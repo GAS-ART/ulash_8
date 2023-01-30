@@ -212,10 +212,10 @@ body.lock {
   top: -2px;
 }
 .language-btn__icon.ru {
-  background-image: url("http://127.0.0.1:8000/img/flags/ru/ru.svg");
+  background-image: url("/img/flags/ru/ru.svg");
 }
 .language-btn__icon.es {
-  background-image: url("http://127.0.0.1:8000/img/flags/es/es.svg");
+  background-image: url("/img/flags/es/es.svg");
 }
 .language-btn__select {
   display: flex;

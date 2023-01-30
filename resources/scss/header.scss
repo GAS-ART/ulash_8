@@ -41,11 +41,11 @@
 		position: relative;
 		top: -2px;
 		&.ru {
-			background-image: url("http://127.0.0.1:8000/img/flags/ru/ru.svg");
+			background-image: url("/img/flags/ru/ru.svg");
 		//	background-image: url("https://colorit.agency/public/images/russia.svg"); 
 		}
 		&.es {
-			background-image: url("http://127.0.0.1:8000/img/flags/es/es.svg");
+			background-image: url("/img/flags/es/es.svg");
 		//	background-image: url("https://colorit.agency/public/images/spain.svg");
 		}
 	}
