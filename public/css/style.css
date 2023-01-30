@@ -1,0 +1,357 @@
+@charset "UTF-8";
+/*
+@include adaptiveValue("свойство", начальное значение, конечное значение);
+Где:
+
+свойство — CSS-свойство, значение которого нужно адаптировать. Можно указать любое свойство значение которого указывается в цифрах.
+начальное значение — стартовое значение свойства в пикселях, пишем число без px. Обычно указывается по макету.
+конечное значение — финальное значение свойства в пикселях, пишем число без px. Значение, к которому мы хотим прийти на меньших ширинах экрана.
+Примеры:
+
+@include adaptiveValue("font-size", 50, 20);
+@include adaptiveValue("padding-top", 80, 10);
+...
+Алгоритм работы миксина
+Миксин работает на основе значений переменных $minWidth, $maxWidth, $maxWidthContainer, $containerPadding и $containerWidth расположеных в блоке «Настройка адаптивной сетки» файла scss/style.scss
+
+В итоге, по умолчанию, миксин будет работать следующим образом:
+
+Если $maxWidthContainer больше нуля, то значения свойства будут меняться в промежутке ширин от $containerWidth до $minWidth. То есть, по всей ширине ограничивающего контейнера.
+
+При этом, если ширина экрана больше чем $containerWidth, то значение свойства будет равно начальному значению. Если ширина экрана меньше чем $minWidth, то значение свойства будет равно конечному значению.
+
+Если $maxWidthContainer равен нулю, то значения свойства будут меняться в промежутке ширин от $maxWidth до $minWidth. То есть, по всей ширине экрана (вьюпорта).
+
+Дополнительные настройки и режимы работы
+Миксин позволяет указать свой промежуток ширины внутри которого будет адаптироваться значение свойства.
+
+@include adaptiveValue("свойство", начальное значение, конечное значение, ширина от, ширина до); 
+ширина от — стартовая ширина меньше которой начнется адаптация, пишем число без px.
+ширина до — конечная ширина до которой будет адаптироваться значение свойства, пишем число без px.
+Пример:
+
+@include adaptiveValue("font-size", 50, 20, 800, 480);
+
+
+
+режим работы — может принимать числовые значения 1, 2 или 3:
+
+1 — Если ширина экрана больше чем ширина от, то значение свойства будет равно начальному значению. Если ширина экрана меньше чем ширина до, то значение свойства будет равно конечному значению.
+2 — Если ширина экрана больше чем ширина от, то значение свойства будет равно начальному значению. Если ширина экрана меньше чем ширина до, то значение свойства будет по умолчанию либо наследоваться от предков.
+3 — Если ширина экрана больше чем ширина от, то значение свойства будет по умолчанию либо наследоваться от предков. Если ширина экрана меньше чем ширина до, то значение свойства будет равно конечному значению.
+
+
+Пример:
+
+@include adaptiveValue("font-size", 50, 20, 800, 480, 1);
+Также мы можем использовать несколько вызовов миксина с разными промежутками:
+
+@include adaptiveValue("font-size", 50, 20, 800, 480, 2);
+@include adaptiveValue("font-size", 20, 10, 480, 320);
+В примере произойдет следующее: значение font-size будет 50px, в промежутке ширин экрана от 800px до 480px, он будет отзывчиво адаптироваться от 50px до 20px. А в промежутке от 480px до 320px отзывчиво адаптироваться от 20px до 10px.
+*/
+@font-face {
+  font-family: icons;
+  font-display: swap;
+  src: url("/fonts/icons.woff2") format("woff2"), url("/fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: SofiaSans;
+  font-display: swap;
+  src: url("/fonts/SofiaSans-Regular.woff2") format("woff2"), url("/fonts/SofiaSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  color: #1B1D1F;
+  line-height: 1;
+  font-family: "Roboto";
+  font-size: 1rem;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea {
+  font-family: "Roboto";
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+body.lock {
+  overflow: hidden;
+  touch-action: none;
+}
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.wrapper > main {
+  flex: 1 1 auto;
+}
+.wrapper > * {
+  min-width: 0;
+}
+
+/*
+(i) Стили будут применяться ко 
+всем классам содержащим *__container
+Например header__container, main__container и т.д.
+Снипет (HTML): cnt
+*/
+[class*=__container] {
+  max-width: 71.875rem;
+  box-sizing: content-box;
+  margin: 0 auto;
+  padding: 0 0.9375rem;
+}
+
+.header__language {
+  position: relative;
+}
+@supports (margin-right: clamp( 0.9375rem , -1.2386658031rem  +  4.5336787565vw , 3.125rem )) {
+  .header__language {
+    margin-right: clamp( 0.9375rem , -1.2386658031rem  +  4.5336787565vw , 3.125rem );
+  }
+}
+@supports not (margin-right: clamp( 0.9375rem , -1.2386658031rem  +  4.5336787565vw , 3.125rem )) {
+  .header__language {
+    margin-right: calc(
+         0.9375rem + 2.1875 * (100vw - 48rem) / 48.25
+      );
+  }
+}
+.header__language a {
+  display: flex;
+  align-items: center;
+}
+@media (pointer: fine) {
+  .header__language:hover .language-btn__select:last-child {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    transform: translate(0, 0px);
+  }
+}
+.header__language.active .language-btn__select:last-child {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  transform: translate(0, 0px);
+}
+
+.language-btn {
+  margin-bottom: 100px;
+}
+.language-btn__icon {
+  width: 1.5625rem;
+  height: 1.5625rem;
+  position: relative;
+  top: -2px;
+}
+.language-btn__icon.ru {
+  background-image: url("http://127.0.0.1:8000/img/flags/ru/ru.svg");
+}
+.language-btn__icon.es {
+  background-image: url("http://127.0.0.1:8000/img/flags/es/es.svg");
+}
+.language-btn__select {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+.language-btn__select:last-child {
+  position: absolute;
+  bottom: -30px;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(0, 15px);
+  padding: 10px 0 0 0;
+}
+
+#selector {
+  height: -moz-min-content;
+  height: min-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+}
+
+.page-404 {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 220px 0 30px 0;
+}
+@media (max-width: 29.99875em) {
+  .page-404 {
+    margin: 126px 0 20px 0;
+  }
+}
+.page-404__body {
+  text-align: center;
+}
+.page-404__tittle {
+  margin-bottom: 15px;
+}
+@supports (font-size: clamp( 3.375rem , 0.4447674419rem  +  14.6511627907vw , 11.25rem )) {
+  .page-404__tittle {
+    font-size: clamp( 3.375rem , 0.4447674419rem  +  14.6511627907vw , 11.25rem );
+  }
+}
+@supports not (font-size: clamp( 3.375rem , 0.4447674419rem  +  14.6511627907vw , 11.25rem )) {
+  .page-404__tittle {
+    font-size: calc(
+         3.375rem + 7.875 * (100vw - 20rem) / 53.75
+      );
+  }
+}
+.page-404__text {
+  margin-bottom: 30px;
+}
+@supports (font-size: clamp( 1.125rem , 0.613372093rem  +  2.5581395349vw , 2.5rem )) {
+  .page-404__text {
+    font-size: clamp( 1.125rem , 0.613372093rem  +  2.5581395349vw , 2.5rem );
+  }
+}
+@supports not (font-size: clamp( 1.125rem , 0.613372093rem  +  2.5581395349vw , 2.5rem )) {
+  .page-404__text {
+    font-size: calc(
+         1.125rem + 1.375 * (100vw - 20rem) / 53.75
+      );
+  }
+}
+.page-404__button {
+  font-family: "Roboto";
+  color: #46B1DE;
+}
+@supports (font-size: clamp( 1.125rem , 0.8459302326rem  +  1.3953488372vw , 1.875rem )) {
+  .page-404__button {
+    font-size: clamp( 1.125rem , 0.8459302326rem  +  1.3953488372vw , 1.875rem );
+  }
+}
+@supports not (font-size: clamp( 1.125rem , 0.8459302326rem  +  1.3953488372vw , 1.875rem )) {
+  .page-404__button {
+    font-size: calc(
+         1.125rem + 0.75 * (100vw - 20rem) / 53.75
+      );
+  }
+}
+.page-404__button a {
+  position: relative;
+}
+.page-404__button a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background: #A1C7D4;
+  transition: width 0.3s ease-in-out;
+}
+.page-404__button a:hover::after {
+  width: 100%;
+}
+
+[class*=_icon-]:before {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class*=_icon-]:before {
+  display: block;
+}
+
+._icon-instagram:before {
+  content: "\e900";
+}
+
+._icon-mail:before {
+  content: "\e901";
+}
+
+._icon-phone:before {
+  content: "\e902";
+}
+
+.test {
+  color: #46B1DE;
+}

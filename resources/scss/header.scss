@@ -1,0 +1,73 @@
+//====================================================================================================
+
+.header {
+	// Выпадающий список языков
+	&__language {
+		@include adaptiveValueREM("margin-right", 50, 15, 1540, 768, 1);
+		position: relative;
+		a {
+			display: flex;
+			align-items: center;
+		}
+		@media (pointer: fine) {
+			&:hover {
+				.language-btn__select:last-child {
+					opacity: 1;
+					visibility: visible;
+					pointer-events: all;
+					transform: translate(0, 0px);
+				}
+			}
+		}
+		&.active {
+			.language-btn__select:last-child {
+				opacity: 1;
+				visibility: visible;
+				pointer-events: all;
+				transform: translate(0, 0px);
+			}
+		}
+	}
+}
+
+.language-btn {
+	&__text {
+		
+	}
+
+	&__icon {
+		width: rem(25);
+		height: rem(25);
+		position: relative;
+		top: -2px;
+		&.ru {
+			background-image: url("http://127.0.0.1:8000/img/flags/ru/ru.svg");
+		//	background-image: url("https://colorit.agency/public/images/russia.svg"); 
+		}
+		&.es {
+			background-image: url("http://127.0.0.1:8000/img/flags/es/es.svg");
+		//	background-image: url("https://colorit.agency/public/images/spain.svg");
+		}
+	}
+	&__select {
+		display: flex;
+		align-items: center;
+		transition: all 0.3s ease 0s;
+		cursor: pointer;
+	}
+	&__select:last-child {
+		position: absolute;
+		bottom: -30px;
+		display: flex;
+		align-items: center;
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		transform: translate(0, 15px);
+		padding: 10px 0 0 0;
+	}
+
+	margin-bottom: 100px;
+}
+// Выпадающий список языков
+//====================================================================================================
