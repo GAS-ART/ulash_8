@@ -19,7 +19,8 @@
       @elseif(App::isLocale('ru'))
       <img src="{{asset('/img/home/ru/французский-маникюр-с-качественным-лаком.jpg')}}" alt="">
       @endif
-      <p>Check deploy</p>
+      <br><br>
+      <p>Change debploy second time</p>
 </div>
 
 @endsection
