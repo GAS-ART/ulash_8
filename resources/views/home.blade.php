@@ -20,7 +20,7 @@
       <img src="{{asset('/img/home/ru/французский-маникюр-с-качественным-лаком.jpg')}}" alt="">
       @endif
       <br><br>
-      <p>Change debploy second time</p>
+      <p>Change debploy third time</p>
 </div>
 
 @endsection
