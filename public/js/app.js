@@ -7,7 +7,7 @@
   \*****************************/
 /***/ (() => {
 
-console.log(document.querySelector('.test__container'));
+console.log('.test 22');
 
 //Переключение языков (комп и мобилка)
 var languageBtn = document.querySelector('.language-btn');

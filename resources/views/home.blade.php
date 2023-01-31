@@ -19,6 +19,7 @@
       @elseif(App::isLocale('ru'))
       <img src="{{asset('/img/home/ru/французский-маникюр-с-качественным-лаком.jpg')}}" alt="">
       @endif
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 </div>
 
 @endsection

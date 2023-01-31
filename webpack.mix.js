@@ -1,5 +1,11 @@
 const mix = require('laravel-mix');
 
+//require('laravel-mix-webp');
+
+mix.browserSync({
+    proxy: 'http://127.0.0.1:8000'
+});
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -12,4 +18,11 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/scss/style.scss', 'public/css', []);
+    .sass('resources/scss/style.scss', 'public/css', [])
+    /* .ImageWebp({
+        from: 'public/img/home',
+        to: 'public/img/home',
+        imageminWebpOptions: {
+            quality: 75
+        },
+    }) */;

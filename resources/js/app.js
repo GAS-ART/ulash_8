@@ -1,4 +1,4 @@
-console.log(document.querySelector('.test__container'));
+console.log('.test 22');
 
    //Переключение языков (комп и мобилка)
    const languageBtn = document.querySelector('.language-btn');
