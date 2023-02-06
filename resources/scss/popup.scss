@@ -82,6 +82,7 @@
       margin-bottom: 10px;
       display: block;
    }
+   
    @media (min-width: $mobileSmall) and (max-height: 750px){
       position: relative;
       height: 37px;
@@ -393,7 +394,7 @@
       position: absolute;
       width: 30px;
       height: 30px;
-      background-image: url("../../../public/img/icons/donwload.svg");
+      // background-image: url("../../../public/img/icons/donwload.svg");
       background-repeat: no-repeat;
      // margin-right: 120px;
      left: 10px;
@@ -524,5 +525,5 @@
   
 }
 
-/*----POP-ELEMENTS----*/
+// /*----POP-ELEMENTS----*/
 

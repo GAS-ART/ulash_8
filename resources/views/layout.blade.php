@@ -10,7 +10,7 @@
       @include('inc.footer')
    </div>
    @include('inc.popup')
-   <script src="{{asset('js/app.js') . '?_v=1'}} "></script>
+   <script src="{{asset('js/app.js') . '?_v=2'}} "></script>
 </body>
 
 </html>

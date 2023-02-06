@@ -9,7 +9,7 @@
 
 
 @section('content')
-<h1>@lang('service.title')</h1>
+<h1>@lang('service.title')1</h1>
 <p>@lang('service.text')</p>
 <a href="{{ route('home', ['locale' => __('lang.current')]) }}" style="color: darkblue; text-decoration: underline">@lang('service.link')</a> 
 @endsection

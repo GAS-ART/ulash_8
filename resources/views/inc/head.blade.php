@@ -21,6 +21,6 @@
    <meta property="og:site_name" content="ruban-dentist.com.ua" />
  <!--  <meta property="og:image" content="{{ asset('img/avatar/3.jpg')}}"/> -->
 
-  <link rel="stylesheet" href="{{asset('css/style.css') . '?_v=1'}}">
+  <link rel="stylesheet" href="{{asset('css/style.css') . '?_v=2'}}">
 
 </head>
