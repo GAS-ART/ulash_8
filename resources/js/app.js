@@ -1,4 +1,6 @@
-import { menuOpen, menuClose, bodyLockStatus, bodyLockToggle, bodyUnloc, bodyLock } from "./moduls.js";
+
+import * as Module from './moduls.js';
+
    //Переключение языков (комп и мобилка)
    const languageBtn = document.querySelector('.language-btn');
    languageBtn.addEventListener('click', function (e) {
@@ -25,13 +27,3 @@ function watchHeader(entries) {
 
 const headerObserver = new IntersectionObserver(watchHeader);
 headerObserver.observe(headerElement);
-
-// burger
-if (document.querySelector(".icon-menu")) {
-  document.addEventListener("click", function (e) {
-    if (bodyLockStatus && e.target.closest('.icon-menu')) {
-      bodyLockToggle();
-      document.documentElement.classList.toggle("menu-open");
-    }
-  });
-};

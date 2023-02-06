@@ -454,28 +454,31 @@
     </div>
   </section>
 
-  <section class="reviews">
-    <div class="reviews__container">
-      <h3 class="reviews__title-h3 section-name">Отзывы</h3>
-      <h2 class="reviews__title-h2 section-title">клиенты о нас</h2>
-      
+  <section class="reviews-slider">
+    <div class="reviews-slider__container">
+      <h3 class="reviews-slider__title-h3 section-name">Отзывы</h3>
+      <h2 class="reviews-slider__title-h2 section-title">клиенты о нас</h2>
 
-    <!-- Оболочка слайдера -->
-    <div class="reviews__slider swiper">
-      <!-- Двигающееся часть слайдера -->
-      <div class="reviews__wrapper swiper-wrapper">
-        <!-- Слайд -->
-        <div class="reviews__slide swiper-slide"></div>
+      <div class="reviews-slider-wrapper">
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="/img/home/es/reviews/1.webp" alt=""></div>
+            <div class="swiper-slide"><img src="/img/home/es/reviews/2.webp" alt=""></div>
+            <div class="swiper-slide"><img src="/img/home/es/reviews/3.webp" alt=""></div>
+            <div class="swiper-slide"><img src="/img/home/es/reviews/1.webp" alt=""></div>
+            <div class="swiper-slide"><img src="/img/home/es/reviews/2.webp" alt=""></div>
+            <div class="swiper-slide"><img src="/img/home/es/reviews/3.webp" alt=""></div>
+            <div class="swiper-slide"><img src="/img/home/es/reviews/1.webp" alt=""></div>
+            <div class="swiper-slide"><img src="/img/home/es/reviews/2.webp" alt=""></div>
+          </div>
+
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev icon-arrow"></div>
+        <div class="swiper-button-next icon-arrow"></div>
       </div>
-      <!-- Если нужна пагинация -->
-      <div class="swiper-pagination"></div>
-      <!-- Если нужна навигация (влево/вправо) -->
-      <button type="button" class="swiper-button-prev"></button>
-      <button type="button" class="swiper-button-next"></button>
-      <!-- Если нужен скролбар -->
-      <div class="swiper-scrollbar"></div>
-    </div>
-    
   </section>
 </div>
 @endsection
