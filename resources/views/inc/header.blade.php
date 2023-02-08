@@ -37,7 +37,7 @@
               </ul>
             </nav>
           </div>
-          <button class="header__popup">@lang('header.nav.popup')</button>
+          <button class="header__popup" data-popup='#popup'>@lang('header.nav.popup')</button>
 
           <div class="header__actions">
             <!--Для выпадающего списка языков-->
