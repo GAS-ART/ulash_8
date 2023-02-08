@@ -1724,14 +1724,17 @@ body {
   pointer-events: none;
   opacity: 1;
   visibility: visible;
+  transition: all 0.3s;
 }
 .read-more__text-full {
-  height: 100%;
+  height: auto;
+  transition: all 0.3s;
 }
 .read-more__text-full:before {
   bottom: -120px;
   opacity: 0;
   visibility: hidden;
+  transition: all 0.3s;
 }
 .read-more__btn {
   font-weight: 600;

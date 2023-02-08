@@ -1408,17 +1408,21 @@ body {
       opacity: 1;
       visibility: visible;
 
+      transition: all .3s;
     }
 
   }
 
   &__text-full {
-    height: 100%;
+    height: auto;
+    transition: all .3s;
 
     &:before {
       bottom: -120px;
       opacity: 0;
       visibility: hidden;
+
+      transition: all .3s;
     }
   }
 
