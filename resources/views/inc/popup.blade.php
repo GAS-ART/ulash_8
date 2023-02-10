@@ -7,8 +7,8 @@
         <h3 class="popup__title-h3 section-name">Оставить заявку</h3>
         <h2 class="popup__title-h2 section-title">ВЫБРАЛИ НУЖНУЮ ВАМ УСЛУГУ?</h2>
       </div>
-      <form class="popup__form" action="#" method="post" enctype="multipart/form-data">
-
+      <form class="popup__form" action="#" method="post">
+      @csrf
         <div class="popup__form-block">
           <div class="popup__form-box">
             <div>
