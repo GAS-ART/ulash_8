@@ -1,4 +1,31 @@
 
+$(".popup__form").submit(function (event) {
+  event.preventDefault();
+  $.ajax({
+     type: 'POST',
+     url: 'https://ulash.artgas.pro/send',
+     data: new FormData(this),
+     contentType: false,
+     cache: false,
+     processData: false,
+     success: function () {
+        sendForm.reset();
+     },
+     error: function (err) {
+        if (err.responseJSON.errors.name) {
+           $(".name-error").html(err.responseJSON.errors.name[0]);
+        } else {
+           $(".name-error").html('');
+        }
+        if (err.responseJSON.errors.phone) {
+           $(".phone-error").html(err.responseJSON.errors.phone[0]);
+        } else {
+           $(".phone-error").html('');
+        }
+     }
+  });
+});
+
 //Переключение языков (комп и мобилка)
 const languageBtn = document.querySelector('.language-btn');
 languageBtn.addEventListener('click', function (e) {

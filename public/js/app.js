@@ -17,6 +17,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _files_scroll_scroll_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./files/scroll/scroll.js */ "./resources/js/files/scroll/scroll.js");
 /* harmony import */ var _files_script_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./files/script.js */ "./resources/js/files/script.js");
 /* harmony import */ var _files_script_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_files_script_js__WEBPACK_IMPORTED_MODULE_6__);
+$(".popup__form").submit(function (event) {
+  event.preventDefault();
+  $.ajax({
+    type: 'POST',
+    url: 'https://ulash.artgas.pro/send',
+    data: new FormData(this),
+    contentType: false,
+    cache: false,
+    processData: false,
+    success: function success() {
+      sendForm.reset();
+    },
+    error: function error(err) {
+      if (err.responseJSON.errors.name) {
+        $(".name-error").html(err.responseJSON.errors.name[0]);
+      } else {
+        $(".name-error").html('');
+      }
+      if (err.responseJSON.errors.phone) {
+        $(".phone-error").html(err.responseJSON.errors.phone[0]);
+      } else {
+        $(".phone-error").html('');
+      }
+    }
+  });
+});
+
 //Переключение языков (комп и мобилка)
 var languageBtn = document.querySelector('.language-btn');
 languageBtn.addEventListener('click', function (e) {

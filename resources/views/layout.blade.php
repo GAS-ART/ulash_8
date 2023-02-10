@@ -10,6 +10,7 @@
       @include('inc.footer')
    </div>
    @include('inc.popup')
+   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
    <script src="{{asset('js/app.js') . '?_v=2'}} "></script>
 </body>
 
