@@ -392,7 +392,7 @@ function formSubmit() {
     formLogging("\u0424\u043E\u0440\u043C\u0430 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0430!");
   }
   function formLogging(message) {
-    (0,_functions_js__WEBPACK_IMPORTED_MODULE_1__.FLS)("[\u0424\u043E\u0440\u043C\u044B]: ".concat(message));
+    FLS("[\u0424\u043E\u0440\u043C\u044B]: ".concat(message));
   }
 }
 /* Модуь формы "колличество" */
@@ -557,7 +557,6 @@ function formRating() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "FLS": () => (/* binding */ FLS),
 /* harmony export */   "_slideDown": () => (/* binding */ _slideDown),
 /* harmony export */   "_slideToggle": () => (/* binding */ _slideToggle),
 /* harmony export */   "_slideUp": () => (/* binding */ _slideUp),
@@ -1190,14 +1189,7 @@ function showMore() {
 //================================================================================================================================================================================================================================================================================================================
 // Прочие полезные функции ================================================================================================================================================================================================================================================================================================================
 //================================================================================================================================================================================================================================================================================================================
-// FLS (Full Logging System)
-function FLS(message) {
-  setTimeout(function () {
-    if (window.FLS) {
-      console.log(message);
-    }
-  }, 0);
-}
+
 // Получить цифры из строки
 function getDigFromString(item) {
   return parseInt(item.replace(/[^\d]/g, ''));
@@ -1297,12 +1289,13 @@ var flsModules = {};
   \**************************************/
 /***/ (() => {
 
-var readMoreBtn = document.querySelector('.read-more__btn');
+// read more
 var readMoreText = document.querySelector('.read-more__text');
+var readMoreBtn = document.querySelector('.read-more__btn');
 document.addEventListener('click', function (e) {
   var target = e.target;
   if (target == readMoreBtn) {
-    readMoreText.classList.toggle('read-more__text-full').slideToggle(300);
+    readMoreText.classList.toggle('read-more__text-full');
   }
 });
 
@@ -1373,9 +1366,9 @@ var gotoBlock = function gotoBlock(targetBlock) {
         behavior: "smooth"
       });
     }
-    (0,_functions_js__WEBPACK_IMPORTED_MODULE_0__.FLS)("[gotoBlock]: \u042E\u0445\u0443\u0443...\u0435\u0434\u0435\u043C \u043A ".concat(targetBlock));
+    FLS("[gotoBlock]: \u042E\u0445\u0443\u0443...\u0435\u0434\u0435\u043C \u043A ".concat(targetBlock));
   } else {
-    (0,_functions_js__WEBPACK_IMPORTED_MODULE_0__.FLS)("[gotoBlock]: \u041E\u0439 \u043E\u0439..\u0422\u0430\u043A\u043E\u0433\u043E \u0431\u043B\u043E\u043A\u0430 \u043D\u0435\u0442 \u043D\u0430 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0435: ".concat(targetBlock));
+    FLS("[gotoBlock]: \u041E\u0439 \u043E\u0439..\u0422\u0430\u043A\u043E\u0433\u043E \u0431\u043B\u043E\u043A\u0430 \u043D\u0435\u0442 \u043D\u0430 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0435: ".concat(targetBlock));
   }
 };
 
@@ -1795,7 +1788,6 @@ var Popup = /*#__PURE__*/function () {
   _createClass(Popup, [{
     key: "initPopups",
     value: function initPopups() {
-      this.popupLogging("\u041F\u0440\u043E\u0441\u043D\u0443\u043B\u0441\u044F");
       this.eventsPopup();
     }
   }, {
@@ -1815,7 +1807,8 @@ var Popup = /*#__PURE__*/function () {
             this._selectorOpen = true;
             this.open();
             return;
-          } else this.popupLogging("\u041E\u0439 \u043E\u0439, \u043D\u0435 \u0437\u0430\u043F\u043E\u043B\u043D\u0435\u043D \u0430\u0442\u0440\u0438\u0431\u0443\u0442 \u0443 ".concat(buttonOpen.classList));
+          }
+          ;
           return;
         }
         // Закрытие на пустом месте (popup__wrapper) и кнопки закрытия (popup__close) для закрытия
@@ -1929,8 +1922,8 @@ var Popup = /*#__PURE__*/function () {
               popup: this
             }
           }));
-          this.popupLogging("\u041E\u0442\u043A\u0440\u044B\u043B \u043F\u043E\u043F\u0430\u043F");
-        } else this.popupLogging("\u041E\u0439 \u043E\u0439, \u0442\u0430\u043A\u043E\u0433\u043E \u043F\u043E\u043F\u0430\u043F\u0430 \u043D\u0435\u0442.\u041F\u0440\u043E\u0432\u0435\u0440\u044C\u0442\u0435 \u043A\u043E\u0440\u0440\u0435\u043A\u0442\u043D\u043E\u0441\u0442\u044C \u0432\u0432\u043E\u0434\u0430. ");
+        }
+        ;
       }
     }
   }, {
@@ -1981,7 +1974,6 @@ var Popup = /*#__PURE__*/function () {
       setTimeout(function () {
         _this2._focusTrap();
       }, 50);
-      this.popupLogging("\u0417\u0430\u043A\u0440\u044B\u043B \u043F\u043E\u043F\u0430\u043F");
     }
     // Получение хэша 
   }, {
@@ -2033,12 +2025,6 @@ var Popup = /*#__PURE__*/function () {
       } else {
         focusable[0].focus();
       }
-    }
-    // Функция вывода в консоль
-  }, {
-    key: "popupLogging",
-    value: function popupLogging(message) {
-      this.options.logging ? (0,_files_functions_js__WEBPACK_IMPORTED_MODULE_0__.FLS)("[\u041F\u043E\u043F\u0430\u043F\u043E\u0441]: ".concat(message)) : null;
     }
   }]);
   return Popup;

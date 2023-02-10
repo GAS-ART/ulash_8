@@ -1330,7 +1330,7 @@ body {
 
 // spollers ========================================================================================================================================================
 
-@media(max-width: 951px) {
+@media(max-width: 950px) {
   .spollers {
     padding-top: 80px;
     padding-bottom: 83px;
@@ -1349,10 +1349,12 @@ body {
     &__wrapper {
       flex-direction: column;
       align-items: center;
-      gap: 0;
+      gap: 16px;
     }
 
-    &__box {}
+    &__box {
+      gap: 16px;
+    }
 
     &__item {}
 
@@ -1392,9 +1394,9 @@ body {
     line-height: 24px;
     color: #828282;
     margin-bottom: 24px;
-    height: 110px;
+    transition: all .6s;
     overflow: hidden;
-    transition: all .3s;
+    max-height: 110px;
 
     &:before {
       content: '';
@@ -1408,21 +1410,18 @@ body {
       opacity: 1;
       visibility: visible;
 
-      transition: all .3s;
+      transition: all .6s;
     }
 
   }
 
   &__text-full {
-    height: auto;
-    transition: all .3s;
+    max-height: 700px;
 
     &:before {
       bottom: -120px;
       opacity: 0;
       visibility: hidden;
-
-      transition: all .3s;
     }
   }
 
