@@ -12,11 +12,11 @@
         <div class="popup__form-block">
           <div class="popup__form-box">
             <div>
-              <input class="popup__name" placeholder="Ваше имя*" tabindex="1" name="username" type="text" />
+              <input class="popup__name" placeholder="Ваше имя*" tabindex="1" name="name" type="text" />
               <p class="name-error"></p>
             </div>
             <div>
-              <input class="popup__phone" placeholder="Номер телефона *" tabindex="2" name="userphone" type="tel:+34617051264" />
+              <input class="popup__phone" placeholder="Номер телефона *" tabindex="2" name="phone" type="tel:+34617051264" />
               <p class="phone-error"></p>
             </div>
             <input class="popup__email" placeholder="Email" tabindex="3" name="email" type="text" />
