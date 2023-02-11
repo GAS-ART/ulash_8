@@ -17,31 +17,83 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _files_scroll_scroll_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./files/scroll/scroll.js */ "./resources/js/files/scroll/scroll.js");
 /* harmony import */ var _files_script_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./files/script.js */ "./resources/js/files/script.js");
 /* harmony import */ var _files_script_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_files_script_js__WEBPACK_IMPORTED_MODULE_6__);
+var popupForm = document.querySelector('.popup__form');
 $(".popup__form").submit(function (event) {
   event.preventDefault();
   $.ajax({
     type: 'POST',
-    url: 'https://ulash.artgas.pro/send',
+    url: 'http://localhost:3000/send',
     data: new FormData(this),
     contentType: false,
     cache: false,
     processData: false,
     success: function success() {
-      sendForm.reset();
+      event.target.querySelector('.popup__name').classList.remove("error");
+      event.target.querySelector('.name-error').innerText = '';
+      event.target.querySelector('.popup__phone').classList.remove("error");
+      event.target.querySelector('.phone-error').innerText = '';
+      $(event.target)[0].reset();
+      event.target.closest('.form').classList.add('send');
     },
     error: function error(err) {
-      if (err.responseJSON.errors.name) {
-        $(".name-error").html(err.responseJSON.errors.name[0]);
+      if (event.target.classList.contains('es')) {
+        var _err$responseJSON, _err$responseJSON$err, _err$responseJSON2, _err$responseJSON2$er;
+        if (err !== null && err !== void 0 && (_err$responseJSON = err.responseJSON) !== null && _err$responseJSON !== void 0 && (_err$responseJSON$err = _err$responseJSON.errors) !== null && _err$responseJSON$err !== void 0 && _err$responseJSON$err.name) {
+          event.target.querySelector('.popup__name').classList.add("error");
+          var text = err.responseJSON.errors.name[0];
+          if (text == 'Не заполнено поле "ВАШЕ ИМЯ"') {
+            event.target.querySelector('.name-error').innerText = 'El campo Nombre no esta rellenado';
+          } else if (text == 'Поле "ИМЯ" не может содержать цифры') {
+            event.target.querySelector('.name-error').innerText = 'Campo "Nombre" no puede contener los números';
+          } else if (text == 'Поле "ИМЯ" должно содержать 2 или больше символов') {
+            event.target.querySelector('.name-error').innerText = 'Campo "Nombre" Debe contener 2 o mas simbolos';
+          } else if (text == 'Поле "Имя" должно содержать не больше 80 символов') {
+            event.target.querySelector('.name-error').innerText = 'Campo "Nombre" no puede contener mas de 80 simbolos';
+          }
+        } else {
+          event.target.querySelector('.popup__name').classList.remove("error");
+          event.target.querySelector('.name-error').innerText = '';
+        }
+        if (err !== null && err !== void 0 && (_err$responseJSON2 = err.responseJSON) !== null && _err$responseJSON2 !== void 0 && (_err$responseJSON2$er = _err$responseJSON2.errors) !== null && _err$responseJSON2$er !== void 0 && _err$responseJSON2$er.phone) {
+          event.target.querySelector('.popup__phone').classList.add("error");
+          var _text = err.responseJSON.errors.phone[0];
+          if (_text == 'Не заполнено поле "Номер телефона"') {
+            event.target.querySelector('.phone-error').innerText = 'El campo no esta rellenado telefono';
+          } else if (_text == 'Не верный формат номера телефона') {
+            $event.target.querySelector('.phone-error').innerText = 'El campo no esta rellenado telefono';
+          }
+        } else {
+          event.target.querySelector('.popup__phone').classList.remove("error");
+          event.target.querySelector('.phone-error').innerText = '';
+        }
       } else {
-        $(".name-error").html('');
-      }
-      if (err.responseJSON.errors.phone) {
-        $(".phone-error").html(err.responseJSON.errors.phone[0]);
-      } else {
-        $(".phone-error").html('');
+        if (err.responseJSON.errors.name) {
+          event.target.querySelector('.popup__name').classList.add("error");
+          event.target.querySelector('.name-error').innerText = err.responseJSON.errors.name[0];
+        } else {
+          event.target.querySelector('.popup__name').classList.remove("error");
+          event.target.querySelector('.name-error').innerText = '';
+        }
+        if (err.responseJSON.errors.phone) {
+          event.target.querySelector('.popup__phone').classList.add("error");
+          event.target.querySelector('.phone-error').innerText = err.responseJSON.errors.phone[0];
+        } else {
+          event.target.querySelector('.popup__phone').classList.remove("error");
+          event.target.querySelector('.phone-error').innerText = '';
+        }
       }
     }
   });
+});
+
+//Стилизация Select
+var placeholderText = 'Выберету услугу';
+if (popupForm.classList.contains('es')) {
+  placeholderText = 'Elige el servicio';
+}
+$('.popup__select').select2({
+  placeholder: placeholderText,
+  minimumResultsForSearch: -1
 });
 
 //Переключение языков (комп и мобилка)

@@ -6,4 +6,4 @@
 Телефон: {{ $phone }} <br>
 Email: {{ $email }} <br>
 Услуга: {{ $service }} <br>
-Комментарий: {{ $message }} <br>
+Комментарий: {{ $text }} <br>
