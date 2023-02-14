@@ -1,0 +1,629 @@
+// teaching-home-page =====================================================================================================================================
+.teaching-home-page {
+  padding-top: 80px;
+  padding-bottom: 76px;
+  position: relative;
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  &__box {
+    flex: 0 1 520px;
+    min-height: 505px;
+  }
+
+  &__title-h3 {
+    margin-bottom: 24px;
+  }
+
+  &__title-h2 {
+    margin-bottom: 24px;
+  }
+
+  &__text-wrapper {
+    max-width: 520px;
+    margin-bottom: 60px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #4F4F4F;
+  }
+
+  &__popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    width: 288px;
+    height: 54px;
+    background: linear-gradient(0deg, #FFD700, #FFD700), #ED7C30;
+    border-radius: 50px;
+    padding: 10px;
+  }
+
+  &__img-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 700px;
+    z-index: -1;
+  }
+
+  &__img {
+    display: block;
+    min-height: 660px;
+    width: 100%;
+    max-width: 880px;
+    position: relative;
+    margin-left: auto;
+
+    & source,
+    & img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      object-fit: cover;
+    }
+  }
+}
+
+// teaching-home-page =====================================================================================================================================
+
+@media (max-width: 1100px) {
+  .teaching-home-page {
+    padding-bottom: 60px;
+    padding-top: 0;
+
+    &__wrapper {
+      margin: 0 auto;
+      width: 100%;
+      max-width: 520px;
+    }
+
+    &__box {
+      min-height: auto;
+    }
+
+    &__title-h3 {
+      margin-bottom: 17px;
+    }
+
+    &__title-h2 {
+      margin-bottom: 40px;
+    }
+
+    &__text-wrapper {
+      margin-bottom: 24px;
+    }
+
+    &__text {}
+
+    &__popup {}
+
+    &__img-wrapper {
+      position: static;
+      width: 100%;
+      padding: 0 24px 0 24px;
+      margin-bottom: 60px;
+    }
+
+    &__img {
+      display: block;
+      min-height: 440px;
+      width: 100%;
+      max-width: 100%;
+      position: relative;
+      margin: 0 auto;
+
+      & source,
+      & img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        object-fit: cover;
+        object-position: center center;
+      }
+    }
+  }
+}
+
+// teaching-home-page =====================================================================================================================================
+@media (max-width: 650px) {
+  .teaching-home-page {
+    padding-bottom: 60px;
+    padding-top: 0;
+
+    &__wrapper {
+      margin: 0 auto;
+      width: 100%;
+      max-width: 520px;
+    }
+
+    &__box {}
+
+    &__title-h3 {
+      margin-bottom: 17px;
+    }
+
+    &__title-h2 {
+      margin-bottom: 40px;
+    }
+
+    &__text-wrapper {
+      margin-bottom: 24px;
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &__popup {}
+
+    &__img {
+      min-height: 240px;
+      max-width: 643px;
+
+      & source,
+      & img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        object-fit: cover;
+        object-position: center center;
+      }
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .teaching-home-page {
+    &__title-h2 {
+      font-size: 30px;
+    }
+  }
+}
+
+// teaching-about =====================================================================================================================================
+.teaching-about {
+  background: #F0EDEA;
+  padding-top: 120px;
+  padding-bottom: 100px;
+  position: relative;
+
+  &__decor-text {
+    font-weight: 900;
+    font-size: 150px;
+    line-height: 188px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    position: absolute;
+    top: -70px;
+    left: 0;
+  }
+
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 80px;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+  }
+
+  &__img {
+    position: relative;
+    width: 100%;
+    flex: 0 1 540px;
+    min-height: 543px;
+    height: 100%;
+
+    & source,
+    & img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+
+  &___content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 1 580px;
+  }
+
+  &__title-h3:last-child {
+    margin-bottom: 22px;
+  }
+
+  &__title-h3 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+
+    &:before {
+      content: "";
+      position: absolute;
+      background: linear-gradient(0deg, #FFD700, #FFD700), #ED7C30;
+      opacity: 0.4;
+      height: 8px;
+      width: 100%;
+      left: 0;
+      bottom: 2px;
+      z-index: -1;
+    }
+  }
+
+  &__title-h2 {
+    font-family: $font__CormorantGaramond;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 56px;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+  }
+
+  &__popup {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 54px;
+    width: 288px;
+    background: linear-gradient(0deg, #FFD700, #FFD700), #ED7C30;
+    border-radius: 50px;
+  }
+
+  &__title {
+    width: 535px;
+  }
+
+  &__title-mobile {
+    display: none;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  &__icon {
+    font-size: 24px;
+    color: #81807F;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #4F4F4F;
+
+    & span {
+      font-weight: 700;
+    }
+  }
+}
+
+// teaching-home-page =====================================================================================================================================
+
+@media (max-width: 920px) {
+  .teaching-about {
+    padding-top: 60px;
+    padding-bottom: 80px;
+
+    &__decor-text {
+      font-size: 50px;
+      line-height: 63px;
+      top: -20px;
+    }
+
+    &__content {
+      max-width: 441px;
+      margin: 0 auto;
+    }
+
+    &__box {
+      flex-direction: column;
+    }
+
+    &__img {
+      max-width: 580px;
+    }
+
+    &__title-h3:last-child {
+      margin-bottom: 15px;
+    }
+
+    &__title-h3 {
+      font-size: 16px;
+      line-height: 30px;
+    }
+
+    &__title-h2 {
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 24px;
+    }
+
+    &__title-mobile {
+      display: block;
+      width: 272px;
+      text-align: center;
+    }
+
+    &__title {
+      display: none;
+    }
+
+    &__items {
+      margin-bottom: 24px;
+    }
+
+    &__item {
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .teaching-about {
+    &__img {
+      min-height: 0;
+      max-height: 274px;
+    }
+  }
+}
+
+// teaching-advantages ================================================================================================
+.teaching-advantages {
+  padding-bottom: 120px;
+  position: relative;
+  background: #F0EDEA;
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &__title-h3 {
+    z-index: 1;
+    margin-bottom: 24px;
+  }
+
+  &__title-h2 {
+    margin-bottom: 60px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 48px;
+  }
+
+  &__item {
+    width: 100%;
+    max-width: 349px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+
+  &__icon {
+    color: #FFD700;
+  }
+
+  &__item:not(:last-child) {
+    padding-right: 48px;
+    position: relative;
+    max-width: 397px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 1px;
+      height: 60px;
+      background: #131313;
+      opacity: 0.4;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__item:nth-child(1) &__icon {
+    font-size: 50px;
+    margin-bottom: 34px;
+  }
+
+  &__item:nth-child(2) &__icon {
+    font-size: 50px;
+    margin-bottom: 23px;
+  }
+
+  &__item:nth-child(3) &__icon {
+    font-size: 43px;
+    margin-bottom: 27px;
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    text-align: center;
+    color: #131313;
+  }
+}
+
+// teaching-advantages =========================================================================================
+
+@media(max-width: 950px) {
+  .teaching-advantages {
+    padding-bottom: 60px;
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 36px;
+      flex-direction: column;
+    }
+
+    &__item {
+      width: 100%;
+      max-width: 349px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    &__icon {
+      color: #FFD700;
+    }
+
+    &__item:not(:last-child) {
+      padding-right: 0;
+      padding-bottom: 36px;
+
+      &:before {
+        width: 60px;
+        height: 1px;
+        right: 50%;
+        top: auto;
+        bottom: 0;
+        transform: translateX(50%);
+      }
+    }
+
+    &__title-h3 {
+      margin-bottom: 17px;
+    }
+
+    &__title-h2 {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+// teaching-program =========================================================================================
+.teaching-program {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  position: relative;
+
+  &__decor-text {
+    position: absolute;
+    top: -60px;
+    right: 0;
+    font-weight: 900;
+    font-size: 150px;
+    line-height: 188px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #F0EDEA;
+  }
+
+  &__wrapper {}
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 16px;
+    column-gap: 16px;
+  }
+
+  &__item {
+    width: 100%;
+    max-width: 298px;
+    min-height: 80px;
+    border: 1px solid rgba(19, 19, 19, 0.1);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding: 15px;
+  }
+
+  &__icon {
+    font-size: 31px;
+    color: #FFD700;
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+// teaching-program =========================================================================================
+@media(max-width: 950px) {
+  .teaching-program {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    &__decor-text {
+      top: -20px;
+      font-size: 60px;
+      line-height: 75px;
+    }
+  }
+}

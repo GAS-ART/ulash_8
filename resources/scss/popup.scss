@@ -62,6 +62,9 @@ body::after {
   max-width: 1240px;
   min-height: 658px;
   background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   .lock & {
     visibility: visible;
@@ -136,6 +139,13 @@ body::after {
     gap: 48px;
   }
 
+  &__input-box {
+    & p {
+      margin-left: 10px;
+      color: red;
+    }
+  }
+
   &__name,
   &__phone,
   &__email,
@@ -175,6 +185,7 @@ body::after {
     width: 100%;
     max-width: 496px;
     height: 138px;
+    resize: none;
   }
 
   &__button-wrapper {
@@ -194,7 +205,59 @@ body::after {
   }
 }
 
+.select2-selection {
+  border: none !important;
+}
 
+.select2 {
+  outline: none;
+  border-bottom: solid 1px #131313;
+  width: 100%;
+  max-width: 496px;
+  height: 45px;
+  padding-left: 10px;
+  padding-bottom: 24px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #131313;
+
+}
+
+.select2-selection__placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #131313 !important;
+}
+
+.select2-selection__arrow {
+  margin-right: 10px !important;
+
+  & b {
+    border-width: 9px 8px 0 8px !important;
+    border-radius: 2px !important;
+    border-color: rgba(19, 19, 19, 0.2) transparent transparent transparent !important;
+  }
+}
+
+.select2-results__option {
+  outline: none;
+  border-bottom: solid 1px #131313;
+  width: 100%;
+  max-width: 496px;
+  height: 45px;
+  padding-left: 10px;
+  padding-bottom: 24px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #131313;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+  padding: 0;
+}
 //========================================================================================================================================================
 
 @media (max-width: 640px) {
@@ -273,6 +336,48 @@ body::after {
       display: flex;
       justify-content: center;
     }
+  }
+
+  .select2 {
+    outline: none;
+    border-bottom: solid 1px #131313;
+    width: 100%;
+    max-width: 496px;
+    height: 35px;
+    padding-left: 5px;
+    padding-bottom: 14px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+
+  }
+
+  .select2-selection__placeholder {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .select2-selection__arrow {
+    margin-right: 10px !important;
+
+    & b {
+      border-width: 9px 8px 0 8px !important;
+      border-radius: 2px !important;
+      border-color: rgba(19, 19, 19, 0.2) transparent transparent transparent !important;
+    }
+  }
+
+  .select2-results__option {
+    outline: none;
+    width: 100%;
+    max-width: 496px;
+    height: 35px;
+    padding-left: 5px;
+    padding-bottom: 14px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 

@@ -13,8 +13,8 @@
       <button class="footer__popup">Готовы довериться профессионалам? <span>Оставьте заявку</span></button>
 
       <div class="footer__icons">
-        <div class="footer__icon icon-instagram"></div>
-        <div class="footer__icon icon-facebook"></div>
+        <a href="#" class="footer__icon icon-instagram"></a>
+        <a href="#" class="footer__icon icon-facebook"></a>
       </div>
     </div>
   </div>

@@ -21,9 +21,9 @@
 
     @elseif(App::isLocale('ru'))
     <picture class="services-home-page__img">
-      <source type="image/webp" media="(min-width:650px)" srcset="/img/home/es/services-page/servisces-home-page/1.webp">
-      <source type="image/webp" media="(min-width:320px)" srcset="/img/home/es/services-page/mobile/servisces-home-page/1.webp">
-      <img src="/img/home/es/services-page/servisces-home-page/1.jpg" alt="">
+      <source type="image/webp" media="(min-width:650px)" srcset="/img/home/ru/services-page/servisces-home-page/1.webp">
+      <source type="image/webp" media="(min-width:320px)" srcset="/img/home/ru/services-page/mobile/servisces-home-page/1.webp">
+      <img src="/img/home/ru/services-page/servisces-home-page/1.jpg" alt="">
     </picture>
     @endif
   </div>

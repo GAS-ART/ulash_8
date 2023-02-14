@@ -55,6 +55,7 @@
     width: 100%;
     height: 100%;
     padding-left: 700px;
+    z-index: -1;
   }
 
   &__img {
@@ -523,7 +524,7 @@
 }
 
 .services-saloon {
-  padding-bottom: 120px;
+
 }
 
 .services-spollers {
@@ -535,6 +536,8 @@
     right: 0;
     left: auto;
     color: #fff;
+    top: 0;
+    z-index: -1;
   }
 }
 
@@ -544,19 +547,25 @@
 }
 
 .services-form {
- & .popup__content {
-  visibility: visible;
-  transform: scale(1);
- }
+  margin-bottom: -80px;
+  transform: translateY(-80px);
+  z-index: 1;
+  position: relative;
+  margin-bottom: 120px;
 
- & .popup__text {
-  margin-top: 49px;
- }
+  & .popup__content {
+    visibility: visible;
+    transform: scale(1);
+  }
+
+  & .popup__text {
+    margin-top: 49px;
+  }
 }
 
 @media (max-width: 950px) {
   .services-advantages {
-    padding-bottom: 80px;
+    padding-bottom: 44px;
   }
 
   .services-saloon {
@@ -572,6 +581,7 @@
     padding-top: 80px;
     padding-bottom: 80px;
   }
+
   .services-form {
     display: none;
   }

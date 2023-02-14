@@ -8,15 +8,15 @@
         <h2 class="popup__title-h2 section-title">ВЫБРАЛИ НУЖНУЮ ВАМ УСЛУГУ?</h2>
       </div>
       <form class="popup__form @lang('lang.current')" action="#" method="post">
-      @csrf
+        @csrf
         <div class="popup__form-block">
           <div class="popup__form-box">
-            <div>
+            <div class="popup__input-box">
               <input class="popup__name" placeholder="Ваше имя*" tabindex="1" name="name" type="text" />
               <p class="name-error"></p>
             </div>
-            <div>
-              <input class="popup__phone" placeholder="Номер телефона *" tabindex="2" name="phone"/>
+            <div class="popup__input-box">
+              <input class="popup__phone" placeholder="Номер телефона *" tabindex="2" name="phone" />
               <p class="phone-error"></p>
             </div>
             <input class="popup__email" placeholder="Email" tabindex="3" name="email" type="text" />
