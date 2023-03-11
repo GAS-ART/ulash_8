@@ -1,5 +1,5 @@
 
-import Swiper, { Navigation, Pagination, Autoplay, EffectFade } from 'swiper';
+import Swiper, { Navigation } from 'swiper';
 
 function initSliders() {
 
@@ -15,15 +15,8 @@ function initSliders() {
     watchOverflow: true,
     slideToClickedSlide: true,
     centeredSlides: false,
-
-    // Lazy Loading
-    // (подгрузка картинок)
     lazy: {
-      // Подгружать на старте
-      // переключения слайда
       loadOnTransitionStart: true,
-      // Подгрузить предыдущую
-      // и следующую картинки
       loadPrevNext: true,
     },
 
@@ -96,8 +89,5 @@ function initSlidersScroll() {
 }
 
 window.addEventListener("load", function (e) {
-  // Запуск инициализации слайдеров
   initSliders();
-  // Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
-  // initSlidersScroll();
 });

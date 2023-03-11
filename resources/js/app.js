@@ -100,7 +100,7 @@ function watchHeader(entries) {
   }
 
 }
-
+//==========================================================================================================
 const headerObserver = new IntersectionObserver(watchHeader);
 headerObserver.observe(headerElement);
 
@@ -109,34 +109,16 @@ window['FLS'] = true;
 
 // Подключение основного файла стилей
 import "../scss/style.scss";
-
-
 import * as flsFunctions from "./files/functions.js";
 
 flsFunctions.menuInit();
+
 /* Учет плавающей панели на мобильных устройствах при 100vh */
-// flsFunctions.fullVHfix();
+flsFunctions.fullVHfix();
 
 // Модуль работы со спойлерами
 flsFunctions.spollers();
 
 import './libs/popup.js'
-
-import * as flsForms from "./files/forms/forms.js";
-
-/* Работа с полями формы */
-/* Документация: https://template.fls.guru/template-docs/rabota-s-formami.html */
-/*
-flsForms.formFieldsInit({
-   viewPass: false,
-   autoHeight: false
-});
-*/
-
 import "./files/sliders.js";
-
-
-// Функции работы скроллом
-import * as flsScroll from "./files/scroll/scroll.js";
-
 import "./files/script.js";

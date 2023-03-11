@@ -12,11 +12,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/style.scss */ "./resources/scss/style.scss");
 /* harmony import */ var _files_functions_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./files/functions.js */ "./resources/js/files/functions.js");
 /* harmony import */ var _libs_popup_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./libs/popup.js */ "./resources/js/libs/popup.js");
-/* harmony import */ var _files_forms_forms_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./files/forms/forms.js */ "./resources/js/files/forms/forms.js");
-/* harmony import */ var _files_sliders_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./files/sliders.js */ "./resources/js/files/sliders.js");
-/* harmony import */ var _files_scroll_scroll_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./files/scroll/scroll.js */ "./resources/js/files/scroll/scroll.js");
-/* harmony import */ var _files_script_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./files/script.js */ "./resources/js/files/script.js");
-/* harmony import */ var _files_script_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_files_script_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _files_sliders_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./files/sliders.js */ "./resources/js/files/sliders.js");
+/* harmony import */ var _files_script_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./files/script.js */ "./resources/js/files/script.js");
+/* harmony import */ var _files_script_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_files_script_js__WEBPACK_IMPORTED_MODULE_4__);
 var popupForm = document.querySelector('.popup__form');
 $(".popup__form").submit(function (event) {
   event.preventDefault();
@@ -117,6 +115,7 @@ function watchHeader(entries) {
     entries[0].target.classList.add('_scroll');
   }
 }
+//==========================================================================================================
 var headerObserver = new IntersectionObserver(watchHeader);
 headerObserver.observe(headerElement);
 
@@ -127,503 +126,15 @@ window['FLS'] = true;
 
 
 _files_functions_js__WEBPACK_IMPORTED_MODULE_1__.menuInit();
+
 /* Учет плавающей панели на мобильных устройствах при 100vh */
-// flsFunctions.fullVHfix();
+_files_functions_js__WEBPACK_IMPORTED_MODULE_1__.fullVHfix();
 
 // Модуль работы со спойлерами
 _files_functions_js__WEBPACK_IMPORTED_MODULE_1__.spollers();
 
 
 
-/* Работа с полями формы */
-/* Документация: https://template.fls.guru/template-docs/rabota-s-formami.html */
-/*
-flsForms.formFieldsInit({
-   viewPass: false,
-   autoHeight: false
-});
-*/
-
-
-
-// Функции работы скроллом
-
-
-
-/***/ }),
-
-/***/ "./resources/js/files/forms/forms.js":
-/*!*******************************************!*\
-  !*** ./resources/js/files/forms/forms.js ***!
-  \*******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "formFieldsInit": () => (/* binding */ formFieldsInit),
-/* harmony export */   "formQuantity": () => (/* binding */ formQuantity),
-/* harmony export */   "formRating": () => (/* binding */ formRating),
-/* harmony export */   "formSubmit": () => (/* binding */ formSubmit),
-/* harmony export */   "formValidate": () => (/* binding */ formValidate)
-/* harmony export */ });
-/* harmony import */ var _modules_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../modules.js */ "./resources/js/files/modules.js");
-/* harmony import */ var _functions_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions.js */ "./resources/js/files/functions.js");
-/* harmony import */ var _scroll_gotoblock_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../scroll/gotoblock.js */ "./resources/js/files/scroll/gotoblock.js");
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, defineProperty = Object.defineProperty || function (obj, key, desc) { obj[key] = desc.value; }, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return defineProperty(generator, "_invoke", { value: makeInvokeMethod(innerFn, self, context) }), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; defineProperty(this, "_invoke", { value: function value(method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; } function maybeInvokeDelegate(delegate, context) { var methodName = context.method, method = delegate.iterator[methodName]; if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel; var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), defineProperty(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (val) { var object = Object(val), keys = []; for (var key in object) keys.push(key); return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, "catch": function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-// Подключение функционала "Чертогов Фрилансера"
-// Подключение списка активных модулей
-
-// Вспомогательные функции
-
-// Модуль прокрутки к блоку
-
-//================================================================================================================================================================================================================================================================================================================================
-
-/*
-Документация: https://template.fls.guru/template-docs/rabota-s-formami.html
-*/
-
-// Работа с полями формы. Добавление классов, работа с placeholder
-function formFieldsInit() {
-  var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {
-    viewPass: false,
-    autoHeight: false
-  };
-  // Если включено, добавляем функционал "скрыть плейсходлер при фокусе"
-  var formFields = document.querySelectorAll('input[placeholder],textarea[placeholder]');
-  if (formFields.length) {
-    formFields.forEach(function (formField) {
-      if (!formField.hasAttribute('data-placeholder-nohide')) {
-        formField.dataset.placeholder = formField.placeholder;
-      }
-    });
-  }
-  document.body.addEventListener("focusin", function (e) {
-    var targetElement = e.target;
-    if (targetElement.tagName === 'INPUT' || targetElement.tagName === 'TEXTAREA') {
-      if (targetElement.dataset.placeholder) {
-        targetElement.placeholder = '';
-      }
-      if (!targetElement.hasAttribute('data-no-focus-classes')) {
-        targetElement.classList.add('_form-focus');
-        targetElement.parentElement.classList.add('_form-focus');
-      }
-      formValidate.removeError(targetElement);
-    }
-  });
-  document.body.addEventListener("focusout", function (e) {
-    var targetElement = e.target;
-    if (targetElement.tagName === 'INPUT' || targetElement.tagName === 'TEXTAREA') {
-      if (targetElement.dataset.placeholder) {
-        targetElement.placeholder = targetElement.dataset.placeholder;
-      }
-      if (!targetElement.hasAttribute('data-no-focus-classes')) {
-        targetElement.classList.remove('_form-focus');
-        targetElement.parentElement.classList.remove('_form-focus');
-      }
-      // Моментальная валидация
-      if (targetElement.hasAttribute('data-validate')) {
-        formValidate.validateInput(targetElement);
-      }
-    }
-  });
-  // Если включено, добавляем функционал "Показать пароль"
-  if (options.viewPass) {
-    document.addEventListener("click", function (e) {
-      var targetElement = e.target;
-      if (targetElement.closest('[class*="__viewpass"]')) {
-        var inputType = targetElement.classList.contains('_viewpass-active') ? "password" : "text";
-        targetElement.parentElement.querySelector('input').setAttribute("type", inputType);
-        targetElement.classList.toggle('_viewpass-active');
-      }
-    });
-  }
-  // Если включено, добавляем функционал "Автовысота"
-  if (options.autoHeight) {
-    var textareas = document.querySelectorAll('textarea[data-autoheight]');
-    if (textareas.length) {
-      var setHeight = function setHeight(textarea, height) {
-        textarea.style.height = "".concat(height, "px");
-      };
-      textareas.forEach(function (textarea) {
-        var startHeight = textarea.hasAttribute('data-autoheight-min') ? Number(textarea.dataset.autoheightMin) : Number(textarea.offsetHeight);
-        var maxHeight = textarea.hasAttribute('data-autoheight-max') ? Number(textarea.dataset.autoheightMax) : Infinity;
-        setHeight(textarea, Math.min(startHeight, maxHeight));
-        textarea.addEventListener('input', function () {
-          if (textarea.scrollHeight > startHeight) {
-            textarea.style.height = "auto";
-            setHeight(textarea, Math.min(Math.max(textarea.scrollHeight, startHeight), maxHeight));
-          }
-        });
-      });
-    }
-  }
-}
-// Валидация форм
-var formValidate = {
-  getErrors: function getErrors(form) {
-    var _this = this;
-    var error = 0;
-    var formRequiredItems = form.querySelectorAll('*[data-required]');
-    if (formRequiredItems.length) {
-      formRequiredItems.forEach(function (formRequiredItem) {
-        if ((formRequiredItem.offsetParent !== null || formRequiredItem.tagName === "SELECT") && !formRequiredItem.disabled) {
-          error += _this.validateInput(formRequiredItem);
-        }
-      });
-    }
-    return error;
-  },
-  validateInput: function validateInput(formRequiredItem) {
-    var error = 0;
-    if (formRequiredItem.dataset.required === "email") {
-      formRequiredItem.value = formRequiredItem.value.replace(" ", "");
-      if (this.emailTest(formRequiredItem)) {
-        this.addError(formRequiredItem);
-        error++;
-      } else {
-        this.removeError(formRequiredItem);
-      }
-    } else if (formRequiredItem.type === "checkbox" && !formRequiredItem.checked) {
-      this.addError(formRequiredItem);
-      error++;
-    } else {
-      if (!formRequiredItem.value.trim()) {
-        this.addError(formRequiredItem);
-        error++;
-      } else {
-        this.removeError(formRequiredItem);
-      }
-    }
-    return error;
-  },
-  addError: function addError(formRequiredItem) {
-    formRequiredItem.classList.add('_form-error');
-    formRequiredItem.parentElement.classList.add('_form-error');
-    var inputError = formRequiredItem.parentElement.querySelector('.form__error');
-    if (inputError) formRequiredItem.parentElement.removeChild(inputError);
-    if (formRequiredItem.dataset.error) {
-      formRequiredItem.parentElement.insertAdjacentHTML('beforeend', "<div class=\"form__error\">".concat(formRequiredItem.dataset.error, "</div>"));
-    }
-  },
-  removeError: function removeError(formRequiredItem) {
-    formRequiredItem.classList.remove('_form-error');
-    formRequiredItem.parentElement.classList.remove('_form-error');
-    if (formRequiredItem.parentElement.querySelector('.form__error')) {
-      formRequiredItem.parentElement.removeChild(formRequiredItem.parentElement.querySelector('.form__error'));
-    }
-  },
-  formClean: function formClean(form) {
-    form.reset();
-    setTimeout(function () {
-      var inputs = form.querySelectorAll('input,textarea');
-      for (var index = 0; index < inputs.length; index++) {
-        var el = inputs[index];
-        el.parentElement.classList.remove('_form-focus');
-        el.classList.remove('_form-focus');
-        formValidate.removeError(el);
-      }
-      var checkboxes = form.querySelectorAll('.checkbox__input');
-      if (checkboxes.length > 0) {
-        for (var _index = 0; _index < checkboxes.length; _index++) {
-          var checkbox = checkboxes[_index];
-          checkbox.checked = false;
-        }
-      }
-      if (_modules_js__WEBPACK_IMPORTED_MODULE_0__.flsModules.select) {
-        var selects = form.querySelectorAll('.select');
-        if (selects.length) {
-          for (var _index2 = 0; _index2 < selects.length; _index2++) {
-            var select = selects[_index2].querySelector('select');
-            _modules_js__WEBPACK_IMPORTED_MODULE_0__.flsModules.select.selectBuild(select);
-          }
-        }
-      }
-    }, 0);
-  },
-  emailTest: function emailTest(formRequiredItem) {
-    return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(formRequiredItem.value);
-  }
-};
-/* Отправка форм */
-function formSubmit() {
-  var forms = document.forms;
-  if (forms.length) {
-    var _iterator = _createForOfIteratorHelper(forms),
-      _step;
-    try {
-      for (_iterator.s(); !(_step = _iterator.n()).done;) {
-        var form = _step.value;
-        form.addEventListener('submit', function (e) {
-          var form = e.target;
-          formSubmitAction(form, e);
-        });
-        form.addEventListener('reset', function (e) {
-          var form = e.target;
-          formValidate.formClean(form);
-        });
-      }
-    } catch (err) {
-      _iterator.e(err);
-    } finally {
-      _iterator.f();
-    }
-  }
-  function formSubmitAction(_x, _x2) {
-    return _formSubmitAction.apply(this, arguments);
-  } // Действия после отправки формы
-  function _formSubmitAction() {
-    _formSubmitAction = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(form, e) {
-      var error, ajax, formAction, formMethod, formData, response, responseResult, formGoToErrorClass;
-      return _regeneratorRuntime().wrap(function _callee$(_context) {
-        while (1) switch (_context.prev = _context.next) {
-          case 0:
-            error = !form.hasAttribute('data-no-validate') ? formValidate.getErrors(form) : 0;
-            if (!(error === 0)) {
-              _context.next = 27;
-              break;
-            }
-            ajax = form.hasAttribute('data-ajax');
-            if (!ajax) {
-              _context.next = 24;
-              break;
-            }
-            // Если режим ajax
-            e.preventDefault();
-            formAction = form.getAttribute('action') ? form.getAttribute('action').trim() : '#';
-            formMethod = form.getAttribute('method') ? form.getAttribute('method').trim() : 'GET';
-            formData = new FormData(form);
-            form.classList.add('_sending');
-            _context.next = 11;
-            return fetch(formAction, {
-              method: formMethod,
-              body: formData
-            });
-          case 11:
-            response = _context.sent;
-            if (!response.ok) {
-              _context.next = 20;
-              break;
-            }
-            _context.next = 15;
-            return response.json();
-          case 15:
-            responseResult = _context.sent;
-            form.classList.remove('_sending');
-            formSent(form, responseResult);
-            _context.next = 22;
-            break;
-          case 20:
-            alert("Ошибка");
-            form.classList.remove('_sending');
-          case 22:
-            _context.next = 25;
-            break;
-          case 24:
-            if (form.hasAttribute('data-dev')) {
-              // Если режим разработки
-              e.preventDefault();
-              formSent(form);
-            }
-          case 25:
-            _context.next = 29;
-            break;
-          case 27:
-            e.preventDefault();
-            if (form.querySelector('._form-error') && form.hasAttribute('data-goto-error')) {
-              formGoToErrorClass = form.dataset.gotoError ? form.dataset.gotoError : '._form-error';
-              (0,_scroll_gotoblock_js__WEBPACK_IMPORTED_MODULE_2__.gotoBlock)(formGoToErrorClass, true, 1000);
-            }
-          case 29:
-          case "end":
-            return _context.stop();
-        }
-      }, _callee);
-    }));
-    return _formSubmitAction.apply(this, arguments);
-  }
-  function formSent(form) {
-    var responseResult = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "";
-    // Создаем событие отправки формы
-    document.dispatchEvent(new CustomEvent("formSent", {
-      detail: {
-        form: form
-      }
-    }));
-    // Показываем попап, если подключен модуль попапов 
-    // и для формы указана настройка
-    setTimeout(function () {
-      if (_modules_js__WEBPACK_IMPORTED_MODULE_0__.flsModules.popup) {
-        var popup = form.dataset.popupMessage;
-        popup ? _modules_js__WEBPACK_IMPORTED_MODULE_0__.flsModules.popup.open(popup) : null;
-      }
-    }, 0);
-    // Очищаем форму
-    formValidate.formClean(form);
-    // Сообщаем в консоль
-    formLogging("\u0424\u043E\u0440\u043C\u0430 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0430!");
-  }
-  function formLogging(message) {
-    FLS("[\u0424\u043E\u0440\u043C\u044B]: ".concat(message));
-  }
-}
-/* Модуь формы "колличество" */
-function formQuantity() {
-  document.addEventListener("click", function (e) {
-    var targetElement = e.target;
-    if (targetElement.closest('[data-quantity-plus]') || targetElement.closest('[data-quantity-minus]')) {
-      var valueElement = targetElement.closest('[data-quantity]').querySelector('[data-quantity-value]');
-      var value = parseInt(valueElement.value);
-      if (targetElement.hasAttribute('data-quantity-plus')) {
-        value++;
-        if (+valueElement.dataset.quantityMax && +valueElement.dataset.quantityMax < value) {
-          value = valueElement.dataset.quantityMax;
-        }
-      } else {
-        --value;
-        if (+valueElement.dataset.quantityMin) {
-          if (+valueElement.dataset.quantityMin > value) {
-            value = valueElement.dataset.quantityMin;
-          }
-        } else if (value < 1) {
-          value = 1;
-        }
-      }
-      targetElement.closest('[data-quantity]').querySelector('[data-quantity-value]').value = value;
-    }
-  });
-}
-/* Модуь звездного рейтинга */
-function formRating() {
-  var ratings = document.querySelectorAll('.rating');
-  if (ratings.length > 0) {
-    initRatings();
-  }
-  // Основная функция
-  function initRatings() {
-    var ratingActive, ratingValue;
-    // "Бегаем" по всем рейтингам на странице
-    for (var index = 0; index < ratings.length; index++) {
-      var rating = ratings[index];
-      initRating(rating);
-    }
-    // Инициализируем конкретный рейтинг
-    function initRating(rating) {
-      initRatingVars(rating);
-      setRatingActiveWidth();
-      if (rating.classList.contains('rating_set')) {
-        setRating(rating);
-      }
-    }
-    // Инициализайция переменных
-    function initRatingVars(rating) {
-      ratingActive = rating.querySelector('.rating__active');
-      ratingValue = rating.querySelector('.rating__value');
-    }
-    // Изменяем ширину активных звезд
-    function setRatingActiveWidth() {
-      var index = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : ratingValue.innerHTML;
-      var ratingActiveWidth = index / 0.05;
-      ratingActive.style.width = "".concat(ratingActiveWidth, "%");
-    }
-    // Возможность указать оценку 
-    function setRating(rating) {
-      var ratingItems = rating.querySelectorAll('.rating__item');
-      var _loop = function _loop(index) {
-        var ratingItem = ratingItems[index];
-        ratingItem.addEventListener("mouseenter", function (e) {
-          // Обновление переменных
-          initRatingVars(rating);
-          // Обновление активных звезд
-          setRatingActiveWidth(ratingItem.value);
-        });
-        ratingItem.addEventListener("mouseleave", function (e) {
-          // Обновление активных звезд
-          setRatingActiveWidth();
-        });
-        ratingItem.addEventListener("click", function (e) {
-          // Обновление переменных
-          initRatingVars(rating);
-          if (rating.dataset.ajax) {
-            // "Отправить" на сервер
-            setRatingValue(ratingItem.value, rating);
-          } else {
-            // Отобразить указанную оцнку
-            ratingValue.innerHTML = index + 1;
-            setRatingActiveWidth();
-          }
-        });
-      };
-      for (var _index3 = 0; _index3 < ratingItems.length; _index3++) {
-        _loop(_index3);
-      }
-    }
-    function setRatingValue(_x3, _x4) {
-      return _setRatingValue.apply(this, arguments);
-    }
-    function _setRatingValue() {
-      _setRatingValue = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(value, rating) {
-        var response, result, newRating;
-        return _regeneratorRuntime().wrap(function _callee2$(_context2) {
-          while (1) switch (_context2.prev = _context2.next) {
-            case 0:
-              if (rating.classList.contains('rating_sending')) {
-                _context2.next = 17;
-                break;
-              }
-              rating.classList.add('rating_sending');
-
-              // Отправика данных (value) на сервер
-              _context2.next = 4;
-              return fetch('rating.json', {
-                method: 'GET'
-
-                //body: JSON.stringify({
-                //	userRating: value
-                //}),
-                //headers: {
-                //	'content-type': 'application/json'
-                //}
-              });
-            case 4:
-              response = _context2.sent;
-              if (!response.ok) {
-                _context2.next = 15;
-                break;
-              }
-              _context2.next = 8;
-              return response.json();
-            case 8:
-              result = _context2.sent;
-              // Получаем новый рейтинг
-              newRating = result.newRating; // Вывод нового среднего результата
-              ratingValue.innerHTML = newRating;
-
-              // Обновление активных звезд
-              setRatingActiveWidth();
-              rating.classList.remove('rating_sending');
-              _context2.next = 17;
-              break;
-            case 15:
-              alert("Ошибка");
-              rating.classList.remove('rating_sending');
-            case 17:
-            case "end":
-              return _context2.stop();
-          }
-        }, _callee2);
-      }));
-      return _setRatingValue.apply(this, arguments);
-    }
-  }
-}
 
 /***/ }),
 
@@ -639,95 +150,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "_slideDown": () => (/* binding */ _slideDown),
 /* harmony export */   "_slideToggle": () => (/* binding */ _slideToggle),
 /* harmony export */   "_slideUp": () => (/* binding */ _slideUp),
-/* harmony export */   "addLoadedClass": () => (/* binding */ addLoadedClass),
-/* harmony export */   "addTouchClass": () => (/* binding */ addTouchClass),
 /* harmony export */   "bodyLock": () => (/* binding */ bodyLock),
 /* harmony export */   "bodyLockStatus": () => (/* binding */ bodyLockStatus),
 /* harmony export */   "bodyLockToggle": () => (/* binding */ bodyLockToggle),
 /* harmony export */   "bodyUnlock": () => (/* binding */ bodyUnlock),
 /* harmony export */   "dataMediaQueries": () => (/* binding */ dataMediaQueries),
 /* harmony export */   "fullVHfix": () => (/* binding */ fullVHfix),
-/* harmony export */   "getDigFormat": () => (/* binding */ getDigFormat),
-/* harmony export */   "getDigFromString": () => (/* binding */ getDigFromString),
-/* harmony export */   "getHash": () => (/* binding */ getHash),
-/* harmony export */   "indexInParent": () => (/* binding */ indexInParent),
-/* harmony export */   "isMobile": () => (/* binding */ isMobile),
-/* harmony export */   "isWebp": () => (/* binding */ isWebp),
 /* harmony export */   "menuClose": () => (/* binding */ menuClose),
 /* harmony export */   "menuInit": () => (/* binding */ menuInit),
 /* harmony export */   "menuOpen": () => (/* binding */ menuOpen),
-/* harmony export */   "removeClasses": () => (/* binding */ removeClasses),
-/* harmony export */   "setHash": () => (/* binding */ setHash),
 /* harmony export */   "showMore": () => (/* binding */ showMore),
-/* harmony export */   "spollers": () => (/* binding */ spollers),
-/* harmony export */   "tabs": () => (/* binding */ tabs),
-/* harmony export */   "uniqArray": () => (/* binding */ uniqArray)
+/* harmony export */   "spollers": () => (/* binding */ spollers)
 /* harmony export */ });
-/* harmony import */ var _modules_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules.js */ "./resources/js/files/modules.js");
-// Подключение списка активных модулей
-
-
-/* Проверка поддержки webp, добавление класса webp или no-webp для HTML */
-function isWebp() {
-  // Проверка поддержки webp
-  function testWebP(callback) {
-    var webP = new Image();
-    webP.onload = webP.onerror = function () {
-      callback(webP.height == 2);
-    };
-    webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
-  }
-  // Добавление класса _webp или _no-webp для HTML
-  testWebP(function (support) {
-    var className = support === true ? 'webp' : 'no-webp';
-    document.documentElement.classList.add(className);
-  });
-}
-/* Проверка мобильного браузера */
-var isMobile = {
-  Android: function Android() {
-    return navigator.userAgent.match(/Android/i);
-  },
-  BlackBerry: function BlackBerry() {
-    return navigator.userAgent.match(/BlackBerry/i);
-  },
-  iOS: function iOS() {
-    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-  },
-  Opera: function Opera() {
-    return navigator.userAgent.match(/Opera Mini/i);
-  },
-  Windows: function Windows() {
-    return navigator.userAgent.match(/IEMobile/i);
-  },
-  any: function any() {
-    return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
-  }
-};
-/* Добавление класса touch для HTML если браузер мобильный */
-function addTouchClass() {
-  // Добавление класса _touch для HTML если браузер мобильный
-  if (isMobile.any()) document.documentElement.classList.add('touch');
-}
-// Добавление loaded для HTML после полной загрузки страницы
-function addLoadedClass() {
-  window.addEventListener("load", function () {
-    setTimeout(function () {
-      document.documentElement.classList.add('loaded');
-    }, 0);
-  });
-}
-// Получение хеша в адресе сайта
-function getHash() {
-  if (location.hash) {
-    return location.hash.replace('#', '');
-  }
-}
-// Указание хеша в адресе сайта
-function setHash(hash) {
-  hash = hash ? "#".concat(hash) : window.location.href.split('#')[0];
-  history.pushState('', '', hash);
-}
 // Учет плавающей панели на мобильных устройствах при 100vh
 function fullVHfix() {
   var fullScreens = document.querySelectorAll('[data-fullscreen]');
@@ -740,7 +174,7 @@ function fullVHfix() {
     fixHeight();
   }
 }
-// Вспомогательные модули плавного расскрытия и закрытия объекта ======================================================================================================================================================================
+// Вспомогательные модули плавного расскрытия и закрытия объекта 
 var _slideUp = function _slideUp(target) {
   var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 500;
   var showmore = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
@@ -821,7 +255,7 @@ var _slideToggle = function _slideToggle(target) {
     return _slideUp(target, duration);
   }
 };
-// Вспомогательные модули блокировки прокрутки и скочка ====================================================================================================================================================================================================================================================================================
+// Вспомогательные модули блокировки прокрутки и скочка 
 var bodyLockStatus = true;
 var bodyLockToggle = function bodyLockToggle() {
   var delay = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 500;
@@ -867,11 +301,7 @@ var bodyLock = function bodyLock() {
     }, delay);
   }
 };
-// Модуль работы со спойлерами =======================================================================================================================================================================================================================
-/*
-Документация по работе в шаблоне: https://template.fls.guru/template-docs/modul-spojlery.html
-Сниппет (HTML): spollers
-*/
+// Модуль работы со спойлерами 
 function spollers() {
   var spollersArray = document.querySelectorAll('[data-spollers]');
   if (spollersArray.length > 0) {
@@ -981,152 +411,8 @@ function spollers() {
     }
   }
 }
-// Модуь работы с табами =======================================================================================================================================================================================================================
-/*
-Документация по работе в шаблоне: https://template.fls.guru/template-docs/modul-taby.html
-Сниппет (HTML): tabs
-*/
-function tabs() {
-  var tabs = document.querySelectorAll('[data-tabs]');
-  var tabsActiveHash = [];
-  if (tabs.length > 0) {
-    var hash = getHash();
-    if (hash && hash.startsWith('tab-')) {
-      tabsActiveHash = hash.replace('tab-', '').split('-');
-    }
-    tabs.forEach(function (tabsBlock, index) {
-      tabsBlock.classList.add('_tab-init');
-      tabsBlock.setAttribute('data-tabs-index', index);
-      tabsBlock.addEventListener("click", setTabsAction);
-      initTabs(tabsBlock);
-    });
 
-    // Получение слойлеров с медиа запросами
-    var mdQueriesArray = dataMediaQueries(tabs, "tabs");
-    if (mdQueriesArray && mdQueriesArray.length) {
-      mdQueriesArray.forEach(function (mdQueriesItem) {
-        // Событие
-        mdQueriesItem.matchMedia.addEventListener("change", function () {
-          setTitlePosition(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
-        });
-        setTitlePosition(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
-      });
-    }
-  }
-  // Установка позиций заголовков
-  function setTitlePosition(tabsMediaArray, matchMedia) {
-    tabsMediaArray.forEach(function (tabsMediaItem) {
-      tabsMediaItem = tabsMediaItem.item;
-      var tabsTitles = tabsMediaItem.querySelector('[data-tabs-titles]');
-      var tabsTitleItems = tabsMediaItem.querySelectorAll('[data-tabs-title]');
-      var tabsContent = tabsMediaItem.querySelector('[data-tabs-body]');
-      var tabsContentItems = tabsMediaItem.querySelectorAll('[data-tabs-item]');
-      tabsTitleItems = Array.from(tabsTitleItems).filter(function (item) {
-        return item.closest('[data-tabs]') === tabsMediaItem;
-      });
-      tabsContentItems = Array.from(tabsContentItems).filter(function (item) {
-        return item.closest('[data-tabs]') === tabsMediaItem;
-      });
-      tabsContentItems.forEach(function (tabsContentItem, index) {
-        if (matchMedia.matches) {
-          tabsContent.append(tabsTitleItems[index]);
-          tabsContent.append(tabsContentItem);
-          tabsMediaItem.classList.add('_tab-spoller');
-        } else {
-          tabsTitles.append(tabsTitleItems[index]);
-          tabsMediaItem.classList.remove('_tab-spoller');
-        }
-      });
-    });
-  }
-  // Работа с контентом
-  function initTabs(tabsBlock) {
-    var tabsTitles = tabsBlock.querySelectorAll('[data-tabs-titles]>*');
-    var tabsContent = tabsBlock.querySelectorAll('[data-tabs-body]>*');
-    var tabsBlockIndex = tabsBlock.dataset.tabsIndex;
-    var tabsActiveHashBlock = tabsActiveHash[0] == tabsBlockIndex;
-    if (tabsActiveHashBlock) {
-      var tabsActiveTitle = tabsBlock.querySelector('[data-tabs-titles]>._tab-active');
-      tabsActiveTitle ? tabsActiveTitle.classList.remove('_tab-active') : null;
-    }
-    if (tabsContent.length) {
-      tabsContent = Array.from(tabsContent).filter(function (item) {
-        return item.closest('[data-tabs]') === tabsBlock;
-      });
-      tabsTitles = Array.from(tabsTitles).filter(function (item) {
-        return item.closest('[data-tabs]') === tabsBlock;
-      });
-      tabsContent.forEach(function (tabsContentItem, index) {
-        tabsTitles[index].setAttribute('data-tabs-title', '');
-        tabsContentItem.setAttribute('data-tabs-item', '');
-        if (tabsActiveHashBlock && index == tabsActiveHash[1]) {
-          tabsTitles[index].classList.add('_tab-active');
-        }
-        tabsContentItem.hidden = !tabsTitles[index].classList.contains('_tab-active');
-      });
-    }
-  }
-  function setTabsStatus(tabsBlock) {
-    var tabsTitles = tabsBlock.querySelectorAll('[data-tabs-title]');
-    var tabsContent = tabsBlock.querySelectorAll('[data-tabs-item]');
-    var tabsBlockIndex = tabsBlock.dataset.tabsIndex;
-    function isTabsAnamate(tabsBlock) {
-      if (tabsBlock.hasAttribute('data-tabs-animate')) {
-        return tabsBlock.dataset.tabsAnimate > 0 ? Number(tabsBlock.dataset.tabsAnimate) : 500;
-      }
-    }
-    var tabsBlockAnimate = isTabsAnamate(tabsBlock);
-    if (tabsContent.length > 0) {
-      var isHash = tabsBlock.hasAttribute('data-tabs-hash');
-      tabsContent = Array.from(tabsContent).filter(function (item) {
-        return item.closest('[data-tabs]') === tabsBlock;
-      });
-      tabsTitles = Array.from(tabsTitles).filter(function (item) {
-        return item.closest('[data-tabs]') === tabsBlock;
-      });
-      tabsContent.forEach(function (tabsContentItem, index) {
-        if (tabsTitles[index].classList.contains('_tab-active')) {
-          if (tabsBlockAnimate) {
-            _slideDown(tabsContentItem, tabsBlockAnimate);
-          } else {
-            tabsContentItem.hidden = false;
-          }
-          if (isHash && !tabsContentItem.closest('.popup')) {
-            setHash("tab-".concat(tabsBlockIndex, "-").concat(index));
-          }
-        } else {
-          if (tabsBlockAnimate) {
-            _slideUp(tabsContentItem, tabsBlockAnimate);
-          } else {
-            tabsContentItem.hidden = true;
-          }
-        }
-      });
-    }
-  }
-  function setTabsAction(e) {
-    var el = e.target;
-    if (el.closest('[data-tabs-title]')) {
-      var tabTitle = el.closest('[data-tabs-title]');
-      var tabsBlock = tabTitle.closest('[data-tabs]');
-      if (!tabTitle.classList.contains('_tab-active') && !tabsBlock.querySelector('._slide')) {
-        var tabActiveTitle = tabsBlock.querySelectorAll('[data-tabs-title]._tab-active');
-        tabActiveTitle.length ? tabActiveTitle = Array.from(tabActiveTitle).filter(function (item) {
-          return item.closest('[data-tabs]') === tabsBlock;
-        }) : null;
-        tabActiveTitle.length ? tabActiveTitle[0].classList.remove('_tab-active') : null;
-        tabTitle.classList.add('_tab-active');
-        setTabsStatus(tabsBlock);
-      }
-      e.preventDefault();
-    }
-  }
-}
-// Модуль работы с меню (бургер) =======================================================================================================================================================================================================================
-/*
-Документация по работе в шаблоне: https://template.fls.guru/template-docs/menu-burger.html
-Сниппет (HTML): menu
-*/
+// Модуль работы с меню (бургер) 
 function menuInit() {
   if (document.querySelector(".icon-menu")) {
     document.addEventListener("click", function (e) {
@@ -1146,11 +432,7 @@ function menuClose() {
   bodyUnlock();
   document.documentElement.classList.remove("menu-open");
 }
-// Модуль "показать еще" =======================================================================================================================================================================================================================
-/*
-Документация по работе в шаблоне: https://template.fls.guru/template-docs/modul-pokazat-eshhjo.html
-Сниппет (HTML): showmore
-*/
+// Модуль "показать еще" 
 function showMore() {
   window.addEventListener("load", function (e) {
     var showMoreBlocks = document.querySelectorAll('[data-showmore]');
@@ -1265,37 +547,6 @@ function showMore() {
     }
   });
 }
-//================================================================================================================================================================================================================================================================================================================
-// Прочие полезные функции ================================================================================================================================================================================================================================================================================================================
-//================================================================================================================================================================================================================================================================================================================
-
-// Получить цифры из строки
-function getDigFromString(item) {
-  return parseInt(item.replace(/[^\d]/g, ''));
-}
-// Форматирование цифр типа 100 000 000
-function getDigFormat(item) {
-  return item.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, "$1 ");
-}
-// Убрать класс из всех элементов массива
-function removeClasses(array, className) {
-  for (var i = 0; i < array.length; i++) {
-    array[i].classList.remove(className);
-  }
-}
-// Уникализация массива
-function uniqArray(array) {
-  return array.filter(function (item, index, self) {
-    return self.indexOf(item) === index;
-  });
-}
-// Функция получения индекса внутри родителя
-function indexInParent(parent, element) {
-  var array = Array.prototype.slice.call(parent.children);
-  return Array.prototype.indexOf.call(array, element);
-}
-;
-// Обработа медиа запросов из атрибутов 
 function dataMediaQueries(array, dataSetValue) {
   // Получение объектов с медиа запросами
   var media = Array.from(array).filter(function (item, index, self) {
@@ -1343,7 +594,6 @@ function dataMediaQueries(array, dataSetValue) {
     }
   }
 }
-//================================================================================================================================================================================================================================================================================================================
 
 /***/ }),
 
@@ -1380,275 +630,6 @@ document.addEventListener('click', function (e) {
 
 /***/ }),
 
-/***/ "./resources/js/files/scroll/gotoblock.js":
-/*!************************************************!*\
-  !*** ./resources/js/files/scroll/gotoblock.js ***!
-  \************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "gotoBlock": () => (/* binding */ gotoBlock)
-/* harmony export */ });
-/* harmony import */ var _functions_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../functions.js */ "./resources/js/files/functions.js");
-// Подключение функционала "Чертогов Фрилансера"
-
-// Подключение дополнения для увеличения возможностей
-// Документация: https://github.com/cferdinandi/smooth-scroll
-// import SmoothScroll from 'smooth-scroll';
-//==============================================================================================================================================================================================================================================================================================================================
-
-// Модуль плавной проктутки к блоку
-var gotoBlock = function gotoBlock(targetBlock) {
-  var noHeader = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-  var speed = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 500;
-  var offsetTop = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 0;
-  var targetBlockElement = document.querySelector(targetBlock);
-  if (targetBlockElement) {
-    var headerItem = '';
-    var headerItemHeight = 0;
-    if (noHeader) {
-      headerItem = 'header.header';
-      var headerElement = document.querySelector(headerItem);
-      if (!headerElement.classList.contains('_header-scroll')) {
-        headerElement.style.cssText = "transition-duration: 0s;";
-        headerElement.classList.add('_header-scroll');
-        headerItemHeight = headerElement.offsetHeight;
-        headerElement.classList.remove('_header-scroll');
-        setTimeout(function () {
-          headerElement.style.cssText = "";
-        }, 0);
-      } else {
-        headerItemHeight = headerElement.offsetHeight;
-      }
-    }
-    var options = {
-      speedAsDuration: true,
-      speed: speed,
-      header: headerItem,
-      offset: offsetTop,
-      easing: 'easeOutQuad'
-    };
-    // Закрываем меню, если оно открыто
-    document.documentElement.classList.contains("menu-open") ? (0,_functions_js__WEBPACK_IMPORTED_MODULE_0__.menuClose)() : null;
-    if (typeof SmoothScroll !== 'undefined') {
-      // Прокрутка с использованием дополнения
-      new SmoothScroll().animateScroll(targetBlockElement, '', options);
-    } else {
-      // Прокрутка стандартными средствами
-      var targetBlockElementPosition = targetBlockElement.getBoundingClientRect().top + scrollY;
-      targetBlockElementPosition = headerItemHeight ? targetBlockElementPosition - headerItemHeight : targetBlockElementPosition;
-      targetBlockElementPosition = offsetTop ? targetBlockElementPosition - offsetTop : targetBlockElementPosition;
-      window.scrollTo({
-        top: targetBlockElementPosition,
-        behavior: "smooth"
-      });
-    }
-    FLS("[gotoBlock]: \u042E\u0445\u0443\u0443...\u0435\u0434\u0435\u043C \u043A ".concat(targetBlock));
-  } else {
-    FLS("[gotoBlock]: \u041E\u0439 \u043E\u0439..\u0422\u0430\u043A\u043E\u0433\u043E \u0431\u043B\u043E\u043A\u0430 \u043D\u0435\u0442 \u043D\u0430 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0435: ".concat(targetBlock));
-  }
-};
-
-/***/ }),
-
-/***/ "./resources/js/files/scroll/scroll.js":
-/*!*********************************************!*\
-  !*** ./resources/js/files/scroll/scroll.js ***!
-  \*********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "headerScroll": () => (/* binding */ headerScroll),
-/* harmony export */   "pageNavigation": () => (/* binding */ pageNavigation),
-/* harmony export */   "stickyBlock": () => (/* binding */ stickyBlock)
-/* harmony export */ });
-/* harmony import */ var _functions_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../functions.js */ "./resources/js/files/functions.js");
-/* harmony import */ var _gotoblock_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./gotoblock.js */ "./resources/js/files/scroll/gotoblock.js");
-// Подключение функционала "Чертогов Фрилансера"
-
-// Модуль прокрутки к блоку
-
-// Переменная контроля добавления события window scroll.
-var addWindowScrollEvent = false;
-//====================================================================================================================================================================================================================================================================================================
-// Плавная навигация по странице
-function pageNavigation() {
-  // data-goto - указать ID блока
-  // data-goto-header - учитывать header
-  // data-goto-top - недокрутить на указанный размер
-  // data-goto-speed - скорость (только если используется доп плагин)
-  // Работаем при клике на пункт
-  document.addEventListener("click", pageNavigationAction);
-  // Если подключен scrollWatcher, подсвечиваем текущий пукт меню
-  document.addEventListener("watcherCallback", pageNavigationAction);
-  // Основная функция
-  function pageNavigationAction(e) {
-    if (e.type === "click") {
-      var targetElement = e.target;
-      if (targetElement.closest('[data-goto]')) {
-        var gotoLink = targetElement.closest('[data-goto]');
-        var gotoLinkSelector = gotoLink.dataset["goto"] ? gotoLink.dataset["goto"] : '';
-        var noHeader = gotoLink.hasAttribute('data-goto-header') ? true : false;
-        var gotoSpeed = gotoLink.dataset.gotoSpeed ? gotoLink.dataset.gotoSpeed : 500;
-        var offsetTop = gotoLink.dataset.gotoTop ? parseInt(gotoLink.dataset.gotoTop) : 0;
-        (0,_gotoblock_js__WEBPACK_IMPORTED_MODULE_1__.gotoBlock)(gotoLinkSelector, noHeader, gotoSpeed, offsetTop);
-        e.preventDefault();
-      }
-    } else if (e.type === "watcherCallback" && e.detail) {
-      var entry = e.detail.entry;
-      var _targetElement = entry.target;
-      // Обработка пунктов навигации, если указано значение navigator подсвечиваем текущий пукт меню
-      if (_targetElement.dataset.watch === 'navigator') {
-        var navigatorActiveItem = document.querySelector("[data-goto]._navigator-active");
-        var navigatorCurrentItem;
-        if (_targetElement.id && document.querySelector("[data-goto=\"#".concat(_targetElement.id, "\"]"))) {
-          navigatorCurrentItem = document.querySelector("[data-goto=\"#".concat(_targetElement.id, "\"]"));
-        } else if (_targetElement.classList.length) {
-          for (var index = 0; index < _targetElement.classList.length; index++) {
-            var element = _targetElement.classList[index];
-            if (document.querySelector("[data-goto=\".".concat(element, "\"]"))) {
-              navigatorCurrentItem = document.querySelector("[data-goto=\".".concat(element, "\"]"));
-              break;
-            }
-          }
-        }
-        if (entry.isIntersecting) {
-          // Видим объект
-          // navigatorActiveItem ? navigatorActiveItem.classList.remove('_navigator-active') : null;
-          navigatorCurrentItem ? navigatorCurrentItem.classList.add('_navigator-active') : null;
-        } else {
-          // Не видим объект
-          navigatorCurrentItem ? navigatorCurrentItem.classList.remove('_navigator-active') : null;
-        }
-      }
-    }
-  }
-  // Прокрутка по хешу
-  if ((0,_functions_js__WEBPACK_IMPORTED_MODULE_0__.getHash)()) {
-    var goToHash;
-    if (document.querySelector("#".concat((0,_functions_js__WEBPACK_IMPORTED_MODULE_0__.getHash)()))) {
-      goToHash = "#".concat((0,_functions_js__WEBPACK_IMPORTED_MODULE_0__.getHash)());
-    } else if (document.querySelector(".".concat((0,_functions_js__WEBPACK_IMPORTED_MODULE_0__.getHash)()))) {
-      goToHash = ".".concat((0,_functions_js__WEBPACK_IMPORTED_MODULE_0__.getHash)());
-    }
-    goToHash ? (0,_gotoblock_js__WEBPACK_IMPORTED_MODULE_1__.gotoBlock)(goToHash, true, 500, 20) : null;
-  }
-}
-// Работа с шапкой при скроле
-function headerScroll() {
-  addWindowScrollEvent = true;
-  var header = document.querySelector('header.header');
-  var headerShow = header.hasAttribute('data-scroll-show');
-  var headerShowTimer = header.dataset.scrollShow ? header.dataset.scrollShow : 500;
-  var startPoint = header.dataset.scroll ? header.dataset.scroll : 1;
-  var scrollDirection = 0;
-  var timer;
-  document.addEventListener("windowScroll", function (e) {
-    var scrollTop = window.scrollY;
-    clearTimeout(timer);
-    if (scrollTop >= startPoint) {
-      !header.classList.contains('_header-scroll') ? header.classList.add('_header-scroll') : null;
-      if (headerShow) {
-        if (scrollTop > scrollDirection) {
-          // downscroll code
-          header.classList.contains('_header-show') ? header.classList.remove('_header-show') : null;
-        } else {
-          // upscroll code
-          !header.classList.contains('_header-show') ? header.classList.add('_header-show') : null;
-        }
-        timer = setTimeout(function () {
-          !header.classList.contains('_header-show') ? header.classList.add('_header-show') : null;
-        }, headerShowTimer);
-      }
-    } else {
-      header.classList.contains('_header-scroll') ? header.classList.remove('_header-scroll') : null;
-      if (headerShow) {
-        header.classList.contains('_header-show') ? header.classList.remove('_header-show') : null;
-      }
-    }
-    scrollDirection = scrollTop <= 0 ? 0 : scrollTop;
-  });
-}
-// Прилипающий блок
-function stickyBlock() {
-  addWindowScrollEvent = true;
-  // data-sticky для родителя внутри которого прилипает блок *
-  // data-sticky-header для родителя, учитываем высоту хедера
-  // data-sticky-top="" для родителя, можно указать отступ сверху
-  // data-sticky-bottom="" для родителя, можно указать отступ снизу
-  // data-sticky-item для прилипающего блока *
-  function stickyBlockInit() {
-    var stickyParents = document.querySelectorAll('[data-sticky]');
-    if (stickyParents.length) {
-      stickyParents.forEach(function (stickyParent) {
-        var stickyConfig = {
-          media: stickyParent.dataset.sticky ? parseInt(stickyParent.dataset.sticky) : null,
-          top: stickyParent.dataset.stickyTop ? parseInt(stickyParent.dataset.stickyTop) : 0,
-          bottom: stickyParent.dataset.stickyBottom ? parseInt(stickyParent.dataset.stickyBottom) : 0,
-          header: stickyParent.hasAttribute('data-sticky-header') ? document.querySelector('header.header').offsetHeight : 0
-        };
-        stickyBlockItem(stickyParent, stickyConfig);
-      });
-    }
-  }
-  function stickyBlockItem(stickyParent, stickyConfig) {
-    var stickyBlockItem = stickyParent.querySelector('[data-sticky-item]');
-    var headerHeight = stickyConfig.header;
-    var offsetTop = headerHeight + stickyConfig.top;
-    var startPoint = stickyBlockItem.getBoundingClientRect().top + scrollY - offsetTop;
-    document.addEventListener("windowScroll", stickyBlockActions);
-    //window.addEventListener("resize", stickyBlockActions);
-
-    function stickyBlockActions(e) {
-      var endPoint = stickyParent.offsetHeight + stickyParent.getBoundingClientRect().top + scrollY - (offsetTop + stickyBlockItem.offsetHeight + stickyConfig.bottom);
-      var stickyItemValues = {
-        position: "relative",
-        bottom: "auto",
-        top: "0px",
-        left: "0px",
-        width: "auto"
-      };
-      if (!stickyConfig.media || stickyConfig.media < window.innerWidth) {
-        if (offsetTop + stickyConfig.bottom + stickyBlockItem.offsetHeight < window.innerHeight) {
-          if (scrollY >= startPoint && scrollY <= endPoint) {
-            stickyItemValues.position = "fixed";
-            stickyItemValues.bottom = "auto";
-            stickyItemValues.top = "".concat(offsetTop, "px");
-            stickyItemValues.left = "".concat(stickyBlockItem.getBoundingClientRect().left, "px"); // Учесть разницу в ширине экрана?
-            stickyItemValues.width = "".concat(stickyBlockItem.offsetWidth, "px");
-          } else if (scrollY >= endPoint) {
-            stickyItemValues.position = "absolute";
-            stickyItemValues.bottom = "".concat(stickyConfig.bottom, "px");
-            stickyItemValues.top = "auto";
-            stickyItemValues.left = "0px";
-            stickyItemValues.width = "".concat(stickyBlockItem.offsetWidth, "px");
-          }
-        }
-      }
-      stickyBlockType(stickyBlockItem, stickyItemValues);
-    }
-  }
-  function stickyBlockType(stickyBlockItem, stickyItemValues) {
-    stickyBlockItem.style.cssText = "position:".concat(stickyItemValues.position, ";bottom:").concat(stickyItemValues.bottom, ";top:").concat(stickyItemValues.top, ";left:").concat(stickyItemValues.left, ";width:").concat(stickyItemValues.width, ";");
-  }
-  stickyBlockInit();
-}
-// При подключении модуля обработчик события запустится автоматически
-setTimeout(function () {
-  if (addWindowScrollEvent) {
-    var windowScroll = new Event("windowScroll");
-    window.addEventListener("scroll", function (e) {
-      document.dispatchEvent(windowScroll);
-    });
-  }
-}, 0);
-
-/***/ }),
-
 /***/ "./resources/js/files/sliders.js":
 /*!***************************************!*\
   !*** ./resources/js/files/sliders.js ***!
@@ -1674,11 +655,7 @@ function initSliders() {
     spaceBetween: 16,
     speed: 800
   }, _defineProperty(_Swiper, "slidesPerView", 'auto'), _defineProperty(_Swiper, "watchOverflow", true), _defineProperty(_Swiper, "slideToClickedSlide", true), _defineProperty(_Swiper, "centeredSlides", false), _defineProperty(_Swiper, "lazy", {
-    // Подгружать на старте
-    // переключения слайда
     loadOnTransitionStart: true,
-    // Подгрузить предыдущую
-    // и следующую картинки
     loadPrevNext: true
   }), _defineProperty(_Swiper, "navigation", {
     prevEl: '.swiper-button-prev',
@@ -1745,10 +722,7 @@ function initSlidersScroll() {
   }
 }
 window.addEventListener("load", function (e) {
-  // Запуск инициализации слайдеров
   initSliders();
-  // Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
-  // initSlidersScroll();
 });
 
 /***/ }),
