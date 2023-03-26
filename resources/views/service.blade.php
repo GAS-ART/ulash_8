@@ -32,15 +32,12 @@
     <div class="services-home-page__wrapper">
 
       <div class="services-home-page__box">
-        <h3 class="services-home-page__title-h3 section-name">о процедуре</h3>
-        <h2 class="services-home-page__title-h2 section-title">Ногтевой сервис</h2>
+        <h3 class="services-home-page__title-h3 section-name">@lang('service.head-screen.title-h3')</h3>
+        <h2 class="services-home-page__title-h2 section-title">@lang('service.head-screen.title-h2')</h2>
         <div class="services-home-page__text-wrapper">
-          <p class="services-home-page__text">
-            Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.
-            "Риба" не тільки успішно пережила п'ять століть, але й прижилася в електронному верстуванні, залишаючись по суті незмінною. Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є
-          </p>
+          <p class="services-home-page__text">@lang('service.head-screen.text')</p>
         </div>
-        <bitton class="services-home-page__popup">Записаться на маникюр</bitton>
+        <bitton class="services-home-page__popup">@lang('service.head-screen.btn-text')</bitton>
       </div>
 
     </div>
@@ -57,53 +54,58 @@
       <div class="services-price__box">
 
         <ul class="services-price__list">
-          <h4 class="services-price__title">Маникюр</h4>
+          <h4 class="services-price__title">@lang('service.price.sect-one.title')</h4>
 
           <li class="services-price__item">
-            <p class="services-price__text">Детский маникюр (придание формы+покрытие лаком, до 8 лет)</p>
+            <p class="services-price__text">@lang('service.price.sect-one.li-one')</p>
             <span class="services-price__price">10 €</span>
           </li>
           <li class="services-price__item">
-            <p class="services-price__text">Детский маникюр (придание формы+покрытие лаком, до 8 лет)</p>
+            <p class="services-price__text">@lang('service.price.sect-one.li-two')</p>
             <span class="services-price__price">10 €</span>
           </li>
           <li class="services-price__item">
-            <p class="services-price__text">Детский маникюр (придание формы+покрытие лаком, до 8 лет)</p>
+            <p class="services-price__text">@lang('service.price.sect-one.li-three')</p>
             <span class="services-price__price">10 €</span>
           </li>
           <li class="services-price__item">
-            <p class="services-price__text">Детский маникюр (придание формы+покрытие лаком, до 8 лет)</p>
+            <p class="services-price__text">@lang('service.price.sect-one.li-four')</p>
             <span class="services-price__price">10 €</span>
           </li>
           <li class="services-price__item">
-            <p class="services-price__text">Детский маникюр (придание формы+покрытие лаком, до 8 лет)</p>
+            <p class="services-price__text">@lang('service.price.sect-one.li-five')</p>
             <span class="services-price__price">10 €</span>
           </li>
           <li class="services-price__item">
-            <p class="services-price__text">Детский маникюр (придание формы+покрытие лаком, до 8 лет)</p>
+            <p class="services-price__text">@lang('service.price.sect-one.li-six')</p>
             <span class="services-price__price">10 €</span>
           </li>
           <li class="services-price__item">
-            <p class="services-price__text">Детский маникюр (придание формы+покрытие лаком, до 8 лет)</p>
+            <p class="services-price__text">@lang('service.price.sect-one.li-seven')</p>
             <span class="services-price__price">10 €</span>
           </li>
+
         </ul>
 
         <ul class="services-price__list">
-          <h4 class="services-price__title">Маникюр</h4>
+          <h4 class="services-price__title">@lang('service.price.sect-two.title')</h4>
+          <li class="services-price__item">
+            <p class="services-price__text">@lang('service.price.sect-two.li-one')</p>
+            <span class="services-price__price">10 €</span>
+          </li>
+          <li class="services-price__item">
+            <p class="services-price__text">@lang('service.price.sect-two.li-two')</p>
+            <span class="services-price__price">10 €</span>
+          </li>
+          <li class="services-price__item">
+            <p class="services-price__text">@lang('service.price.sect-two.li-three')</p>
+            <span class="services-price__price">10 €</span>
+          </li>
+          <li class="services-price__item">
+            <p class="services-price__text">@lang('service.price.sect-two.li-four')</p>
+            <span class="services-price__price">10 €</span>
+          </li>
 
-          <li class="services-price__item">
-            <p class="services-price__text">Детский маникюр (придание формы+покрытие лаком, до 8 лет)</p>
-            <span class="services-price__price">10 €</span>
-          </li>
-          <li class="services-price__item">
-            <p class="services-price__text">Детский маникюр (придание формы+покрытие лаком, до 8 лет)</p>
-            <span class="services-price__price">10 €</span>
-          </li>
-          <li class="services-price__item">
-            <p class="services-price__text">Детский маникюр (придание формы+покрытие лаком, до 8 лет)</p>
-            <span class="services-price__price">10 €</span>
-          </li>
         </ul>
 
 
@@ -112,61 +114,63 @@
       <div class="services-price__box">
 
         <ul class="services-price__list">
-          <h4 class="services-price__title">Маникюр</h4>
+          <h4 class="services-price__title">@lang('service.price.sect-three.title')</h4>
+          <p class="services-price__description">@lang('service.price.sect-three.description')</p>
+          <li class="services-price__item">
+            <p class="services-price__text">@lang('service.price.sect-three.li-one')</p>
+            <span class="services-price__price">10 €</span>
+          </li>
 
           <li class="services-price__item">
-            <p class="services-price__text">Детский маникюр (придание формы+покрытие лаком, до 8 лет)</p>
+            <p class="services-price__text">@lang('service.price.sect-three.li-two')</p>
             <span class="services-price__price">10 €</span>
           </li>
+
           <li class="services-price__item">
-            <p class="services-price__text">Детский маникюр (придание формы+покрытие лаком, до 8 лет)</p>
+            <p class="services-price__text">@lang('service.price.sect-three.li-three')</p>
             <span class="services-price__price">10 €</span>
           </li>
+
           <li class="services-price__item">
-            <p class="services-price__text">Детский маникюр (придание формы+покрытие лаком, до 8 лет)</p>
+            <p class="services-price__text">@lang('service.price.sect-three.li-four')</p>
             <span class="services-price__price">10 €</span>
           </li>
+
           <li class="services-price__item">
-            <p class="services-price__text">Детский маникюр (придание формы+покрытие лаком, до 8 лет)</p>
+            <p class="services-price__text">@lang('service.price.sect-three.li-five')</p>
             <span class="services-price__price">10 €</span>
           </li>
+
           <li class="services-price__item">
-            <p class="services-price__text">Детский маникюр (придание формы+покрытие лаком, до 8 лет)</p>
+            <p class="services-price__text">@lang('service.price.sect-three.li-six')</p>
             <span class="services-price__price">10 €</span>
           </li>
+
           <li class="services-price__item">
-            <p class="services-price__text">Детский маникюр (придание формы+покрытие лаком, до 8 лет)</p>
+            <p class="services-price__text">@lang('service.price.sect-three.li-seven')</p>
             <span class="services-price__price">10 €</span>
           </li>
+
           <li class="services-price__item">
-            <p class="services-price__text">Детский маникюр (придание формы+покрытие лаком, до 8 лет)</p>
+            <p class="services-price__text">@lang('service.price.sect-three.li-eight')</p>
+            <span class="services-price__price">10 €</span>
+          </li>
+
+          <li class="services-price__item">
+            <p class="services-price__text">@lang('service.price.sect-three.li-nine')</p>
+            <span class="services-price__price">10 €</span>
+          </li>
+
+          <li class="services-price__item">
+            <p class="services-price__text">@lang('service.price.sect-three.li-ten')</p>
             <span class="services-price__price">10 €</span>
           </li>
         </ul>
-
-        <ul class="services-price__list">
-          <h4 class="services-price__title">Маникюр</h4>
-
-          <li class="services-price__item">
-            <p class="services-price__text">Детский маникюр (придание формы+покрытие лаком, до 8 лет)</p>
-            <span class="services-price__price">10 €</span>
-          </li>
-          <li class="services-price__item">
-            <p class="services-price__text">Детский маникюр (придание формы+покрытие лаком, до 8 лет)</p>
-            <span class="services-price__price">10 €</span>
-          </li>
-          <li class="services-price__item">
-            <p class="services-price__text">Детский маникюр (придание формы+покрытие лаком, до 8 лет)</p>
-            <span class="services-price__price">10 €</span>
-          </li>
-        </ul>
-
-
       </div>
 
     </div>
 
-    <button class="services-price__btn">Посмотреть все цены</button>
+    <button class="services-price__btn">@lang('service.price.btn-text')</button>
   </div>
 </section>
 
@@ -195,15 +199,12 @@
 
 
         <div class="services-types__content">
-          <h3 class="services-types__title-h3 section-name">маникюр</h3>
-          <h2 class="services-types__title-h2 section-title">комбинированный</h2>
+          <h3 class="services-types__title-h3 section-name">@lang('service.types.sect-one.title-h3')</h3>
+          <h2 class="services-types__title-h2 section-title">@lang('service.types.sect-one.title-h2')</h2>
           <div class="services-types__text-wrapper">
-            <p class="services-types__text">
-              Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.
-              "Риба" не тільки успішно пережила п'ять століть, але й прижилася в електронному верстуванні, залишаючись по суті незмінною. Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum
-            </p>
+            <p class="services-types__text">@lang('service.types.sect-one.text')</p>
           </div>
-          <bitton class="services-home-page__popup">Записаться на маникюр</bitton>
+          <bitton class="services-home-page__popup">@lang('service.types.sect-one.btn-text')</bitton>
         </div>
 
       </div>
@@ -227,15 +228,12 @@
 
 
         <div class="services-types__content">
-          <h3 class="services-types__title-h3 section-name">маникюр</h3>
-          <h2 class="services-types__title-h2 section-title">комбинированный</h2>
+          <h3 class="services-types__title-h3 section-name">@lang('service.types.sect-two.title-h3')</h3>
+          <h2 class="services-types__title-h2 section-title">@lang('service.types.sect-two.title-h2')</h2>
           <div class="services-types__text-wrapper">
-            <p class="services-types__text">
-              Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.
-              "Риба" не тільки успішно пережила п'ять століть, але й прижилася в електронному верстуванні, залишаючись по суті незмінною. Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum
-            </p>
+            <p class="services-types__text">@lang('service.types.sect-two.text')</p>
           </div>
-          <bitton class="services-home-page__popup">Записаться на маникюр</bitton>
+          <bitton class="services-home-page__popup">@lang('service.types.sect-two.btn-text')</bitton>
         </div>
 
       </div>
@@ -259,15 +257,12 @@
 
 
         <div class="services-types__content">
-          <h3 class="services-types__title-h3 section-name">маникюр</h3>
-          <h2 class="services-types__title-h2 section-title">комбинированный</h2>
+          <h3 class="services-types__title-h3 section-name">@lang('service.types.sect-three.title-h3')</h3>
+          <h2 class="services-types__title-h2 section-title">@lang('service.types.sect-three.title-h2')</h2>
           <div class="services-types__text-wrapper">
-            <p class="services-types__text">
-              Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.
-              "Риба" не тільки успішно пережила п'ять століть, але й прижилася в електронному верстуванні, залишаючись по суті незмінною. Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum
-            </p>
+            <p class="services-types__text">@lang('service.types.sect-three.text')</p>
           </div>
-          <bitton class="services-home-page__popup">Записаться на маникюр</bitton>
+          <bitton class="services-home-page__popup">@lang('service.types.sect-three.btn-text')</bitton>
         </div>
 
       </div>
@@ -291,17 +286,13 @@
 
 
         <div class="services-types__content">
-          <h3 class="services-types__title-h3 section-name">маникюр</h3>
-          <h2 class="services-types__title-h2 section-title">комбинированный</h2>
+          <h3 class="services-types__title-h3 section-name">@lang('service.types.sect-four.title-h3')</h3>
+          <h2 class="services-types__title-h2 section-title">@lang('service.types.sect-four.title-h2')</h2>
           <div class="services-types__text-wrapper">
-            <p class="services-types__text">
-              Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.
-              "Риба" не тільки успішно пережила п'ять століть, але й прижилася в електронному верстуванні, залишаючись по суті незмінною. Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum
-            </p>
+            <p class="services-types__text">@lang('service.types.sect-four.text')</p>
           </div>
-          <bitton class="services-home-page__popup">Записаться на маникюр</bitton>
+          <bitton class="services-home-page__popup">@lang('service.types.sect-four.btn-text')</bitton>
         </div>
-
       </div>
     </div>
   </div>

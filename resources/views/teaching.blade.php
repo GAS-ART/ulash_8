@@ -32,14 +32,12 @@
     <div class="teaching-home-page__wrapper">
 
       <div class="teaching-home-page__box">
-        <h3 class="teaching-home-page__title-h3 section-name">курс</h3>
-        <h2 class="teaching-home-page__title-h2 section-title">Получи повышение квалификации лешмейкера</h2>
+        <h3 class="teaching-home-page__title-h3 section-name">@lang('teaching.head-screen.title-h3')</h3>
+        <h2 class="teaching-home-page__title-h2 section-title">@lang('teaching.head-screen.title-h2')</h2>
         <div class="teaching-home-page__text-wrapper">
-          <p class="teaching-home-page__text">
-            за 1 день в международной академии красоты Glory Lash
-          </p>
+          <p class="teaching-home-page__text">@lang('teaching.head-screen.text')</p>
         </div>
-        <bitton class="teaching-home-page__popup" data-popup="#popup">Забронировать место</bitton>
+        <bitton class="teaching-home-page__popup" data-popup="#popup">@lang('teaching.head-screen.btn-text')</bitton>
       </div>
 
     </div>
@@ -73,38 +71,38 @@
 
       <div class="teaching-about__content">
         <div class="teaching-about__title">
-          <h3 class="teaching-about__title-h3 section-name">Курс "Повышение квалификации по</h3>
-          <h3 class="teaching-about__title-h3 section-name">наращиванию ресниц"</h3>
+          <h3 class="teaching-about__title-h3 section-name">@lang('teaching.about.title-h3')</h3>
+          <h3 class="teaching-about__title-h3 section-name">@lang('teaching.about.title-h3-two')</h3>
         </div>
 
         <div class="teaching-about__title-mobile">
-          <h3 class="teaching-about__title-h3 section-name">Курс "Повышение</h3>
-          <h3 class="teaching-about__title-h3 section-name">квалификации по</h3>
-          <h3 class="teaching-about__title-h3 section-name">наращиванию ресниц"</h3>
+          <h3 class="teaching-about__title-h3 section-name">@lang('teaching.about.title-h3-mobile')</h3>
+          <h3 class="teaching-about__title-h3 section-name">@lang('teaching.about.title-h3-two-mobile')</h3>
+          <h3 class="teaching-about__title-h3 section-name">@lang('teaching.about.title-h3-three-mobile')</h3>
         </div>
 
-        <h2 class="teaching-about__title-h2 section-title">Подробней о курсе</h2>
+        <h2 class="teaching-about__title-h2 section-title">@lang('teaching.about.title-h2')</h2>
         <ul class="teaching-about__items">
 
           <li class="teaching-about__item">
             <span class="teaching-about__icon icon-point"></span>
-            <p class="teaching-about__text"><span>Старт:</span> Курс длится 1 день с 10.00 - 20.00</p>
+            <p class="teaching-about__text">@lang('teaching.about.li-one')</p>
           </li>
           <li class="teaching-about__item">
             <span class="teaching-about__icon icon-point"></span>
-            <p class="teaching-about__text"><span>Максимальное количество:</span> 3 человека</p>
+            <p class="teaching-about__text">@lang('teaching.about.li-two')</p>
           </li>
           <li class="teaching-about__item">
             <span class="teaching-about__icon icon-point"></span>
-            <p class="teaching-about__text"><span>Место:</span> студия красоты Ulash в отдельном оборудованном для обучения кабинете со всеми необходимыми материалами</p>
+            <p class="teaching-about__text">@lang('teaching.about.li-three')</p>
           </li>
           <li class="teaching-about__item">
             <span class="teaching-about__icon icon-point"></span>
-            <p class="teaching-about__text"><span>Цена:</span> 100 €</p>
+            <p class="teaching-about__text">@lang('teaching.about.li-four')</p>
           </li>
 
         </ul>
-        <bitton class="teaching-about__popup">Получить консультацию</bitton>
+        <bitton class="teaching-about__popup">@lang('teaching.about.btn-text')</bitton>
       </div>
 
     </div>
@@ -116,23 +114,23 @@
   <div class="teaching-advantages__container">
 
     <div class="teaching-advantages__title">
-      <h3 class="teaching-advantages__title-h3 section-name">Преимущества</h3>
-      <h2 class="teaching-advantages__title-h2 section-title">Что ты получишь за 2 дня</h2>
+      <h3 class="teaching-advantages__title-h3 section-name">@lang('teaching.advantages.title-h3')</h3>
+      <h2 class="teaching-advantages__title-h2 section-title">@lang('teaching.advantages.title-h2')</h2>
     </div>
 
     <div class="teaching-advantages__wrapper">
 
       <div class="teaching-advantages__item">
         <div class="teaching-advantages__icon icon-handClock"></div>
-        <div class="teaching-advantages__text">Мощную теоретическую базу по нашим учебным пособиям</div>
+        <div class="teaching-advantages__text">@lang('teaching.advantages.li-one')</div>
       </div>
       <div class="teaching-advantages__item">
         <div class="teaching-advantages__icon icon-rockFlower"></div>
-        <div class="teaching-advantages__text">Почти индивидуальное обучение (группа до 3 человек)</div>
+        <div class="teaching-advantages__text">@lang('teaching.advantages.li-two')</div>
       </div>
       <div class="teaching-advantages__item">
         <div class="teaching-advantages__icon icon-diamond"></div>
-        <div class="teaching-advantages__text">3 сертификата международного образца от академии Glory lash</div>
+        <div class="teaching-advantages__text">@lang('teaching.advantages.li-three')</div>
       </div>
     </div>
   </div>
@@ -142,8 +140,8 @@
   <p class="teaching-program__decor-text">program</p>
   <div class="teaching-program__container">
     <div class="teaching-advantages__title">
-      <h3 class="teaching-advantages__title-h3 section-name">Программа курса</h3>
-      <h2 class="teaching-advantages__title-h2 section-title">Что входит в курс:</h2>
+      <h3 class="teaching-advantages__title-h3 section-name">@lang('teaching.program.title-h3')</h3>
+      <h2 class="teaching-advantages__title-h2 section-title">@lang('teaching.program.title-h2')</h2>
     </div>
 
     <div class="teaching-program__wrapper">
@@ -151,35 +149,35 @@
 
         <li class="teaching-program__item">
           <span class="teaching-program__icon icon-curl"></span>
-          <p class="teaching-program__text">Теория наращивания нижних ресниц + правильная постановка руки</p>
+          <p class="teaching-program__text">@lang('teaching.program.li-one')</p>
         </li>
         <li class="teaching-program__item">
           <span class="teaching-program__icon icon-curl"></span>
-          <p class="teaching-program__text">Теория наращивания нижних ресниц + правильная постановка руки</p>
+          <p class="teaching-program__text">@lang('teaching.program.li-two')</p>
         </li>
         <li class="teaching-program__item">
           <span class="teaching-program__icon icon-curl"></span>
-          <p class="teaching-program__text">Теория наращивания нижних ресниц + правильная постановка руки</p>
+          <p class="teaching-program__text">@lang('teaching.program.li-three')</p>
         </li>
         <li class="teaching-program__item">
           <span class="teaching-program__icon icon-curl"></span>
-          <p class="teaching-program__text">Теория наращивания нижних ресниц + правильная постановка руки</p>
+          <p class="teaching-program__text">@lang('teaching.program.li-four')</p>
         </li>
         <li class="teaching-program__item">
           <span class="teaching-program__icon icon-curl"></span>
-          <p class="teaching-program__text">Теория наращивания нижних ресниц + правильная постановка руки</p>
+          <p class="teaching-program__text">@lang('teaching.program.li-five')</p>
         </li>
         <li class="teaching-program__item">
           <span class="teaching-program__icon icon-curl"></span>
-          <p class="teaching-program__text">Теория наращивания нижних ресниц + правильная постановка руки</p>
+          <p class="teaching-program__text">@lang('teaching.program.li-six')</p>
         </li>
         <li class="teaching-program__item">
           <span class="teaching-program__icon icon-curl"></span>
-          <p class="teaching-program__text">Теория наращивания нижних ресниц + правильная постановка руки</p>
+          <p class="teaching-program__text">@lang('teaching.program.li-seven')</p>
         </li>
         <li class="teaching-program__item">
           <span class="teaching-program__icon icon-curl"></span>
-          <p class="teaching-program__text">Теория наращивания нижних ресниц + правильная постановка руки</p>
+          <p class="teaching-program__text">@lang('teaching.program.li-eight')</p>
         </li>
 
       </ul>

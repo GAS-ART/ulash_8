@@ -16,19 +16,19 @@
   <div class="contacts__wrapper">
     <div class="contacts__content">
       <div class="popup__text">
-        <h3 class="popup__title-h3 section-name">связаться с нами</h3>
-        <h2 class="popup__title-h2 section-title">Контакты</h2>
+        <h3 class="popup__title-h3 section-name">@lang('contacts.title-h3')</h3>
+        <h2 class="popup__title-h2 section-title">@lang('contacts.title-h2')</h2>
         <ul class="footer__menu-list">
           <li class="footer__menu-item">
             <a class="footer__contacts-item" href="#">
               <span class="footer__contacts-icon icon-point"></span>
-              <p class="footer__contacts-address">Barselona, adress adress</p>
+              <p class="footer__contacts-address">@lang('contacts.adress-link')</p>
             </a>
           </li>
           <li class="footer__menu-item">
             <a class="footer__contacts-item" href="tel:+34617051264">
               <span class="footer__contacts-icon icon-phone"></span>
-              <p class="footer__contacts-phone">+34 617-05-12-64</p>
+              <p class="footer__contacts-phone">@lang('contacts.phone-link')</p>
             </a>
           </li>
         </ul>
@@ -38,24 +38,24 @@
         <div class="popup__form-block">
           <div class="popup__form-box">
             <div>
-              <input class="popup__name" placeholder="Ваше имя*" tabindex="1" name="name" type="text" />
+              <input class="popup__name" placeholder="@lang('contacts.name')" tabindex="1" name="name" type="text" />
               <p class="name-error"></p>
             </div>
             <div class="contacts__phon-mail">
               <div>
-                <input class="popup__phone" placeholder="Номер телефона*" tabindex="2" name="phone" />
+                <input class="popup__phone" placeholder="@lang('contacts.phone')" tabindex="2" name="phone" />
                 <p class="phone-error"></p>
               </div>
-              <input class="popup__email" placeholder="Email" tabindex="3" name="email" type="text" />
+              <input class="popup__email" placeholder="@lang('contacts.mail')" tabindex="3" name="email" type="text" />
             </div>
             <div>
-              <textarea class="popup__textarea" placeholder="Комментарий" name="text" tabindex="5"></textarea>
+              <textarea class="popup__textarea" placeholder="@lang('contacts.textarea')" name="text" tabindex="5"></textarea>
             </div>
           </div>
         </div>
 
         <div class="popup__button-wrapper">
-          <button class="popup__button" type="submit">Оставить заявку</button>
+          <button class="popup__button" type="submit">@lang('contacts.btn')</button>
         </div>
 
       </form>

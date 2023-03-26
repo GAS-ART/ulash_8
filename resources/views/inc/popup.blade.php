@@ -4,37 +4,37 @@
     <div class="popup__content">
       <div class="popup__close" data-close></div>
       <div class="popup__text">
-        <h3 class="popup__title-h3 section-name">Оставить заявку</h3>
-        <h2 class="popup__title-h2 section-title">ВЫБРАЛИ НУЖНУЮ ВАМ УСЛУГУ?</h2>
+        <h3 class="popup__title-h3 section-name">@lang('popup.title-h3')</h3>
+        <h2 class="popup__title-h2 section-title">@lang('popup.title-h2')</h2>
       </div>
       <form class="popup__form @lang('lang.current')" action="#" method="post">
         @csrf
         <div class="popup__form-block">
           <div class="popup__form-box">
             <div class="popup__input-box">
-              <input class="popup__name" placeholder="Ваше имя*" tabindex="1" name="name" type="text" />
+              <input class="popup__name" placeholder="@lang('popup.name')" tabindex="1" name="name" type="text" />
               <p class="name-error"></p>
             </div>
             <div class="popup__input-box">
-              <input class="popup__phone" placeholder="Номер телефона *" tabindex="2" name="phone" />
+              <input class="popup__phone" placeholder="@lang('popup.phone')" tabindex="2" name="phone" />
               <p class="phone-error"></p>
             </div>
-            <input class="popup__email" placeholder="Email" tabindex="3" name="email" type="text" />
+            <input class="popup__email" placeholder="@lang('popup.mail')" tabindex="3" name="email" type="text" />
           </div>
 
           <div class="popup__form-box">
             <select class="popup__select" name="service" tabindex="4">
               <option value=""></option>
-              <option value="Масаж">Масаж</option>
-              <option value="Спортзал">Спортзал</option>
+              <option value="Масаж">@lang('popup.option-one')</option>
+              <option value="Спортзал">@lang('popup.option-two')</option>
             </select>
 
-            <textarea class="popup__textarea" placeholder="Комментарий" name="text" tabindex="5"></textarea>
+            <textarea class="popup__textarea" placeholder="@lang('popup.textarea')" name="text" tabindex="5"></textarea>
           </div>
         </div>
 
         <div class="popup__button-wrapper">
-          <button class="popup__button" type="submit">Оставить заявку</button>
+          <button class="popup__button" type="submit">@lang('popup.btn')</button>
         </div>
 
       </form>

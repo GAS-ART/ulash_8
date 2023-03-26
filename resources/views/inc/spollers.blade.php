@@ -1,93 +1,75 @@
+<p class="spollers__decor-text">FAQ</p>
+<div class="spollers__container">
+  <h2 class="spollers__title-h2 section-title">@lang('home.spollers.title')</h2>
 
-  <p class="spollers__decor-text">FAQ</p>
-  <div class="spollers__container">
-    <h2 class="spollers__title-h2 section-title">Вопрос ответ</h2>
+  <div class="spollers__wrapper">
 
-    <div class="spollers__wrapper">
+    <div class="spollers__box">
 
-      <div class="spollers__box">
-
-        <div class="spollers__item" data-spollers>
-          <button type="button" data-spoller class="spollers__title">
-            <p class="spollers__text">Сколько будет длиться процедура наращивания ресниц?</p>
-            <span class="spollers__icon icon-plusSpoiler"></span>
-          </button>
-          <div class="spollers__body">
-            Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.
-          </div>
-        </div>
-
-        <div class="spollers__item" data-spollers>
-          <button type="button" data-spoller class="spollers__title">
-            <p class="spollers__text">Сколько будет длиться процедура наращивания ресниц?</p>
-            <span class="spollers__icon icon-plusSpoiler"></span>
-          </button>
-          <div class="spollers__body">
-            Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.
-          </div>
-        </div>
-        <div class="spollers__item" data-spollers>
-          <button type="button" data-spoller class="spollers__title">
-            <p class="spollers__text">Сколько будет длиться процедура наращивания ресниц?</p>
-            <span class="spollers__icon icon-plusSpoiler"></span>
-          </button>
-          <div class="spollers__body">
-            Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.
-          </div>
-        </div>
-        <div class="spollers__item" data-spollers>
-          <button type="button" data-spoller class="spollers__title">
-            <p class="spollers__text">Сколько будет длиться процедура наращивания ресниц?</p>
-            <span class="spollers__icon icon-plusSpoiler"></span>
-          </button>
-          <div class="spollers__body">
-            Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.
-          </div>
-        </div>
-
+      <div class="spollers__item" data-spollers>
+        <button type="button" data-spoller class="spollers__title">
+          <p class="spollers__text">@lang('home.spollers.spoller-one')</p>
+          <span class="spollers__icon icon-plusSpoiler"></span>
+        </button>
+        <div class="spollers__body">@lang('home.spollers.content-one')</div>
       </div>
 
-      <div class="spollers__box">
-
-        <div class="spollers__item" data-spollers>
-          <button type="button" data-spoller class="spollers__title">
-            <p class="spollers__text">Сколько будет длиться процедура наращивания ресниц?</p>
-            <span class="spollers__icon icon-plusSpoiler"></span>
-          </button>
-          <div class="spollers__body">
-            Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.
-          </div>
-        </div>
-
-        <div class="spollers__item" data-spollers>
-          <button type="button" data-spoller class="spollers__title">
-            <p class="spollers__text">Сколько будет длиться процедура наращивания ресниц?</p>
-            <span class="spollers__icon icon-plusSpoiler"></span>
-          </button>
-          <div class="spollers__body">
-            Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.
-          </div>
-        </div>
-        <div class="spollers__item" data-spollers>
-          <button type="button" data-spoller class="spollers__title">
-            <p class="spollers__text">Сколько будет длиться процедура наращивания ресниц?</p>
-            <span class="spollers__icon icon-plusSpoiler"></span>
-          </button>
-          <div class="spollers__body">
-            Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.
-          </div>
-        </div>
-        <div class="spollers__item" data-spollers>
-          <button type="button" data-spoller class="spollers__title">
-            <p class="spollers__text">Сколько будет длиться процедура наращивания ресниц?</p>
-            <span class="spollers__icon icon-plusSpoiler"></span>
-          </button>
-          <div class="spollers__body">
-            Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.
-          </div>
-        </div>
-
+      <div class="spollers__item" data-spollers>
+        <button type="button" data-spoller class="spollers__title">
+          <p class="spollers__text">@lang('home.spollers.spoller-two')</p>
+          <span class="spollers__icon icon-plusSpoiler"></span>
+        </button>
+        <div class="spollers__body">@lang('home.spollers.content-two')</div>
+      </div>
+      <div class="spollers__item" data-spollers>
+        <button type="button" data-spoller class="spollers__title">
+          <p class="spollers__text">@lang('home.spollers.spoller-three')</p>
+          <span class="spollers__icon icon-plusSpoiler"></span>
+        </button>
+        <div class="spollers__body">@lang('home.spollers.content-three')</div>
+      </div>
+      <div class="spollers__item" data-spollers>
+        <button type="button" data-spoller class="spollers__title">
+          <p class="spollers__text">@lang('home.spollers.spoller-four')</p>
+          <span class="spollers__icon icon-plusSpoiler"></span>
+        </button>
+        <div class="spollers__body">@lang('home.spollers.content-four')</div>
       </div>
 
     </div>
+
+    <div class="spollers__box">
+
+      <div class="spollers__item" data-spollers>
+        <button type="button" data-spoller class="spollers__title">
+          <p class="spollers__text">@lang('home.spollers.spoller-five')</p>
+          <span class="spollers__icon icon-plusSpoiler"></span>
+        </button>
+        <div class="spollers__body">@lang('home.spollers.content-five')</div>
+      </div>
+
+      <div class="spollers__item" data-spollers>
+        <button type="button" data-spoller class="spollers__title">
+          <p class="spollers__text">@lang('home.spollers.spoller-six')</p>
+          <span class="spollers__icon icon-plusSpoiler"></span>
+        </button>
+        <div class="spollers__body">@lang('home.spollers.content-six')</div>
+      </div>
+      <div class="spollers__item" data-spollers>
+        <button type="button" data-spoller class="spollers__title">
+          <p class="spollers__text">@lang('home.spollers.spoller-seven')</p>
+          <span class="spollers__icon icon-plusSpoiler"></span>
+        </button>
+        <div class="spollers__body">@lang('home.spollers.content-seven')</div>
+      </div>
+      <div class="spollers__item" data-spollers>
+        <button type="button" data-spoller class="spollers__title">
+          <p class="spollers__text">@lang('home.spollers.spoller-eight')</p>
+          <span class="spollers__icon icon-plusSpoiler"></span>
+        </button>
+        <div class="spollers__body">@lang('home.spollers.content-eight')</div>
+      </div>
+    </div>
+
   </div>
+</div>

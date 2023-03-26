@@ -13,15 +13,15 @@
     <div class="home-page__container">
       <div class="home-page__content">
         <div class="home-page__icon icon-curl"></div>
-        <h1 class="home-page__titel">ULASH</h1>
-        <p class="home-page__accent">Салон красоты в Барселоне</p>
-        <p class="home-page__text">Премиум качество от лучших мастеров красоты и эстетики</p>
-        <button class="home-page__popup" data-popup='#popup'>Консультация</button>
+        <h1 class="home-page__titel">@lang('home.head-screen.title')</h1>
+        <p class="home-page__accent">@lang('home.head-screen.text')</p>
+        <p class="home-page__text">@lang('home.head-screen.description')</p>
+        <button class="home-page__popup" data-popup='#popup'>@lang('home.head-screen.btn-text')</button>
       </div>
       <div class="home-page__mobile">
         <div class="home-page__mobile-icon icon-curl"></div>
-        <p class="home-page__text-mobile">Премиум качество от лучших мастеров красоты и эстетики</p>
-        <button class="home-page__popup-mobile" data-popup='#popup'>Консультация</button>
+        <p class="home-page__text-mobile">@lang('home.head-screen.description')</p>
+        <button class="home-page__popup-mobile" data-popup='#popup'>@lang('home.head-screen.btn-text')</button>
       </div>
     </div>
     <div class="home-page__bg-wrapper">
@@ -47,9 +47,8 @@
     <div class="about__wrapper">
       <div class="about__title-author">
         <div class="about__title">
-          <h3 class="about__title-h3 section-name">О нашем салоне</h3>
-          <h2 class="about__title-h2 section-title">Салон красоты
-            Ulash</h2>
+          <h3 class="about__title-h3 section-name">@lang('home.about.title-h3')</h3>
+          <h2 class="about__title-h2 section-title">@lang('home.about.title-h2')</h2>
         </div>
         <div class="about__author">
           <div class="about__author-wrapper">
@@ -68,9 +67,8 @@
             </div>
 
             <div class="about__author-name-wrapper">
-              <p class="about__author-name">Прокопенко
-                Валентина Викторовна</p>
-              <p class="about__author-profession">Владелица студии красоты</p>
+              <p class="about__author-name">@lang('home.about.author-name')</p>
+              <p class="about__author-profession">@lang('home.about.author-profession')</p>
             </div>
           </div>
           <div class="about__author-signa">
@@ -90,12 +88,9 @@
         </div>
       </div>
       <div class="about__text-wrapper">
-        <p class="about__text">Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.
-        </p>
-        <p class="about__text">"Риба" не тільки успішно пережила п'ять століть, але й прижилася в електронному верстуванні, залишаючись по суті незмінною. Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є
-        </p>
-        <p class="about__text">Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів
-        </p>
+        <p class="about__text">@lang('home.about.text-one')</p>
+        <p class="about__text">@lang('home.about.text-two')</p>
+        <p class="about__text">@lang('home.about.text-three')</p>
       </div>
 
 
@@ -123,8 +118,8 @@
     <p class="services__decor">services</p>
     <div class="services__servis">
       <div class="services__title">
-        <h3 class="services__title-h3 section-name">услуги</h3>
-        <h2 class="services__title-h2 section-title">Что мы можем предложить</h2>
+        <h3 class="services__title-h3 section-name">@lang('home.services.title-h3')</h3>
+        <h2 class="services__title-h2 section-title">@lang('home.services.title-h2')</h2>
       </div>
       <div class="services__imgs-wrapper">
 
@@ -144,8 +139,8 @@
           @endif
 
           <div class="services__content">
-            <h4 class="services__content-title">Ногтевой сервис</h4>
-            <p class="services__content-link">Записаться</p>
+            <h4 class="services__content-title">@lang('home.services.card-one-text')</h4>
+            <p class="services__content-link">@lang('home.services.card-btn-text')</p>
           </div>
         </a>
 
@@ -165,8 +160,8 @@
           @endif
 
           <div class="services__content">
-            <h4 class="services__content-title">Ногтевой сервис</h4>
-            <p class="services__content-link">Записаться</p>
+            <h4 class="services__content-title">@lang('home.services.card-two-text')</h4>
+            <p class="services__content-link">@lang('home.services.card-btn-text')</p>
           </div>
         </a>
 
@@ -186,8 +181,8 @@
           @endif
 
           <div class="services__content">
-            <h4 class="services__content-title">Ногтевой сервис</h4>
-            <p class="services__content-link">Записаться</p>
+            <h4 class="services__content-title">@lang('home.services.card-three-text')</h4>
+            <p class="services__content-link">@lang('home.services.card-btn-text')</p>
           </div>
         </a>
 
@@ -207,8 +202,8 @@
           @endif
 
           <div class="services__content">
-            <h4 class="services__content-title">Ногтевой сервис</h4>
-            <p class="services__content-link">Записаться</p>
+            <h4 class="services__content-title">@lang('home.services.card-four-text')</h4>
+            <p class="services__content-link">@lang('home.services.card-btn-text')</p>
           </div>
         </a>
 
@@ -216,7 +211,7 @@
 
     </div>
     <div class="services__teaching">
-      <h2 class="services__teaching-title-h2 section-title">Обучение</h2>
+      <h2 class="services__teaching-title-h2 section-title">@lang('home.teaching.title')</h2>
 
       <div class="services__teaching-wrapper">
 
@@ -238,9 +233,9 @@
 
           </a>
           <div class="services__teaching-content">
-            <h4 class="services__teaching-title">Курс по наращиванию нижних ресниц и декорирования</h4>
-            <p class="services__teaching-text">Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично</p>
-            <button class="services__teaching-popup">Записаться</button>
+            <h4 class="services__teaching-title">@lang('home.teaching.card-one-title')</h4>
+            <p class="services__teaching-text">@lang('home.teaching.card-one-text')</p>
+            <button class="services__teaching-popup">@lang('home.teaching.card-btn-text')</button>
           </div>
         </div>
 
@@ -261,9 +256,9 @@
             @endif
           </a>
           <div class="services__teaching-content">
-            <h4 class="services__teaching-title">Курс по наращиванию нижних ресниц и декорирования</h4>
-            <p class="services__teaching-text">Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично</p>
-            <button class="services__teaching-popup">Записаться</button>
+            <h4 class="services__teaching-title">@lang('home.teaching.card-two-title')</h4>
+            <p class="services__teaching-text">@lang('home.teaching.card-two-text')</p>
+            <button class="services__teaching-popup">@lang('home.teaching.card-btn-text')</button>
           </div>
         </div>
 
@@ -284,9 +279,9 @@
             @endif
           </a>
           <div class="services__teaching-content">
-            <h4 class="services__teaching-title">Курс по наращиванию нижних ресниц и декорирования</h4>
-            <p class="services__teaching-text">Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично</p>
-            <button class="services__teaching-popup">Записаться</button>
+            <h4 class="services__teaching-title">@lang('home.teaching.card-three-title')</h4>
+            <p class="services__teaching-text">@lang('home.teaching.card-three-text')</p>
+            <button class="services__teaching-popup">@lang('home.teaching.card-btn-text')</button>
           </div>
         </div>
       </div>
@@ -302,22 +297,22 @@
       <div class="advantages__wrapper">
         <div class="advantages__item">
           <div class="advantages__icon">10</div>
-          <div class="advantages__text">10 лет делаем людей красивыми</div>
+          <div class="advantages__text">@lang('home.advantages.text-one')</div>
         </div>
 
         <div class="advantages__item">
           <div class="advantages__icon icon-handClock"></div>
-          <div class="advantages__text">Экономим ваше время с услугами в 4-6 рук</div>
+          <div class="advantages__text">@lang('home.advantages.text-two')</div>
         </div>
- 
+
         <div class="advantages__item">
           <div class="advantages__icon icon-rockFlower"></div>
-          <div class="advantages__text">Экономим ваше время с услугами в 4-6 рук</div>
+          <div class="advantages__text">@lang('home.advantages.text-three')</div>
         </div>
-  
+
         <div class="advantages__item">
           <div class="advantages__icon icon-diamond"></div>
-          <div class="advantages__text">Экономим ваше время с услугами в 4-6 рук</div>
+          <div class="advantages__text">@lang('home.advantages.text-four')</div>
         </div>
       </div>
     </div>
@@ -326,8 +321,8 @@
   <section class="saloon">
     <div class="saloon__container">
       <div class="saloon__title">
-        <h3 class="saloon__title-h3 section-name">салон красоты</h3>
-        <h2 class="saloon__title-h2 section-title">Наши последние работы</h2>
+        <h3 class="saloon__title-h3 section-name">@lang('home.saloon.title-h3')</h3>
+        <h2 class="saloon__title-h2 section-title">@lang('home.saloon.title-h2')</h2>
       </div>
 
       <div class="saloon__wrapper">
@@ -350,8 +345,8 @@
           <div class="saloon__content-wrapper">
             <div class="saloon__icon icon-plusImage"></div>
             <div class="saloon__text-wrapper">
-              <h4 class="saloon__content-title">ресницы</h4>
-              <p class="saloon__text">Lorem Ipsum - це текст-"риба", що використовується</p>
+              <h4 class="saloon__content-title">@lang('home.saloon.card-one-title')</h4>
+              <p class="saloon__text">@lang('home.saloon.card-one-text')</p>
             </div>
           </div>
         </div>
@@ -375,8 +370,8 @@
           <div class="saloon__content-wrapper">
             <div class="saloon__icon icon-plusImage"></div>
             <div class="saloon__text-wrapper">
-              <h4 class="saloon__content-title">ресницы</h4>
-              <p class="saloon__text">Lorem Ipsum - це текст-"риба", що використовується</p>
+              <h4 class="saloon__content-title">@lang('home.saloon.card-two-title')</h4>
+              <p class="saloon__text">@lang('home.saloon.card-two-text')</p>
             </div>
           </div>
         </div>
@@ -399,8 +394,8 @@
           <div class="saloon__content-wrapper">
             <div class="saloon__icon icon-plusImage"></div>
             <div class="saloon__text-wrapper">
-              <h4 class="saloon__content-title">ресницы</h4>
-              <p class="saloon__text">Lorem Ipsum - це текст-"риба", що використовується</p>
+              <h4 class="saloon__content-title">@lang('home.saloon.card-three-title')</h4>
+              <p class="saloon__text">@lang('home.saloon.card-three-text')</p>
             </div>
           </div>
         </div>
@@ -423,8 +418,8 @@
           <div class="saloon__content-wrapper">
             <div class="saloon__icon icon-plusImage"></div>
             <div class="saloon__text-wrapper">
-              <h4 class="saloon__content-title">ресницы</h4>
-              <p class="saloon__text">Lorem Ipsum - це текст-"риба", що використовується</p>
+              <h4 class="saloon__content-title">@lang('home.saloon.card-four-title')</h4>
+              <p class="saloon__text">@lang('home.saloon.card-four-text')</p>
             </div>
           </div>
         </div>
@@ -446,21 +441,21 @@
           <div class="saloon__content-wrapper">
             <div class="saloon__icon icon-plusImage"></div>
             <div class="saloon__text-wrapper">
-              <h4 class="saloon__content-title">ресницы</h4>
-              <p class="saloon__text">Lorem Ipsum - це текст-"риба", що використовується</p>
+              <h4 class="saloon__content-title">@lang('home.saloon.card-five-title')</h4>
+              <p class="saloon__text">@lang('home.saloon.card-five-text')</p>
             </div>
           </div>
         </div>
       </div>
-      <button class="saloon__btn">Посмотреть больше работ</button>
+      <button class="saloon__btn">@lang('home.saloon.btn-text')</button>
     </div>
   </section>
 
   <section class="reviews-slider">
     <div class="reviews-slider__containerSlider">
       <div class="reviews-slider__text">
-        <h3 class="reviews-slider__title-h3 section-name">Отзывы</h3>
-        <h2 class="reviews-slider__title-h2 section-title">клиенты о нас</h2>
+        <h3 class="reviews-slider__title-h3 section-name">@lang('home.reviews.title-h3')</h3>
+        <h2 class="reviews-slider__title-h2 section-title">@lang('home.reviews.title-h2')</h2>
       </div>
 
       <div class="reviews-slider-wrapper">
@@ -618,7 +613,7 @@
 <section class="spollers">
   <p class="spollers__decor-text">FAQ</p>
   <div class="spollers__container">
-    <h2 class="spollers__title-h2 section-title">Вопрос ответ</h2>
+    <h2 class="spollers__title-h2 section-title">@lang('home.spollers.title')</h2>
 
     <div class="spollers__wrapper">
 
@@ -626,39 +621,38 @@
 
         <div class="spollers__item" data-spollers>
           <button type="button" data-spoller class="spollers__title">
-            <p class="spollers__text">Сколько будет длиться процедура наращивания ресниц?</p>
+            <p class="spollers__text">@lang('home.spollers.spoller-one')</p>
             <span class="spollers__icon icon-plusSpoiler"></span>
           </button>
           <div class="spollers__body">
-            Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.
-          </div>
-        </div>
-
-        <div class="spollers__item" data-spollers>
-          <button type="button" data-spoller class="spollers__title">
-            <p class="spollers__text">Сколько будет длиться процедура наращивания ресниц?</p>
-            <span class="spollers__icon icon-plusSpoiler"></span>
-          </button>
-          <div class="spollers__body">
-            Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.
+            @lang('home.spollers.content-one')
           </div>
         </div>
         <div class="spollers__item" data-spollers>
           <button type="button" data-spoller class="spollers__title">
-            <p class="spollers__text">Сколько будет длиться процедура наращивания ресниц?</p>
+            <p class="spollers__text">@lang('home.spollers.spoller-two')</p>
             <span class="spollers__icon icon-plusSpoiler"></span>
           </button>
           <div class="spollers__body">
-            Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.
+            @lang('home.spollers.content-two')
           </div>
         </div>
         <div class="spollers__item" data-spollers>
           <button type="button" data-spoller class="spollers__title">
-            <p class="spollers__text">Сколько будет длиться процедура наращивания ресниц?</p>
+            <p class="spollers__text">@lang('home.spollers.spoller-three')</p>
             <span class="spollers__icon icon-plusSpoiler"></span>
           </button>
           <div class="spollers__body">
-            Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.
+            @lang('home.spollers.content-three')
+          </div>
+        </div>
+        <div class="spollers__item" data-spollers>
+          <button type="button" data-spoller class="spollers__title">
+            <p class="spollers__text">@lang('home.spollers.spoller-four')</p>
+            <span class="spollers__icon icon-plusSpoiler"></span>
+          </button>
+          <div class="spollers__body">
+            @lang('home.spollers.content-four')
           </div>
         </div>
 
@@ -668,39 +662,38 @@
 
         <div class="spollers__item" data-spollers>
           <button type="button" data-spoller class="spollers__title">
-            <p class="spollers__text">Сколько будет длиться процедура наращивания ресниц?</p>
+            <p class="spollers__text">@lang('home.spollers.spoller-five')</p>
             <span class="spollers__icon icon-plusSpoiler"></span>
           </button>
           <div class="spollers__body">
-            Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.
-          </div>
-        </div>
-
-        <div class="spollers__item" data-spollers>
-          <button type="button" data-spoller class="spollers__title">
-            <p class="spollers__text">Сколько будет длиться процедура наращивания ресниц?</p>
-            <span class="spollers__icon icon-plusSpoiler"></span>
-          </button>
-          <div class="spollers__body">
-            Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.
+            @lang('home.spollers.content-five')
           </div>
         </div>
         <div class="spollers__item" data-spollers>
           <button type="button" data-spoller class="spollers__title">
-            <p class="spollers__text">Сколько будет длиться процедура наращивания ресниц?</p>
+            <p class="spollers__text">@lang('home.spollers.spoller-six')</p>
             <span class="spollers__icon icon-plusSpoiler"></span>
           </button>
           <div class="spollers__body">
-            Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.
+            @lang('home.spollers.content-six')
           </div>
         </div>
         <div class="spollers__item" data-spollers>
           <button type="button" data-spoller class="spollers__title">
-            <p class="spollers__text">Сколько будет длиться процедура наращивания ресниц?</p>
+            <p class="spollers__text">@lang('home.spollers.spoller-seven')</p>
             <span class="spollers__icon icon-plusSpoiler"></span>
           </button>
           <div class="spollers__body">
-            Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.
+            @lang('home.spollers.content-seven')
+          </div>
+        </div>
+        <div class="spollers__item" data-spollers>
+          <button type="button" data-spoller class="spollers__title">
+            <p class="spollers__text">@lang('home.spollers.spoller-eight')</p>
+            <span class="spollers__icon icon-plusSpoiler"></span>
+          </button>
+          <div class="spollers__body">
+            @lang('home.spollers.content-eight')
           </div>
         </div>
 
@@ -712,19 +705,12 @@
 
 <section class="read-more">
   <div class="read-more__container">
-    <h2 class="read-more__title-h2">Студия красоты Ulash – сделаем красотку на миллион!</h2>
+    <h2 class="read-more__title-h2">@lang('home.read-more.title')</h2>
 
     <div class="read-more__wrapper">
-      <p class="read-more__text">Каждая девушка периодически желает ощутить удовольствие от посещения салона красоты. И в самом деле, это чрезвычайно полезно. Студия красоты Ulash собрала лучших специалистов в своей нише. Они трудятся над каждой дамой, чтобы она вышла из дверей салона с безупречным внешним видом.
-        Зачем посещать студию красоты?
-        Профессиональный уход, который предлагается в салоне, не только улучшает имидж, но и дарит положительные эмоции и уникальные возможности. В лице мастеров вы можете найти хороших друзей, а среди других клиентов – полезные связи. В этом месте вы можете выговориться, спросить совета, как поступить в конкретной ситуации.
-        Каждая девушка периодически желает ощутить удовольствие от посещения салона красоты. И в самом деле, это чрезвычайно полезно. Студия красоты Ulash собрала лучших специалистов в своей нише. Они трудятся над каждой дамой, чтобы она вышла из дверей салона с безупречным внешним видом.
-        Зачем посещать студию красоты.
-        Профессиональный уход, который предлагается в салоне, не только улучшает имидж, но и дарит положительные эмоции и уникальные возможности. В лице мастеров вы можете найти хороших друзей, а среди других клиентов – полезные связи. В этом месте вы можете выговориться, спросить совета, как поступить в конкретной ситуации.
-        Каждая девушка периодически желает ощутить удовольствие от посещения салона красоты. И в самом деле, это чрезвычайно полезно. Студия красоты Ulash собрала лучших специалистов в своей нише. Они трудятся над каждой дамой, чтобы она вышла из дверей салона с безупречным внешним видом.
-        Зачем посещать студию красоты.</p>
+      <p class="read-more__text">@lang('home.read-more.text')</p>
 
-      <button class="read-more__btn">Читать дальше</button>
+      <button class="read-more__btn">@lang('home.read-more.btn-text')</button>
     </div>
   </div>
 </section>

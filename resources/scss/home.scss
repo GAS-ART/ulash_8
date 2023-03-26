@@ -355,6 +355,7 @@ body {
       flex: 0 0 272px;
     }
 
+    // 302px
 
     &__title {
       max-width: 240px;
@@ -763,7 +764,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
   }
 
 
@@ -1510,7 +1511,7 @@ body {
   }
 }
 
-// read-more ========================================================================================================================================================
+// read-more ====================================================
 
 @media(max-width: 951px) {
   .read-more {
@@ -1528,4 +1529,23 @@ body {
       margin-bottom: 20px;
     }
   }
+}
+//===================================================
+
+.phone-error,
+.name-error {
+  margin-left: 10px;
+  color: red;
+}
+
+:lang(es) .about__title {
+  max-width: 302px;
+}
+:lang(es) .about__title-author { 
+  flex: 0 0 302px;
+}
+@media (max-width: 950px){
+  :lang(es) .about__title-h3::before {
+   width: 225px;
+ }
 }

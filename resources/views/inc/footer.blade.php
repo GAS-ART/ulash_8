@@ -10,7 +10,7 @@
         @endif
       </a>
 
-      <button class="footer__popup">Готовы довериться профессионалам? <span>Оставьте заявку</span></button>
+      <button class="footer__popup">@lang('footer.popup')</button>
 
       <div class="footer__icons">
         <a href="#" class="footer__icon icon-instagram"></a>
@@ -22,42 +22,42 @@
   <div class="footer__container">
     <div class="footer__content">
       <div class="footer__box">
-        <a href="{{ route('service', ['locale' => __('lang.current')]) }}" class="footer__menu-title">Услуги</a>
+        <a href="{{ route('service', ['locale' => __('lang.current')]) }}" class="footer__menu-title">@lang('footer.services.title')</a>
 
         <ul class="footer__menu-list">
-          <li class="footer__menu-item"><a href="{{ route('service', ['locale' => __('lang.current')]) }}" class="footer__menu-link">Ногтевой сервис</a></li>
-          <li class="footer__menu-item"><a href="{{ route('teaching', ['locale' => __('lang.current')]) }}" class="footer__menu-link">Ресницы</a></li>
-          <li class="footer__menu-item"><a href="{{ route('reviews', ['locale' => __('lang.current')]) }}" class="footer__menu-link">Брови</a></li>
-          <li class="footer__menu-item"><a href="{{ route('contants', ['locale' => __('lang.current')]) }}" class="footer__menu-link">Депиляция и шугаринг</a></li>
+          <li class="footer__menu-item"><a href="{{ route('service', ['locale' => __('lang.current')]) }}" class="footer__menu-link">@lang('footer.services.li-one')</a></li>
+          <li class="footer__menu-item"><a href="{{ route('teaching', ['locale' => __('lang.current')]) }}" class="footer__menu-link">@lang('footer.services.li-two')</a></li>
+          <li class="footer__menu-item"><a href="{{ route('reviews', ['locale' => __('lang.current')]) }}" class="footer__menu-link">@lang('footer.services.li-three')</a></li>
+          <li class="footer__menu-item"><a href="{{ route('contants', ['locale' => __('lang.current')]) }}" class="footer__menu-link">@lang('footer.services.li-four')</a></li>
         </ul>
 
       </div>
 
       <div class="footer__box">
-        <a href="{{ route('teaching', ['locale' => __('lang.current')]) }}" class="footer__menu-title">Обучение</a>
+        <a href="{{ route('teaching', ['locale' => __('lang.current')]) }}" class="footer__menu-title">@lang('footer.teaching.title')</a>
 
         <ul class="footer__menu-list">
-          <li class="footer__menu-item"><a href="{{ route('service', ['locale' => __('lang.current')]) }}" class="footer__menu-link">Базовый курс ресницы</a></li>
-          <li class="footer__menu-item"><a href="{{ route('teaching', ['locale' => __('lang.current')]) }}" class="footer__menu-link">Повышение квалификации по наращиванию</a></li>
-          <li class="footer__menu-item"><a href="{{ route('reviews', ['locale' => __('lang.current')]) }}" class="footer__menu-link">Курс по наращиванию нижних ресниц и декорирования</a></li>
+          <li class="footer__menu-item"><a href="{{ route('service', ['locale' => __('lang.current')]) }}" class="footer__menu-link">@lang('footer.teaching.li-one')</a></li>
+          <li class="footer__menu-item"><a href="{{ route('teaching', ['locale' => __('lang.current')]) }}" class="footer__menu-link">@lang('footer.teaching.li-two')</a></li>
+          <li class="footer__menu-item"><a href="{{ route('reviews', ['locale' => __('lang.current')]) }}" class="footer__menu-link">@lang('footer.teaching.li-three')</a></li>
         </ul>
 
       </div>
 
       <div class="footer__box">
-        <a href="{{ route('service', ['locale' => __('lang.current')]) }}" class="footer__menu-title">Контакты</a>
+        <a href="{{ route('service', ['locale' => __('lang.current')]) }}" class="footer__menu-title">@lang('footer.contacts.title')</a>
 
         <ul class="footer__menu-list">
           <li class="footer__menu-item">
             <a class="footer__contacts-item" href="#">
               <span class="footer__contacts-icon icon-point"></span>
-              <p class="footer__contacts-address">Barselona, adress adress</p>
+              <p class="footer__contacts-address">@lang('footer.contacts.adress')</p>
             </a>
           </li>
           <li class="footer__menu-item">
             <a class="footer__contacts-item" href="tel:+34617051264">
               <span class="footer__contacts-icon icon-phone"></span>
-              <p class="footer__contacts-phone">+34 617-05-12-64</p>
+              <p class="footer__contacts-phone">@lang('footer.contacts.phone')</p>
             </a>
           </li>
 
