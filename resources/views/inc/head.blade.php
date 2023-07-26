@@ -15,7 +15,7 @@
   <title>@yield('title')</title>
   <meta name="description" content="@yield('description')">
 
-  <meta property="og:url" content="@yield('ogUrl')" />
+  <meta property="og:url" content="{{ url()->current() }}" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="@yield('ogTitle')" />
   <meta property="og:description" content="@yield('ogDescription')" />

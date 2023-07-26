@@ -3,7 +3,6 @@
 @section('description', __('titles.home.description'))
 @section('ogTitle', __('titles.home.ogTitle'))
 @section('ogDescription', __('titles.home.ogDescription'))
-@section('ogUrl', __('titles.home.ogUrl'))
 
 @section('page', 'home')
 
@@ -88,9 +87,10 @@
         </div>
       </div>
       <div class="about__text-wrapper">
-        <p class="about__text">@lang('home.about.text-one')</p>
-        <p class="about__text">@lang('home.about.text-two')</p>
-        <p class="about__text">@lang('home.about.text-three')</p>
+        <p class="about__text">@lang('home.about.text-1')</p>
+        <p class="about__text">@lang('home.about.text-2')</p>
+        <p class="about__text">@lang('home.about.text-3')</p>
+        <p class="about__text">@lang('home.about.text-4')</p>
       </div>
 
 
@@ -235,7 +235,7 @@
           <div class="services__teaching-content">
             <h4 class="services__teaching-title">@lang('home.teaching.card-one-title')</h4>
             <p class="services__teaching-text">@lang('home.teaching.card-one-text')</p>
-            <button class="services__teaching-popup">@lang('home.teaching.card-btn-text')</button>
+            <button class="services__teaching-popup" data-popup="#popup">@lang('home.teaching.card-btn-text')</button>
           </div>
         </div>
 
@@ -258,7 +258,7 @@
           <div class="services__teaching-content">
             <h4 class="services__teaching-title">@lang('home.teaching.card-two-title')</h4>
             <p class="services__teaching-text">@lang('home.teaching.card-two-text')</p>
-            <button class="services__teaching-popup">@lang('home.teaching.card-btn-text')</button>
+            <button class="services__teaching-popup" data-popup="#popup">@lang('home.teaching.card-btn-text')</button>
           </div>
         </div>
 
@@ -281,7 +281,7 @@
           <div class="services__teaching-content">
             <h4 class="services__teaching-title">@lang('home.teaching.card-three-title')</h4>
             <p class="services__teaching-text">@lang('home.teaching.card-three-text')</p>
-            <button class="services__teaching-popup">@lang('home.teaching.card-btn-text')</button>
+            <button class="services__teaching-popup" data-popup="#popup">@lang('home.teaching.card-btn-text')</button>
           </div>
         </div>
       </div>
@@ -296,7 +296,7 @@
     <div class="advantages__container">
       <div class="advantages__wrapper">
         <div class="advantages__item">
-          <div class="advantages__icon">10</div>
+          <div class="advantages__icon">15</div>
           <div class="advantages__text">@lang('home.advantages.text-one')</div>
         </div>
 
@@ -428,7 +428,8 @@
           @if(App::isLocale('es'))
           <picture class="saloon__img">
             <source type="image/webp" type="image/webp" media="(min-width:450px)" srcset="/img/home/es/saloon/5.webp">
-            <source type="image/webp" type="image/webp" media="(min-width:320px)" srcset="/img/home/es/mobile/saloon/5.webp">
+            <source type="image/webp" type="image/webp" media="(min-width:320px)"
+              srcset="/img/home/es/mobile/saloon/5.webp">
             <img src="/img/home/es/saloon/5.jpg" alt="">
           </picture>
           @elseif(App::isLocale('ru'))
@@ -467,8 +468,10 @@
 
               @if(App::isLocale('es'))
               <picture class="swiper-slide__img">
-                <source type="image/webp" type="image/webp" media="(min-width:701px)" srcset="/img/home/es/reviews/1.webp">
-                <source type="image/webp" type="image/webp" media="(min-width:320px)" srcset="/img/home/es/mobile/reviews/1.webp">
+                <source type="image/webp" type="image/webp" media="(min-width:701px)"
+                  srcset="/img/home/es/reviews/1.webp">
+                <source type="image/webp" type="image/webp" media="(min-width:320px)"
+                  srcset="/img/home/es/mobile/reviews/1.webp">
                 <img src="/img/home/es/reviews/1.jpg" alt="">
               </picture>
               @elseif(App::isLocale('ru'))
@@ -485,8 +488,10 @@
 
               @if(App::isLocale('es'))
               <picture class="swiper-slide__img">
-                <source type="image/webp" type="image/webp" media="(min-width:701px)" srcset="/img/home/es/reviews/2.webp">
-                <source type="image/webp" type="image/webp" media="(min-width:320px)" srcset="/img/home/es/mobile/reviews/2.webp">
+                <source type="image/webp" type="image/webp" media="(min-width:701px)"
+                  srcset="/img/home/es/reviews/2.webp">
+                <source type="image/webp" type="image/webp" media="(min-width:320px)"
+                  srcset="/img/home/es/mobile/reviews/2.webp">
                 <img src="/img/home/es/reviews/2.jpg" alt="">
               </picture>
               @elseif(App::isLocale('ru'))
@@ -502,8 +507,10 @@
 
               @if(App::isLocale('es'))
               <picture class="swiper-slide__img">
-                <source type="image/webp" type="image/webp" media="(min-width:701px)" srcset="/img/home/es/reviews/3.webp">
-                <source type="image/webp" type="image/webp" media="(min-width:320px)" srcset="/img/home/es/mobile/reviews/2.webp">
+                <source type="image/webp" type="image/webp" media="(min-width:701px)"
+                  srcset="/img/home/es/reviews/3.webp">
+                <source type="image/webp" type="image/webp" media="(min-width:320px)"
+                  srcset="/img/home/es/mobile/reviews/2.webp">
                 <img src="/img/home/es/reviews/3.jpg" alt="">
               </picture>
               @elseif(App::isLocale('ru'))
@@ -519,8 +526,10 @@
 
               @if(App::isLocale('es'))
               <picture class="swiper-slide__img">
-                <source type="image/webp" type="image/webp" media="(min-width:701px)" srcset="/img/home/es/reviews/1.webp">
-                <source type="image/webp" type="image/webp" media="(min-width:320px)" srcset="/img/home/es/mobile/reviews/1.webp">
+                <source type="image/webp" type="image/webp" media="(min-width:701px)"
+                  srcset="/img/home/es/reviews/1.webp">
+                <source type="image/webp" type="image/webp" media="(min-width:320px)"
+                  srcset="/img/home/es/mobile/reviews/1.webp">
                 <img src="/img/home/es/reviews/1.jpg" alt="">
               </picture>
               @elseif(App::isLocale('ru'))
@@ -536,8 +545,10 @@
 
               @if(App::isLocale('es'))
               <picture class="swiper-slide__img">
-                <source type="image/webp" type="image/webp" media="(min-width:701px)" srcset="/img/home/es/reviews/1.webp">
-                <source type="image/webp" type="image/webp" media="(min-width:320px)" srcset="/img/home/es/mobile/reviews/1.webp">
+                <source type="image/webp" type="image/webp" media="(min-width:701px)"
+                  srcset="/img/home/es/reviews/1.webp">
+                <source type="image/webp" type="image/webp" media="(min-width:320px)"
+                  srcset="/img/home/es/mobile/reviews/1.webp">
                 <img src="/img/home/es/reviews/1.jpg" alt="">
               </picture>
               @elseif(App::isLocale('ru'))
@@ -553,8 +564,10 @@
 
               @if(App::isLocale('es'))
               <picture class="swiper-slide__img">
-                <source type="image/webp" type="image/webp" media="(min-width:701px)" srcset="/img/home/es/reviews/1.webp">
-                <source type="image/webp" type="image/webp" media="(min-width:320px)" srcset="/img/home/es/mobile/reviews/1.webp">
+                <source type="image/webp" type="image/webp" media="(min-width:701px)"
+                  srcset="/img/home/es/reviews/1.webp">
+                <source type="image/webp" type="image/webp" media="(min-width:320px)"
+                  srcset="/img/home/es/mobile/reviews/1.webp">
                 <img src="/img/home/es/reviews/1.jpg" alt="">
               </picture>
               @elseif(App::isLocale('ru'))
@@ -570,8 +583,10 @@
 
               @if(App::isLocale('es'))
               <picture class="swiper-slide__img">
-                <source type="image/webp" type="image/webp" media="(min-width:701px)" srcset="/img/home/es/reviews/1.webp">
-                <source type="image/webp" type="image/webp" media="(min-width:320px)" srcset="/img/home/es/mobile/reviews/1.webp">
+                <source type="image/webp" type="image/webp" media="(min-width:701px)"
+                  srcset="/img/home/es/reviews/1.webp">
+                <source type="image/webp" type="image/webp" media="(min-width:320px)"
+                  srcset="/img/home/es/mobile/reviews/1.webp">
                 <img src="/img/home/es/reviews/1.jpg" alt="">
               </picture>
               @elseif(App::isLocale('ru'))
@@ -587,8 +602,10 @@
 
               @if(App::isLocale('es'))
               <picture class="swiper-slide__img">
-                <source type="image/webp" type="image/webp" media="(min-width:701px)" srcset="/img/home/es/reviews/1.webp">
-                <source type="image/webp" type="image/webp" media="(min-width:320px)" srcset="/img/home/es/mobile/reviews/1.webp">
+                <source type="image/webp" type="image/webp" media="(min-width:701px)"
+                  srcset="/img/home/es/reviews/1.webp">
+                <source type="image/webp" type="image/webp" media="(min-width:320px)"
+                  srcset="/img/home/es/mobile/reviews/1.webp">
                 <img src="/img/home/es/reviews/1.jpg" alt="">
               </picture>
               @elseif(App::isLocale('ru'))
@@ -611,97 +628,9 @@
 </div>
 
 <section class="spollers">
-  <p class="spollers__decor-text">FAQ</p>
-  <div class="spollers__container">
-    <h2 class="spollers__title-h2 section-title">@lang('home.spollers.title')</h2>
-
-    <div class="spollers__wrapper">
-
-      <div class="spollers__box">
-
-        <div class="spollers__item" data-spollers>
-          <button type="button" data-spoller class="spollers__title">
-            <p class="spollers__text">@lang('home.spollers.spoller-one')</p>
-            <span class="spollers__icon icon-plusSpoiler"></span>
-          </button>
-          <div class="spollers__body">
-            @lang('home.spollers.content-one')
-          </div>
-        </div>
-        <div class="spollers__item" data-spollers>
-          <button type="button" data-spoller class="spollers__title">
-            <p class="spollers__text">@lang('home.spollers.spoller-two')</p>
-            <span class="spollers__icon icon-plusSpoiler"></span>
-          </button>
-          <div class="spollers__body">
-            @lang('home.spollers.content-two')
-          </div>
-        </div>
-        <div class="spollers__item" data-spollers>
-          <button type="button" data-spoller class="spollers__title">
-            <p class="spollers__text">@lang('home.spollers.spoller-three')</p>
-            <span class="spollers__icon icon-plusSpoiler"></span>
-          </button>
-          <div class="spollers__body">
-            @lang('home.spollers.content-three')
-          </div>
-        </div>
-        <div class="spollers__item" data-spollers>
-          <button type="button" data-spoller class="spollers__title">
-            <p class="spollers__text">@lang('home.spollers.spoller-four')</p>
-            <span class="spollers__icon icon-plusSpoiler"></span>
-          </button>
-          <div class="spollers__body">
-            @lang('home.spollers.content-four')
-          </div>
-        </div>
-
-      </div>
-
-      <div class="spollers__box">
-
-        <div class="spollers__item" data-spollers>
-          <button type="button" data-spoller class="spollers__title">
-            <p class="spollers__text">@lang('home.spollers.spoller-five')</p>
-            <span class="spollers__icon icon-plusSpoiler"></span>
-          </button>
-          <div class="spollers__body">
-            @lang('home.spollers.content-five')
-          </div>
-        </div>
-        <div class="spollers__item" data-spollers>
-          <button type="button" data-spoller class="spollers__title">
-            <p class="spollers__text">@lang('home.spollers.spoller-six')</p>
-            <span class="spollers__icon icon-plusSpoiler"></span>
-          </button>
-          <div class="spollers__body">
-            @lang('home.spollers.content-six')
-          </div>
-        </div>
-        <div class="spollers__item" data-spollers>
-          <button type="button" data-spoller class="spollers__title">
-            <p class="spollers__text">@lang('home.spollers.spoller-seven')</p>
-            <span class="spollers__icon icon-plusSpoiler"></span>
-          </button>
-          <div class="spollers__body">
-            @lang('home.spollers.content-seven')
-          </div>
-        </div>
-        <div class="spollers__item" data-spollers>
-          <button type="button" data-spoller class="spollers__title">
-            <p class="spollers__text">@lang('home.spollers.spoller-eight')</p>
-            <span class="spollers__icon icon-plusSpoiler"></span>
-          </button>
-          <div class="spollers__body">
-            @lang('home.spollers.content-eight')
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
+  @include('inc.spollers')
 </section>
+
 
 <section class="read-more">
   <div class="read-more__container">

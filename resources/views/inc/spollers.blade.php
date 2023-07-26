@@ -35,6 +35,15 @@
         </button>
         <div class="spollers__body">@lang('home.spollers.content-four')</div>
       </div>
+      <div class="spollers__item" data-spollers>
+        <button type="button" data-spoller class="spollers__title">
+          <p class="spollers__text">@lang('home.spollers.spoller-nine')</p>
+          <span class="spollers__icon icon-plusSpoiler"></span>
+        </button>
+        <div class="spollers__body">
+          @lang('home.spollers.content-nine')
+        </div>
+      </div>
 
     </div>
 
@@ -68,6 +77,15 @@
           <span class="spollers__icon icon-plusSpoiler"></span>
         </button>
         <div class="spollers__body">@lang('home.spollers.content-eight')</div>
+      </div>
+      <div class="spollers__item" data-spollers>
+        <button type="button" data-spoller class="spollers__title">
+          <p class="spollers__text">@lang('home.spollers.spoller-ten')</p>
+          <span class="spollers__icon icon-plusSpoiler"></span>
+        </button>
+        <div class="spollers__body">
+          @lang('home.spollers.content-ten')
+        </div>
       </div>
     </div>
 

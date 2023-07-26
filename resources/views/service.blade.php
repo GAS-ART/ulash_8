@@ -3,7 +3,6 @@
 @section('description', __('titles.home.description'))
 @section('ogTitle', __('titles.home.ogTitle'))
 @section('ogDescription', __('titles.home.ogDescription'))
-@section('ogUrl', __('titles.home.ogUrl'))
 
 @section('page', 'home')
 
@@ -14,15 +13,19 @@
   <div class="services-home-page__img-wrapper">
     @if(App::isLocale('es'))
     <picture class="services-home-page__img">
-      <source type="image/webp" media="(min-width:650px)" srcset="/img/home/es/services-page/servisces-home-page/1.webp">
-      <source type="image/webp" media="(min-width:320px)" srcset="/img/home/es/services-page/mobile/servisces-home-page/1.webp">
+      <source type="image/webp" media="(min-width:650px)"
+        srcset="/img/home/es/services-page/servisces-home-page/1.webp">
+      <source type="image/webp" media="(min-width:320px)"
+        srcset="/img/home/es/services-page/mobile/servisces-home-page/1.webp">
       <img src="/img/home/es/services-page/servisces-home-page/1.jpg" alt="">
     </picture>
 
     @elseif(App::isLocale('ru'))
     <picture class="services-home-page__img">
-      <source type="image/webp" media="(min-width:650px)" srcset="/img/home/ru/services-page/servisces-home-page/1.webp">
-      <source type="image/webp" media="(min-width:320px)" srcset="/img/home/ru/services-page/mobile/servisces-home-page/1.webp">
+      <source type="image/webp" media="(min-width:650px)"
+        srcset="/img/home/ru/services-page/servisces-home-page/1.webp">
+      <source type="image/webp" media="(min-width:320px)"
+        srcset="/img/home/ru/services-page/mobile/servisces-home-page/1.webp">
       <img src="/img/home/ru/services-page/servisces-home-page/1.jpg" alt="">
     </picture>
     @endif
@@ -185,14 +188,16 @@
         @if(App::isLocale('es'))
         <picture class="services-types__img">
           <source type="image/webp" media="(min-width:650px)" srcset="/img/home/es/services-page/services-types/1.webp">
-          <source type="image/webp" media="(min-width:320px)" srcset="/img/home/es/services-page/mobile/services-types/1.webp">
+          <source type="image/webp" media="(min-width:320px)"
+            srcset="/img/home/es/services-page/mobile/services-types/1.webp">
           <img src="/img/home/es/services-page/services-types/1.jpg" alt="">
         </picture>
 
         @elseif(App::isLocale('ru'))
         <picture class="services-types__img">
           <source type="image/webp" media="(min-width:650px)" srcset="/img/home/es/services-page/services-types/1.webp">
-          <source type="image/webp" media="(min-width:320px)" srcset="/img/home/es/services-page/mobile/services-types/1.webp">
+          <source type="image/webp" media="(min-width:320px)"
+            srcset="/img/home/es/services-page/mobile/services-types/1.webp">
           <img src="/img/home/es/services-page/services-types/1.jpg" alt="">
         </picture>
         @endif
@@ -214,14 +219,16 @@
         @if(App::isLocale('es'))
         <picture class="services-types__img">
           <source type="image/webp" media="(min-width:650px)" srcset="/img/home/es/services-page/services-types/1.webp">
-          <source type="image/webp" media="(min-width:320px)" srcset="/img/home/es/services-page/mobile/services-types/1.webp">
+          <source type="image/webp" media="(min-width:320px)"
+            srcset="/img/home/es/services-page/mobile/services-types/1.webp">
           <img src="/img/home/es/services-page/services-types/1.jpg" alt="">
         </picture>
 
         @elseif(App::isLocale('ru'))
         <picture class="services-types__img">
           <source type="image/webp" media="(min-width:650px)" srcset="/img/home/es/services-page/services-types/1.webp">
-          <source type="image/webp" media="(min-width:320px)" srcset="/img/home/es/services-page/mobile/services-types/1.webp">
+          <source type="image/webp" media="(min-width:320px)"
+            srcset="/img/home/es/services-page/mobile/services-types/1.webp">
           <img src="/img/home/es/services-page/services-types/1.jpg" alt="">
         </picture>
         @endif
@@ -243,14 +250,16 @@
         @if(App::isLocale('es'))
         <picture class="services-types__img">
           <source type="image/webp" media="(min-width:650px)" srcset="/img/home/es/services-page/services-types/1.webp">
-          <source type="image/webp" media="(min-width:320px)" srcset="/img/home/es/services-page/mobile/services-types/1.webp">
+          <source type="image/webp" media="(min-width:320px)"
+            srcset="/img/home/es/services-page/mobile/services-types/1.webp">
           <img src="/img/home/es/services-page/services-types/1.jpg" alt="">
         </picture>
 
         @elseif(App::isLocale('ru'))
         <picture class="services-types__img">
           <source type="image/webp" media="(min-width:650px)" srcset="/img/home/es/services-page/services-types/1.webp">
-          <source type="image/webp" media="(min-width:320px)" srcset="/img/home/es/services-page/mobile/services-types/1.webp">
+          <source type="image/webp" media="(min-width:320px)"
+            srcset="/img/home/es/services-page/mobile/services-types/1.webp">
           <img src="/img/home/es/services-page/services-types/1.jpg" alt="">
         </picture>
         @endif
@@ -272,14 +281,16 @@
         @if(App::isLocale('es'))
         <picture class="services-types__img">
           <source type="image/webp" media="(min-width:650px)" srcset="/img/home/es/services-page/services-types/1.webp">
-          <source type="image/webp" media="(min-width:320px)" srcset="/img/home/es/services-page/mobile/services-types/1.webp">
+          <source type="image/webp" media="(min-width:320px)"
+            srcset="/img/home/es/services-page/mobile/services-types/1.webp">
           <img src="/img/home/es/services-page/services-types/1.jpg" alt="">
         </picture>
 
         @elseif(App::isLocale('ru'))
         <picture class="services-types__img">
           <source type="image/webp" media="(min-width:650px)" srcset="/img/home/es/services-page/services-types/1.webp">
-          <source type="image/webp" media="(min-width:320px)" srcset="/img/home/es/services-page/mobile/services-types/1.webp">
+          <source type="image/webp" media="(min-width:320px)"
+            srcset="/img/home/es/services-page/mobile/services-types/1.webp">
           <img src="/img/home/es/services-page/services-types/1.jpg" alt="">
         </picture>
         @endif

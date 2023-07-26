@@ -115,6 +115,53 @@ function watchHeader(entries) {
     entries[0].target.classList.add('_scroll');
   }
 }
+var menuItems = document.querySelectorAll('.menu-item');
+document.addEventListener('click', function (e) {
+  /* Open/close menu */
+  if (!e.target.closest('.menu-item')) {
+    menuItems.forEach(function (item) {
+      return item.classList.remove('active');
+    });
+  } else {
+    menuItems.forEach(function (item) {
+      return item != e.target.closest('.menu-item') ? item.classList.remove('active') : item.classList.toggle('active');
+    });
+  }
+});
+
+/* // Open menu in burger
+const burgerMenuItems = document.querySelectorAll('[data-spoiler-menu]');
+let marginHeight = 0;
+burgerMenuItems.forEach(item => {
+   const subList = item.querySelector('ul');
+   const subListItems = subList.querySelectorAll('li');
+   subListItems.forEach(item => marginHeight += 10);
+   const subListHeight = subList.offsetHeight + marginHeight - 10;
+
+   marginHeight = 0;
+   subList.style.height = `0px`;
+   const menuTitle = item.querySelector('[data-spoiler-btn]');
+   menuTitle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      subList.style.height == '0px' ? subList.style.height = `${subListHeight}px` : subList.style.height = `0px`
+      burgerMenuItems.forEach(item => {
+         console.log(e.target.closest('[data-spoiler-menu]') != item);
+         if (e.target.closest('[data-spoiler-menu]') != item) {
+            item.classList.remove('active');
+            const currentSubList = item.querySelector('ul');
+            currentSubList.style.height = `0px`;
+         }
+      });
+      item.classList.toggle('active');
+   });
+}); */
+
+$(document).ready(function () {
+  $('[data-spoiler-btn]').click(function () {
+    $(this).siblings('.spoiler-content').slideToggle();
+  });
+});
+
 //==========================================================================================================
 var headerObserver = new IntersectionObserver(watchHeader);
 headerObserver.observe(headerElement);

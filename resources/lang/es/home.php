@@ -11,42 +11,42 @@ return [
   'about' => [
     'title-h3' => 'SOBRE NUESTRO SALÓN',
     'title-h2' => 'SALÓN DE BELLEZA ULASH',
-    'author-name' => 'Prokopenko Valentina Viktorovna',
+    'author-name' => 'Yuliia Smirnova',
     'author-profession' => 'Dueña de estudio de belleza',
-    'text-one' => '
-    Lorem Ipsum: este texto es "riba", que es victorioso en otro diseño. Lorem Ipsum es, de hecho, un "riboi" estándar del siglo XVI, si un drukar desconocido tomó una galera de fuentes y una clave para una selección diferente de fuentes.',
-    'text-two' => '
-    Lorem Ipsum: este texto es "riba", que es victorioso en otro diseño. Lorem Ipsum es, de hecho, un "riboi" estándar del siglo XVI, si un drukar desconocido tomó una galera de fuentes y una clave para una selección diferente de fuentes.',
-    'text-three' => '
-    Lorem Ipsum: este texto es "riba", que es victorioso en otro diseño. Lorem Ipsum es, de hecho, un "riboi" estándar del siglo XVI, si un drukar desconocido tomó una galera de fuentes y una clave para una selección diferente de fuentes.',
+    'text-1' => '¡Bienvenido a salón de belleza Ulash en Barcelona! Hemos creado este citio de relax y belleza especialmente para ti. Aquí cada cliente es nuestro invitado especial y nos esforzamos para que su visita sea inolvidable.',
+    'text-2' => 'Nuestro equipo está formado por estilistas experimentados y talentosos que estarán felices de ayudarlo a encontrar una nueva apariencia o realizar su belleza natural. Ofrecemos una gama alta de servicios tales como: manicura y pedicura, extensiones de pestañas y capacitación.',
+    'text-3' => 'Prestamos especial atención a la calidad de los servicios y utilizamos solo productos cosméticos probados. En nuestro salón puede estar seguro de la seguridad y calidad de los procedimientos.',
+    'text-4' => 'Tenemos un ambiente de cordialidad y comodidad. Nos esforzamos para que su tiempo con nosotros sea agradable y relajante. Siempre nos complace escuchar sus deseos y aconsejarle las mejores soluciones.',
+    'text-5' => 'Acércate a nosotros para disfrutar del cuidado y la atención hacia ti mismo. Te ayudaremos a sentirte genial y seguro, plasmar las ideas más atrevidas y darte una imagen brillante.',
+    'text-6' => '¡Estaremos encantados de verte en el salón de belleza Ulash!',
   ],
   'services' => [
     'title-h3' => 'SERVICIOS',
     'title-h2' => 'QUE PODEMOS OFRECER',
     'card-one-text' => 'Manicura',
-    'card-two-text' => 'Manicura',
-    'card-three-text' => 'Manicura',
-    'card-four-text' => 'Manicura',
+    'card-two-text' => 'Pedicura',
+    'card-three-text' => 'Extension de pestañas',
+    'card-four-text' => 'Сursos',
     'card-btn-text' => 'Inscribirse',
   ],
   'teaching' => [
     'title' => 'EDUCACIÓN',
-    'card-one-title' => 'Curso de extensión y decoración de pestañas inferiores',
+    'card-one-title' => 'Curso basico',
     'card-one-text' => 'Lorem Ipsum: este texto es "riba", que es victorioso en otro diseño. Lorem Ipsum є, de hecho',
 
-    'card-two-title' => 'Curso de extensión y decoración de pestañas inferiores',
+    'card-two-title' => 'Capacitacion',
     'card-two-text' => 'Lorem Ipsum: este texto es "riba", que es victorioso en otro diseño. Lorem Ipsum є, de hecho',
 
-    'card-three-title' => 'Curso de extensión y decoración de pestañas inferiores',
+    'card-three-title' => 'Curso de extensión de pestañas inferiores',
     'card-three-text' => 'Lorem Ipsum: este texto es "riba", que es victorioso en otro diseño. Lorem Ipsum є, de hecho',
 
     'card-btn-text' => 'Inscribirse',
   ],
   'advantages' => [
-    'text-one' => 'Ahorramos tu tiempo con servicios en 4-6 manos',
-    'text-two' => 'Ahorramos tu tiempo con servicios en 4-6 manos',
-    'text-three' => 'Ahorramos tu tiempo con servicios en 4-6 manos',
-    'text-four' => 'Ahorramos tu tiempo con servicios en 4-6 manos',
+    'text-one' => 'Cuidamos las meujeres hace 15 años',
+    'text-two' => 'Equipo de profesionales cualificados. Ahorramos tu tiempo',
+    'text-three' => 'Utilizamos productos cosméticos de gama alta',
+    'text-four' => 'Siguiendo las últimas tendencias',
   ],
   'saloon' => [
     'title-h3' => 'SALÓN DE BELLEZA',
@@ -76,29 +76,33 @@ return [
   'spollers' => [
     'title' => 'PREGUNTA RESPUESTA',
 
-    'spoller-one' => '¿Cuánto tiempo llevará el procedimiento de extensión de pestañas?',
-    'content-one' => 'Lorem Ipsum: este texto es "riba", que es victorioso en otro diseño. Lorem Ipsum es, de hecho, un "riboi" estándar del siglo XVI, si un drukar desconocido tomó una galera de fuentes y una clave para una selección diferente de fuentes.',
+    'spoller-one' => '¿Cuánto durará el procedimiento de extensión de pestañas?',
+    'content-one' => 'Para los procedimientos básicos de extensión de pestañas, el tiempo aproximado será:<br> volumen parcial - a partir de 1 hora;<br> extensión clásica (volumen completo) - a partir de 2 horas;<br> volumen doble - a partir de 2,5 horas;<br> triple o más volumen - a partir de 3 horas. Pero nadie puede decirlo con certeza, porque todo también depende de la densidad de sus cilios nativos. En el caso de la extensión de pestañas, ¡RÁPIDO y CUALITATIVO son incompatibles!',
 
-    'spoller-two' => '¿Cuánto tiempo llevará el procedimiento de extensión de pestañas?',
-    'content-two' => 'Lorem Ipsum: este texto es "riba", que es victorioso en otro diseño. Lorem Ipsum es, de hecho, un "riboi" estándar del siglo XVI, si un drukar desconocido tomó una galera de fuentes y una clave para una selección diferente de fuentes.',
+    'spoller-two' => '¿Las extensiones de pestañas causan molestias?',
+    'content-two' => 'No. Las pestañas artificiales no van adheridas a la piel, sino a pelos naturales, por lo que no habrá molestias.',
 
-    'spoller-three' => '¿Cuánto tiempo llevará el procedimiento de extensión de pestañas?',
-    'content-three' => 'Lorem Ipsum: este texto es "riba", que es victorioso en otro diseño. Lorem Ipsum es, de hecho, un "riboi" estándar del siglo XVI, si un drukar desconocido tomó una galera de fuentes y una clave para una selección diferente de fuentes.',
+    'spoller-three' => '¿Se pueden teñir las extensiones de pestañas?',
+    'content-three' => 'Las pestañas extendidas sin cosméticos se ven bastante expresivas, por lo que no recomendamos teñir las pestañas extendidas, ya que el rímel afecta la calidad de las pestañas.',
 
-    'spoller-four' => '¿Cuánto tiempo llevará el procedimiento de extensión de pestañas?',
-    'content-four' => 'Lorem Ipsum: este texto es "riba", que es victorioso en otro diseño. Lorem Ipsum es, de hecho, un "riboi" estándar del siglo XVI, si un drukar desconocido tomó una galera de fuentes y una clave para una selección diferente de fuentes.',
+    'spoller-four' => '¿Las extensiones de pestañas provocan alergias?',
+    'content-four' => 'En el proceso de construcción se utilizan materiales de alta calidad que se someten a control dermatológico. La alergia es posible solo en caso de intolerancia individual a los materiales.',
 
-    'spoller-five' => '¿Cuánto tiempo llevará el procedimiento de extensión de pestañas?',
-    'content-five' => 'Lorem Ipsum: este texto es "riba", que es victorioso en otro diseño. Lorem Ipsum es, de hecho, un "riboi" estándar del siglo XVI, si un drukar desconocido tomó una galera de fuentes y una clave para una selección diferente de fuentes.',
+    'spoller-five' => '¿Cuánto tiempo se pueden usar las extensiones de pestañas antes de la próxima extensión?',
+    'content-five' => 'Si sigue las reglas de cuidado, las extensiones de pestañas se pueden usar de 3 a 5 semanas.',
 
-    'spoller-six' => '¿Cuánto tiempo llevará el procedimiento de extensión de pestañas?',
-    'content-six' => 'Lorem Ipsum: este texto es "riba", que es victorioso en otro diseño. Lorem Ipsum es, de hecho, un "riboi" estándar del siglo XVI, si un drukar desconocido tomó una galera de fuentes y una clave para una selección diferente de fuentes.',
+    'spoller-six' => '¿Hacen extensiones de pestañas inferiores?',
+    'content-six' => 'Lo hacen, pero el período de sus calcetines es dos veces menor que los de arriba.',
 
-    'spoller-seven' => '¿Cuánto tiempo llevará el procedimiento de extensión de pestañas?',
-    'content-seven' => 'Lorem Ipsum: este texto es "riba", que es victorioso en otro diseño. Lorem Ipsum es, de hecho, un "riboi" estándar del siglo XVI, si un drukar desconocido tomó una galera de fuentes y una clave para una selección diferente de fuentes.',
+    'spoller-seven' => '¿La extensión estropea las pestañas naturales?',
+    'content-seven' => 'No, no se estropea. Si el procedimiento se realiza correctamente y, durante el uso, se siguieron todas las reglas para el cuidado de las extensiones de pestañas, las pestañas naturales seguirán siendo las mismas que antes de la extensión.',
 
-    'spoller-eight' => '¿Cuánto tiempo llevará el procedimiento de extensión de pestañas?',
-    'content-eight' => 'Lorem Ipsum: este texto es "riba", que es victorioso en otro diseño. Lorem Ipsum es, de hecho, un "riboi" estándar del siglo XVI, si un drukar desconocido tomó una galera de fuentes y una clave para una selección diferente de fuentes.',
+    'spoller-eight' => '¿Cuáles son las contraindicaciones de las extensiones de pestañas?',
+    'content-eight' => 'Problemas dermatológicos, conjuntivitis, hinchazón e inflamación de la mucosa ocular, trastornos hormonales, resfriados, alergias estacionales, aumento del lagrimeo.',
+    'spoller-nine' => '¿La extensión perjudica a quienes usan lentes de contacto?',
+    'content-nine' => 'Las pestañas extendidas en el calcetín no se sienten en absoluto. Solo antes de la extensión en sí, será necesario quitar las lentes.',
+    'spoller-ten' => 'Después de construir, ¿puedo ir al mar, visitar una sauna o una piscina?',
+    'content-ten' => 'Poder. Pero trate de no mojarse las pestañas el primer día después de la extensión, es recomendable no visitar el baño, solárium, evitar las bajas temperaturas durante las primeras 24 horas. Además, tus cilios extendidos no temen la humedad, los cambios de temperatura, la sal o el agua clorada.',
   ],
   'read-more' => [
     'title' => 'ESTUDIO DE BELLEZA ULASH - ¡HAGA UNA BELLEZA PARA UN MILLÓN!',

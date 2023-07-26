@@ -285,6 +285,9 @@ body.lock {
   padding: 0 1.5rem;
 }
 
+.header {
+  z-index: 2;
+}
 .header .header-top {
   display: flex;
   align-items: center;
@@ -343,6 +346,32 @@ body.lock {
   flex-wrap: wrap;
   gap: 60px;
   row-gap: 30px;
+}
+.header__menu-item {
+  position: relative;
+  cursor: pointer;
+}
+.header__menu-item.active .header__sub-menu-list {
+  top: calc(100% + 10px);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  left: 50%;
+}
+.header__sub-menu-list {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: -50%;
+  padding: 10px 15px;
+  background-color: #FFD700;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: 0;
+  pointer-events: none;
+  transition: all 0.3s ease 0s;
+}
+.header__sub-menu-item:not(:last-child) {
+  margin-bottom: 10px;
 }
 .header__menu-link {
   font-weight: 700;
@@ -460,10 +489,56 @@ body.lock {
   .menu__list {
     width: 200px;
     min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+    /*       display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around; */
+  }
+  .menu__item {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    background-color: #ffffff;
+    z-index: 2;
+    /* &.active{
+      .menu__sub-menu-list{
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+        margin-bottom: 25px;
+      }
+      .menu__sub-menu-item{
+        &:not(:last-child){
+          margin-bottom: 10px;
+        }
+        &:first-child{
+          margin-top: 15px;
+        }
+      }
+    } */
+  }
+  .menu__item:not(:last-child) {
+    margin-bottom: 45px;
+  }
+  .menu__sub-menu-list {
+    position: relative;
+    font-style: italic;
+    font-weight: 400;
+    display: none;
+    /* opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s, height 0.3s ease 0s; */
+    margin-bottom: 0px;
+  }
+  .menu__sub-menu-item:first-child {
+    margin-top: 15px;
+  }
+  .menu__sub-menu-item:not(:last-child) {
+    margin-bottom: 15px;
   }
   .menu-open .menu__body {
     opacity: 1;
@@ -847,7 +922,7 @@ body {
 }
 .about__img {
   flex: 0 1 38%;
-  min-height: 616px;
+  min-height: 680px;
 }
 .about__img picture {
   display: block;

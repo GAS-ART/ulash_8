@@ -1,7 +1,7 @@
 //====================================================================================================
 
 .header {
-
+  z-index: 2;
   .header-top {
     display: flex;
     align-items: center;
@@ -76,7 +76,38 @@
     row-gap: 30px;
   }
 
-  &__menu-item {}
+  &__menu-item {
+    position: relative;
+    cursor: pointer;
+    &.active{
+      .header__sub-menu-list{
+        top: calc(100% + 10px);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+        left: 50%;
+      }
+    }
+  }
+
+  &__sub-menu-list{
+    position: absolute;
+    top: calc(100% + 10px);
+    left: -50%;
+    padding: 10px 15px;
+    background-color: $color__yellow;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: 0;
+    pointer-events: none;
+    transition: all 0.3s ease 0s;
+  }
+
+  &__sub-menu-item{
+    &:not(:last-child){
+      margin-bottom: 10px;
+    }  
+  }
 
   &__menu-link {
     font-weight: 700;
@@ -217,11 +248,60 @@
     &__list {
       width: 200px;
       min-height: 200px;
-      display: flex;
+/*       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: space-around;
+      justify-content: space-around; */
     }
+
+    &__item { 
+      user-select: none;
+      position: relative;
+      cursor: pointer;
+      text-align: center;
+      background-color: #ffffff;
+      z-index: 2;
+      &:not(:last-child){
+        margin-bottom: 45px;
+      }
+      /* &.active{
+        .menu__sub-menu-list{
+          opacity: 1;
+          visibility: visible;
+          pointer-events: all;
+          margin-bottom: 25px;
+        }
+        .menu__sub-menu-item{
+          &:not(:last-child){
+            margin-bottom: 10px;
+          }
+          &:first-child{
+            margin-top: 15px;
+          }
+        }
+      } */
+    }
+  
+    &__sub-menu-list{
+      position: relative;
+      font-style: italic;
+      font-weight: 400;
+      display: none;
+      /* opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s, height 0.3s ease 0s; */
+      margin-bottom: 0px;
+    }
+  
+    &__sub-menu-item{
+      &:first-child{
+        margin-top: 15px;
+      }
+      &:not(:last-child){
+        margin-bottom: 15px;
+      }  
+    } 
   }
 
   .menu-open .menu {
