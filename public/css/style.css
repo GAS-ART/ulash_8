@@ -381,9 +381,10 @@ body.lock {
   padding: 10px 15px;
   background-color: #FFD700;
   opacity: 0;
-  visibility: 0;
+  visibility: hidden;
   pointer-events: none;
   transition: all 0.3s ease 0s;
+  min-width: 143px;
 }
 .header__sub-menu-item:not(:last-child) {
   margin-bottom: 10px;
