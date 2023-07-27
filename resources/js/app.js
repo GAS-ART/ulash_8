@@ -101,16 +101,16 @@ function watchHeader(entries) {
 
 }
 
-const menuItems = document.querySelectorAll('.menu-item');
+/* const menuItems = document.querySelectorAll('.menu-item');
 
 document.addEventListener('click', (e) => {
-   /* Open/close menu */
+   // Open/close menu 
    if (!e.target.closest('.menu-item')) {
       menuItems.forEach(item => item.classList.remove('active'));
    } else {
       menuItems.forEach(item => item != e.target.closest('.menu-item') ? item.classList.remove('active') : item.classList.toggle('active'));
    }
-});
+}); */
 
 /* // Open menu in burger
 const burgerMenuItems = document.querySelectorAll('[data-spoiler-menu]');

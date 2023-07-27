@@ -13,12 +13,12 @@ return [
     'title-h2' => 'SALÓN DE BELLEZA ULASH',
     'author-name' => 'Yuliia Smirnova',
     'author-profession' => 'Dueña de estudio de belleza',
-    'text-1' => '¡Bienvenido a salón de belleza Ulash en Barcelona! Hemos creado este citio de relax y belleza especialmente para ti. Aquí cada cliente es nuestro invitado especial y nos esforzamos para que su visita sea inolvidable.',
-    'text-2' => 'Nuestro equipo está formado por estilistas experimentados y talentosos que estarán felices de ayudarlo a encontrar una nueva apariencia o realizar su belleza natural. Ofrecemos una gama alta de servicios tales como: manicura y pedicura, extensiones de pestañas y capacitación.',
-    'text-3' => 'Prestamos especial atención a la calidad de los servicios y utilizamos solo productos cosméticos probados. En nuestro salón puede estar seguro de la seguridad y calidad de los procedimientos.',
+    'text-1' => '¡Bienvenidos a salón de belleza Ulash en Barcelona! Hemos creado este citio de relax y belleza especialmente para ti. Aquí cada cliente es nuestro invitado especial y nos esforzamos para que su visita sea inolvidable.',
+    'text-2' => 'Nuestro equipo son estilistas experimentados y talentosos que estarán felices de ayudarlo a encontrar una nueva apariencia o realizar su belleza natural. Se presta atención a la calidad de los servicios y materiales, para que pueda estar seguro de que cualquier procedimiento es seguro. Nos esforzamos para que su tiempo con nosotros sea agradable y relajante. Siempre nos complace escuchar sus deseos y aconsejarle las mejores soluciones. Acércate a nosotros para disfrutar del cuidado y la atención hacia ti mismo. Te ayudaremos a sentirte bien y te daremos una imagen brillante. ¡Estaremos encantados de verte en el salón de belleza Ulash!',
+/*     'text-3' => 'Prestamos especial atención a la calidad de los servicios y utilizamos solo productos cosméticos probados. En nuestro salón puede estar seguro de la seguridad y calidad de los procedimientos.',
     'text-4' => 'Tenemos un ambiente de cordialidad y comodidad. Nos esforzamos para que su tiempo con nosotros sea agradable y relajante. Siempre nos complace escuchar sus deseos y aconsejarle las mejores soluciones.',
     'text-5' => 'Acércate a nosotros para disfrutar del cuidado y la atención hacia ti mismo. Te ayudaremos a sentirte genial y seguro, plasmar las ideas más atrevidas y darte una imagen brillante.',
-    'text-6' => '¡Estaremos encantados de verte en el salón de belleza Ulash!',
+    'text-6' => '¡Estaremos encantados de verte en el salón de belleza Ulash!', */
   ],
   'services' => [
     'title-h3' => 'SERVICIOS',

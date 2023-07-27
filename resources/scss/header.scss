@@ -79,13 +79,29 @@
   &__menu-item {
     position: relative;
     cursor: pointer;
-    &.active{
+    &::before{
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 166px;
+      height: 15px;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    &:hover{
       .header__sub-menu-list{
         top: calc(100% + 10px);
         opacity: 1;
         visibility: visible;
         pointer-events: all;
-        left: 50%;
+        left: 0%;
+      }
+      &::before{
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
       }
     }
   }
@@ -93,10 +109,10 @@
   &__sub-menu-list{
     position: absolute;
     top: calc(100% + 10px);
-    left: -50%;
+    left: -100%;
     padding: 10px 15px;
     background-color: $color__yellow;
-    transform: translateX(-50%);
+    //transform: translateX(-50%);
     opacity: 0;
     visibility: 0;
     pointer-events: none;

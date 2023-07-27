@@ -89,8 +89,6 @@
       <div class="about__text-wrapper">
         <p class="about__text">@lang('home.about.text-1')</p>
         <p class="about__text">@lang('home.about.text-2')</p>
-        <p class="about__text">@lang('home.about.text-3')</p>
-        <p class="about__text">@lang('home.about.text-4')</p>
       </div>
 
 

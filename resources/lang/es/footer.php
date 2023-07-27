@@ -6,9 +6,9 @@ return [
   'services' => [
     'title' => 'SERVICIOS',
     'li-one' => 'Manicura',
-    'li-two' => 'Pestañas',
-    'li-three' => 'Cejas',
-    'li-four' => 'Depilación y sugaring',
+    'li-two' => 'Pedicura',
+    'li-three' => 'Extension',
+    'li-four' => 'Capacitación',
   ],
   'teaching' => [
     'title' => 'EDUCACIÓN',
