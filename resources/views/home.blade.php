@@ -138,7 +138,7 @@
 
           <div class="services__content">
             <h4 class="services__content-title">@lang('home.services.card-one-text')</h4>
-            <p class="services__content-link">@lang('home.services.card-btn-text')</p>
+            <p data-popup="#popup" class="services__content-link">@lang('home.services.card-btn-text')</p>
           </div>
         </a>
 
@@ -159,7 +159,7 @@
 
           <div class="services__content">
             <h4 class="services__content-title">@lang('home.services.card-two-text')</h4>
-            <p class="services__content-link">@lang('home.services.card-btn-text')</p>
+            <p data-popup="#popup" class="services__content-link">@lang('home.services.card-btn-text')</p>
           </div>
         </a>
 
@@ -180,7 +180,7 @@
 
           <div class="services__content">
             <h4 class="services__content-title">@lang('home.services.card-three-text')</h4>
-            <p class="services__content-link">@lang('home.services.card-btn-text')</p>
+            <p data-popup="#popup" class="services__content-link">@lang('home.services.card-btn-text')</p>
           </div>
         </a>
 
@@ -201,7 +201,7 @@
 
           <div class="services__content">
             <h4 class="services__content-title">@lang('home.services.card-four-text')</h4>
-            <p class="services__content-link">@lang('home.services.card-btn-text')</p>
+            <p data-popup="#popup" class="services__content-link">@lang('home.services.card-btn-text')</p>
           </div>
         </a>
 
