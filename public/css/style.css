@@ -1156,15 +1156,29 @@ body {
   text-align: center;
 }
 .services__teaching-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  /*     display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px; */
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 402px));
+  grid-template-rows: auto;
   gap: 16px;
 }
+@media (max-width: 61.99875em) {
+  .services__teaching-wrapper {
+    grid-template-columns: minmax(290px, 402px);
+    grid-template-rows: repeat(3, auto);
+    justify-content: center;
+  }
+}
 .services__teaching-item {
-  flex: 0 1 33%;
-  min-height: 562px;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template: 270px 1fr/1fr;
   background: #FFFFFF;
+  gap: 24px;
+  padding-bottom: 40px;
 }
 .services__teaching-img-wrapper {
   display: block;
@@ -1196,13 +1210,14 @@ body {
      object-fit: cover;
 }
 .services__teaching-content {
-  margin: 24px;
+  display: grid;
+  grid-template: auto 1fr auto/1fr;
 }
 .services__teaching-title {
   font-family: "CormorantGaramond", sans-serif;
   font-weight: 700;
   font-size: 24px;
-  line-height: 30px;
+  padding: 0 24px;
   margin-bottom: 16px;
 }
 .services__teaching-text {
@@ -1211,8 +1226,10 @@ body {
   line-height: 24px;
   color: #828282;
   margin-bottom: 24px;
+  padding: 0 24px;
 }
 .services__teaching-popup {
+  justify-self: start;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1222,28 +1239,37 @@ body {
   background: #FFD700;
   padding: 17px 44px;
   border-radius: 50px;
+  margin: 0 24px;
 }
 
-@media (max-width: 950px) {
-  .services__teaching-title-h2 {
-    margin-top: 80px;
-    margin-bottom: 40px;
+/* @media(max-width: 950px) {
+  .services {
+    &__teaching {}
+
+    &__teaching-title-h2 {
+      margin-top: 80px;
+      margin-bottom: 40px;
+    }
+
+    &__teaching-wrapper {
+      flex-direction: column;
+    }
+
+    &__teaching-item {
+      flex: none;
+      max-width: 320px;
+      min-height: 450px;
+    }
+
+    &__teaching-img-wrapper {
+      height: 182px;
+    }
+
+    &__teaching-content {
+      margin: 24px;
+    }
   }
-  .services__teaching-wrapper {
-    flex-direction: column;
-  }
-  .services__teaching-item {
-    flex: none;
-    max-width: 320px;
-    min-height: 450px;
-  }
-  .services__teaching-img-wrapper {
-    height: 182px;
-  }
-  .services__teaching-content {
-    margin: 24px;
-  }
-}
+} */
 .advantages {
   padding-top: 160px;
   padding-bottom: 160px;
