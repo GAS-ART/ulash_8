@@ -24,9 +24,9 @@ return [
   'services' => [
     'title-h3' => 'УСЛУГИ',
     'title-h2' => 'ЧТО МЫ МОЖЕМ ПРЕДЛОЖИТЬ',
-    'card-one-text' => 'Маникюр',
-    'card-two-text' => 'Педикюр',
-    'card-three-text' => 'Рестницы',
+    'card-one-text' => 'Маникюр, педикюр',
+    'card-two-text' => 'Наращивание рестниц',
+    'card-three-text' => 'Брови',
     'card-four-text' => 'Обучение',
     'card-btn-text' => 'Записаться',
   ],

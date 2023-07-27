@@ -1066,10 +1066,10 @@ body {
 }
 .services__content {
   position: relative;
-  max-width: 120px;
+  max-width: 160px;
   min-height: 218px;
   z-index: 2;
-  margin: 40px 16px 40px 16px;
+  margin: 40px 16px 40px 5px;
   display: inline-flex;
   flex-direction: column;
   justify-content: space-between;

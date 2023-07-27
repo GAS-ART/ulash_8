@@ -23,9 +23,9 @@ return [
   'services' => [
     'title-h3' => 'SERVICIOS',
     'title-h2' => 'QUE PODEMOS OFRECER',
-    'card-one-text' => 'Manicura',
-    'card-two-text' => 'Pedicura',
-    'card-three-text' => 'Extension de pestañas',
+    'card-one-text' => 'Manicura y pedicura',
+    'card-two-text' => 'Extension de<br> pestañas',
+    'card-three-text' => 'Cejas',
     'card-four-text' => 'Сursos',
     'card-btn-text' => 'Inscribirse',
   ],
