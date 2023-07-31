@@ -1657,6 +1657,7 @@ body {
   height: 431px;
   margin: 0 42px 0 42px;
   position: relative;
+  touch-action: pan-y;
 }
 .swiper::before {
   content: "";
@@ -1696,6 +1697,16 @@ body {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+}
+.swiper-slide .swiper-lazy-preloader {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  background-image: url(/images/load_100.gif?a668e6fae7d649d3c6335def0e2959ff);
 }
 
 .swiper-slide {
