@@ -260,6 +260,28 @@
           </div>
         </div>
 
+        {{-- <div class="services__teaching-item">
+          <a class="services__teaching-img-wrapper" href="#">
+            @if(App::isLocale('es'))
+            <picture>
+              <source type="image/webp" media="(min-width:950px)" srcset="/img/home/es/teaching/3.webp">
+              <source type="image/webp" media="(min-width:320px)" srcset="/img/home/es/mobile/teaching/3.webp">
+              <img src="/img/home/es/teaching/3.jpg" alt="">
+            </picture>
+            @elseif(App::isLocale('ru'))
+            <picture>
+              <source type="image/webp" media="(min-width:950px)" srcset="\img\home\ru\teaching\3.webp">
+              <source type="image/webp" media="(min-width:320px)" srcset="\img\home\ru\mobile\teaching\3.webp">
+              <img src="\img\home\ru\teaching\3.jpg" alt="">
+            </picture>
+            @endif
+          </a>
+          <div class="services__teaching-content">
+            <h4 class="services__teaching-title">@lang('home.teaching.card-three-title')</h4>
+            <p class="services__teaching-text">@lang('home.teaching.card-three-text')</p>
+            <button class="services__teaching-popup" data-popup="#popup">@lang('home.teaching.card-btn-text')</button>
+          </div>
+        </div> --}}
       </div>
     </div>
   </div>
@@ -385,132 +407,157 @@
           <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide">
+
+              @if(App::isLocale('es'))
               <picture class="swiper-slide__img">
-                <img src="/img/home/es/reviews/1.webp" alt="">
+                <source type="image/webp" type="image/webp" media="(min-width:701px)"
+                  srcset="/img/home/es/reviews/1.webp">
+                <source type="image/webp" type="image/webp" media="(min-width:320px)"
+                  srcset="/img/home/es/mobile/reviews/1.webp">
+                <img src="/img/home/es/reviews/1.jpg" alt="">
               </picture>
-            </div>
-            <div class="swiper-slide">
+              @elseif(App::isLocale('ru'))
               <picture class="swiper-slide__img">
-                <img src="/img/home/es/reviews/2.webp" alt="">
+                <source type="image/webp" media="(min-width:701px)" srcset="/img/home/ru/reviews/1.webp">
+                <source type="image/webp" media="(min-width:320px)" srcset="/img/home/ru/mobile/reviews/1.webp">
+                <img src="/img/home/ru/reviews/1.jpg" alt="">
               </picture>
+              @endif
+
             </div>
+
             <div class="swiper-slide">
+
+              @if(App::isLocale('es'))
               <picture class="swiper-slide__img">
-                <img src="/img/home/es/reviews/3.webp" alt="">
+                <source type="image/webp" type="image/webp" media="(min-width:701px)"
+                  srcset="/img/home/es/reviews/2.webp">
+                <source type="image/webp" type="image/webp" media="(min-width:320px)"
+                  srcset="/img/home/es/mobile/reviews/2.webp">
+                <img src="/img/home/es/reviews/2.jpg" alt="">
               </picture>
-            </div>
-            <div class="swiper-slide">
+              @elseif(App::isLocale('ru'))
               <picture class="swiper-slide__img">
-                <img src="/img/home/es/reviews/4.webp" alt="">
+                <source type="image/webp" media="(min-width:701px)" srcset="/img/home/ru/reviews/2.webp">
+                <source type="image/webp" media="(min-width:320px)" srcset="/img/home/ru/mobile/reviews/2.webp">
+                <img src="/img/home/ru/reviews/2.jpg" alt="">
               </picture>
+              @endif
+
             </div>
             <div class="swiper-slide">
-              <div class="swiper-slide__img">
-                <img src="/img/home/es/reviews/5test.webp" alt="" loading="lazy">
-                <div class="swiper-lazy-preloader"></div>
-              </div>
+
+              @if(App::isLocale('es'))
+              <picture class="swiper-slide__img">
+                <source type="image/webp" type="image/webp" media="(min-width:701px)"
+                  srcset="/img/home/es/reviews/3.webp">
+                <source type="image/webp" type="image/webp" media="(min-width:320px)"
+                  srcset="/img/home/es/mobile/reviews/2.webp">
+                <img src="/img/home/es/reviews/3.jpg" alt="">
+              </picture>
+              @elseif(App::isLocale('ru'))
+              <picture class="swiper-slide__img">
+                <source type="image/webp" media="(min-width:701px)" srcset="/img/home/ru/reviews/3.webp">
+                <source type="image/webp" media="(min-width:320px)" srcset="/img/home/ru/mobile/reviews/1.webp">
+                <img src="/img/home/ru/reviews/1.jpg" alt="">
+              </picture>
+              @endif
+
             </div>
             <div class="swiper-slide">
-              <div class="swiper-slide__img">
-                <img src="/img/home/es/reviews/6.webp" alt="" loading="lazy">
-                <div class="swiper-lazy-preloader"></div>
-              </div>
+
+              @if(App::isLocale('es'))
+              <picture class="swiper-slide__img">
+                <source type="image/webp" type="image/webp" media="(min-width:701px)"
+                  srcset="/img/home/es/reviews/1.webp">
+                <source type="image/webp" type="image/webp" media="(min-width:320px)"
+                  srcset="/img/home/es/mobile/reviews/1.webp">
+                <img src="/img/home/es/reviews/1.jpg" alt="">
+              </picture>
+              @elseif(App::isLocale('ru'))
+              <picture class="swiper-slide__img">
+                <source type="image/webp" media="(min-width:701px)" srcset="/img/home/ru/reviews/2.webp">
+                <source type="image/webp" media="(min-width:320px)" srcset="/img/home/ru/mobile/reviews/2.webp">
+                <img src="/img/home/ru/reviews/2.jpg" alt="">
+              </picture>
+              @endif
+
             </div>
             <div class="swiper-slide">
-              <div class="swiper-slide__img">
-                <img src="/img/home/es/reviews/7.webp" alt="" loading="lazy">
-                <div class="swiper-lazy-preloader"></div>
-              </div>
+
+              @if(App::isLocale('es'))
+              <picture class="swiper-slide__img">
+                <source type="image/webp" type="image/webp" media="(min-width:701px)"
+                  srcset="/img/home/es/reviews/1.webp">
+                <source type="image/webp" type="image/webp" media="(min-width:320px)"
+                  srcset="/img/home/es/mobile/reviews/1.webp">
+                <img src="/img/home/es/reviews/1.jpg" alt="">
+              </picture>
+              @elseif(App::isLocale('ru'))
+              <picture class="swiper-slide__img">
+                <source type="image/webp" media="(min-width:701px)" srcset="/img/home/ru/reviews/2.webp">
+                <source type="image/webp" media="(min-width:320px)" srcset="/img/home/ru/mobile/reviews/2.webp">
+                <img src="/img/home/ru/reviews/2.jpg" alt="">
+              </picture>
+              @endif
+
             </div>
             <div class="swiper-slide">
-              <div class="swiper-slide__img">
-                <img src="/img/home/es/reviews/8.webp" alt="" loading="lazy">
-                <div class="swiper-lazy-preloader"></div>
-              </div>
+
+              @if(App::isLocale('es'))
+              <picture class="swiper-slide__img">
+                <source type="image/webp" type="image/webp" media="(min-width:701px)"
+                  srcset="/img/home/es/reviews/1.webp">
+                <source type="image/webp" type="image/webp" media="(min-width:320px)"
+                  srcset="/img/home/es/mobile/reviews/1.webp">
+                <img src="/img/home/es/reviews/1.jpg" alt="">
+              </picture>
+              @elseif(App::isLocale('ru'))
+              <picture class="swiper-slide__img">
+                <source type="image/webp" media="(min-width:701px)" srcset="/img/home/ru/reviews/2.webp">
+                <source type="image/webp" media="(min-width:320px)" srcset="/img/home/ru/mobile/reviews/2.webp">
+                <img src="/img/home/ru/reviews/2.jpg" alt="">
+              </picture>
+              @endif
+
             </div>
             <div class="swiper-slide">
-              <div class="swiper-slide__img">
-                <img src="/img/home/es/reviews/9.webp" alt="" loading="lazy">
-                <div class="swiper-lazy-preloader"></div>
-              </div>
+
+              @if(App::isLocale('es'))
+              <picture class="swiper-slide__img">
+                <source type="image/webp" type="image/webp" media="(min-width:701px)"
+                  srcset="/img/home/es/reviews/1.webp">
+                <source type="image/webp" type="image/webp" media="(min-width:320px)"
+                  srcset="/img/home/es/mobile/reviews/1.webp">
+                <img src="/img/home/es/reviews/1.jpg" alt="">
+              </picture>
+              @elseif(App::isLocale('ru'))
+              <picture class="swiper-slide__img">
+                <source type="image/webp" media="(min-width:701px)" srcset="/img/home/ru/reviews/2.webp">
+                <source type="image/webp" media="(min-width:320px)" srcset="/img/home/ru/mobile/reviews/2.webp">
+                <img src="/img/home/ru/reviews/2.jpg" alt="">
+              </picture>
+              @endif
+
             </div>
             <div class="swiper-slide">
-              <div class="swiper-slide__img">
-                <img src="/img/home/es/reviews/10.webp" alt="" loading="lazy">
-                <div class="swiper-lazy-preloader"></div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide__img">
-                <img src="/img/home/es/reviews/11.webp" alt="" loading="lazy">
-                <div class="swiper-lazy-preloader"></div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide__img">
-                <img src="/img/home/es/reviews/12.webp" alt="" loading="lazy">
-                <div class="swiper-lazy-preloader"></div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide__img">
-                <img src="/img/home/es/reviews/13.webp" alt="" loading="lazy">
-                <div class="swiper-lazy-preloader"></div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide__img">
-                <img src="/img/home/es/reviews/14.webp" alt="" loading="lazy">
-                <div class="swiper-lazy-preloader"></div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide__img">
-                <img src="/img/home/es/reviews/15.webp" alt="" loading="lazy">
-                <div class="swiper-lazy-preloader"></div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide__img">
-                <img src="/img/home/es/reviews/16.webp" alt="" loading="lazy">
-                <div class="swiper-lazy-preloader"></div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide__img">
-                <img src="/img/home/es/reviews/17.webp" alt="" loading="lazy">
-                <div class="swiper-lazy-preloader"></div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide__img">
-                <img src="/img/home/es/reviews/18.webp" alt="" loading="lazy">
-                <div class="swiper-lazy-preloader"></div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide__img">
-                <img src="/img/home/es/reviews/19.webp" alt="" loading="lazy">
-                <div class="swiper-lazy-preloader"></div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide__img">
-                <img src="/img/home/es/reviews/20.webp" alt="" loading="lazy">
-                <div class="swiper-lazy-preloader"></div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide__img">
-                <img src="/img/home/es/reviews/21.webp" alt="" loading="lazy">
-                <div class="swiper-lazy-preloader"></div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide__img">
-                <img src="/img/home/es/reviews/22.webp" alt="" loading="lazy">
-                <div class="swiper-lazy-preloader"></div>
-              </div>
+
+              @if(App::isLocale('es'))
+              <picture class="swiper-slide__img">
+                <source type="image/webp" type="image/webp" media="(min-width:701px)"
+                  srcset="/img/home/es/reviews/1.webp">
+                <source type="image/webp" type="image/webp" media="(min-width:320px)"
+                  srcset="/img/home/es/mobile/reviews/1.webp">
+                <img src="/img/home/es/reviews/1.jpg" alt="">
+              </picture>
+              @elseif(App::isLocale('ru'))
+              <picture class="swiper-slide__img">
+                <source type="image/webp" media="(min-width:701px)" srcset="/img/home/ru/reviews/2.webp">
+                <source type="image/webp" media="(min-width:320px)" srcset="/img/home/ru/mobile/reviews/2.webp">
+                <img src="/img/home/ru/reviews/2.jpg" alt="">
+              </picture>
+              @endif
+
             </div>
           </div>
 

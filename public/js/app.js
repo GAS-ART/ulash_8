@@ -1014,81 +1014,74 @@ document.addEventListener('click', function (e) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
-var _Swiper;
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 
-var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper', {
-  speed: 400,
-  spaceBetween: 100
-});
-new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper', (_Swiper = {
-  modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation],
-  //observer: true,
-  //observeParents: true,
-  loop: true,
-  slidesPerView: 4,
-  slidesPerGroup: 1,
-  spaceBetween: 16,
-  lazyPreloadPrevNext: 1,
-  simulateTouch: true,
-  speed: 800
-}, _defineProperty(_Swiper, "slidesPerView", 'auto'), _defineProperty(_Swiper, "centeredSlides", false), _defineProperty(_Swiper, "navigation", {
-  prevEl: '.swiper-button-prev',
-  nextEl: '.swiper-button-next'
-}), _defineProperty(_Swiper, "breakpoints", {
-  320: {
-    slidesPerView: 2.6,
-    centeredSlides: true
-  },
-  340: {
-    spaceBetween: 16,
-    slidesPerView: 2.6,
-    centeredSlides: true
-  },
-  420: {
-    slidesPerView: 3,
-    centeredSlides: true
-  },
-  620: {
-    slidesPerView: 3,
-    centeredSlides: true
-  },
-  680: {
-    slidesPerView: 2.6,
-    centeredSlides: true
-  },
-  1000: {
-    slidesPerView: 3,
-    centeredSlides: true
-  },
-  1200: {
+function initSliders() {
+  var _Swiper;
+  var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper', (_Swiper = {
+    modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation],
+    observer: true,
+    observeParents: true,
+    loop: true,
     slidesPerView: 4,
-    centeredSlides: false
-  }
-}), _Swiper));
-
-/* function initSliders() {
-
-
+    spaceBetween: 16,
+    speed: 800
+  }, _defineProperty(_Swiper, "slidesPerView", 'auto'), _defineProperty(_Swiper, "watchOverflow", true), _defineProperty(_Swiper, "slideToClickedSlide", true), _defineProperty(_Swiper, "centeredSlides", false), _defineProperty(_Swiper, "lazy", {
+    loadOnTransitionStart: true,
+    loadPrevNext: true
+  }), _defineProperty(_Swiper, "navigation", {
+    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next'
+  }), _defineProperty(_Swiper, "breakpoints", {
+    320: {
+      slidesPerView: 2.6,
+      centeredSlides: true
+    },
+    340: {
+      spaceBetween: 16,
+      slidesPerView: 2.6,
+      centeredSlides: true
+    },
+    420: {
+      slidesPerView: 3,
+      centeredSlides: true
+    },
+    620: {
+      slidesPerView: 3,
+      centeredSlides: true
+    },
+    680: {
+      slidesPerView: 2.6,
+      centeredSlides: true
+    },
+    1000: {
+      slidesPerView: 3,
+      centeredSlides: true
+    },
+    1200: {
+      slidesPerView: 4,
+      centeredSlides: false
+    }
+  }), _Swiper));
 }
 
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 function initSlidersScroll() {
-  let sliderScrollItems = document.querySelectorAll('.swiper_scroll');
+  var sliderScrollItems = document.querySelectorAll('.swiper_scroll');
   if (sliderScrollItems.length > 0) {
-    for (let index = 0; index < sliderScrollItems.length; index++) {
-      const sliderScrollItem = sliderScrollItems[index];
-      const sliderScrollBar = sliderScrollItem.querySelector('.swiper-scrollbar');
-      const sliderScroll = new Swiper(sliderScrollItem, {
+    for (var index = 0; index < sliderScrollItems.length; index++) {
+      var sliderScrollItem = sliderScrollItems[index];
+      var sliderScrollBar = sliderScrollItem.querySelector('.swiper-scrollbar');
+      var sliderScroll = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](sliderScrollItem, {
         observer: true,
         observeParents: true,
         direction: 'vertical',
         slidesPerView: 'auto',
         freeMode: {
-          enabled: true,
+          enabled: true
         },
         scrollbar: {
           el: sliderScrollBar,
@@ -1096,17 +1089,16 @@ function initSlidersScroll() {
           snapOnRelease: false
         },
         mousewheel: {
-          releaseOnEdges: true,
-        },
+          releaseOnEdges: true
+        }
       });
       sliderScroll.scrollbar.updateSize();
     }
   }
 }
-
 window.addEventListener("load", function (e) {
   initSliders();
-}); */
+});
 
 /***/ }),
 

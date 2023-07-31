@@ -1250,6 +1250,7 @@ body {
   overflow: hidden;
   cursor: pointer;
   position: relative;
+
   & img,
   & source {
     position: absolute;
@@ -1260,20 +1261,10 @@ body {
     -o-object-fit: cover;
     object-fit: cover;
   }
-  .swiper-lazy-preloader{
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 5;
-    background-image: url('../../public/img/load_100.gif');
-  }
 }
 
 .swiper-slide {
-  //width: 25%;
+  width: 25%;
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;

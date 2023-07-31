@@ -1,72 +1,62 @@
 
 import Swiper, { Navigation } from 'swiper';
 
-const swiper = new Swiper('.swiper', {
-  speed: 400,
-  spaceBetween: 100,
-});
+function initSliders() {
 
-new Swiper('.swiper', {
-  modules: [Navigation],
-  //observer: true,
-  //observeParents: true,
-  loop: true,
-  slidesPerView: 4,
-  slidesPerGroup: 1,
-  spaceBetween: 16,
-  lazyPreloadPrevNext: 1,
-  simulateTouch: true,
-  speed: 800,
-  slidesPerView: 'auto',
-  //watchOverflow: true,
-  //slideToClickedSlide: true,
-  centeredSlides: false,
-  //lazy: {
-  //      loadOnTransitionStart: true,
-  //      loadPrevNext: true,
-  //},
+  const swiper = new Swiper('.swiper', {
+    modules: [Navigation],
+    observer: true,
+    observeParents: true,
+    loop: true,
+    slidesPerView: 4,
+    spaceBetween: 16,
+    speed: 800,
+    slidesPerView: 'auto',
+    watchOverflow: true,
+    slideToClickedSlide: true,
+    centeredSlides: false,
+    lazy: {
+      loadOnTransitionStart: true,
+      loadPrevNext: true,
+    },
 
-  navigation: {
-    prevEl: '.swiper-button-prev',
-    nextEl: '.swiper-button-next',
-  },
+    navigation: {
+      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-next',
+    },
 
-  breakpoints: {
-    320: {
-      slidesPerView: 2.6,
-      centeredSlides: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 2.6,
+        centeredSlides: true,
+      },
+      340: {
+        spaceBetween: 16,
+        slidesPerView: 2.6,
+        centeredSlides: true,
+      },
+      420: {
+        slidesPerView: 3,
+        centeredSlides: true,
+      },
+      620: {
+        slidesPerView: 3,
+        centeredSlides: true,
+      },
+      680: {
+        slidesPerView: 2.6,
+        centeredSlides: true,
+      },
+      1000: {
+        slidesPerView: 3,
+        centeredSlides: true,
+      },
+      1200: {
+        slidesPerView: 4,
+        centeredSlides: false,
+      },
     },
-    340: {
-      spaceBetween: 16,
-      slidesPerView: 2.6,
-      centeredSlides: true,
-    },
-    420: {
-      slidesPerView: 3,
-      centeredSlides: true,
-    },
-    620: {
-      slidesPerView: 3,
-      centeredSlides: true,
-    },
-    680: {
-      slidesPerView: 2.6,
-      centeredSlides: true,
-    },
-    1000: {
-      slidesPerView: 3,
-      centeredSlides: true,
-    },
-    1200: {
-      slidesPerView: 4,
-      centeredSlides: false,
-    },
-  },
-});
-
-/* function initSliders() {
-
-
+  });
 }
 
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
@@ -100,4 +90,4 @@ function initSlidersScroll() {
 
 window.addEventListener("load", function (e) {
   initSliders();
-}); */
+});
