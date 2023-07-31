@@ -1,3 +1,5 @@
+const currentLang = document.documentElement.lang;
+
 const popupForm = document.querySelector('.popup__form');
 
 $(".popup__form").submit(function (event) {
@@ -144,6 +146,72 @@ $(document).ready(function () {
       $(this).siblings('.spoiler-content').slideToggle();
    });
 });
+
+//Portfolio - show more
+const portfolioBody = document.querySelector('.saloon__wrapper');
+const portfolioShowMoreBtn = document.querySelector('.saloon__btn');
+const portfolioData = [
+   { src: 'img/home/es/saloon/6.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+   { src: 'img/home/es/saloon/7.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+   { src: 'img/home/es/saloon/8.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+   { src: 'img/home/es/saloon/9.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+   { src: 'img/home/es/saloon/10.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+   { src: 'img/home/es/saloon/11.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+   { src: 'img/home/es/saloon/12.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+   { src: 'img/home/es/saloon/13.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+   { src: 'img/home/es/saloon/14.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+   { src: 'img/home/es/saloon/15.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+   { src: 'img/home/es/saloon/16.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+   { src: 'img/home/es/saloon/17.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+   { src: 'img/home/es/saloon/18.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+   { src: 'img/home/es/saloon/19.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+   { src: 'img/home/es/saloon/20.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+   { src: 'img/home/es/saloon/21.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+   { src: 'img/home/es/saloon/22.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+   { src: 'img/home/es/saloon/23.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+   { src: 'img/home/es/saloon/24.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+   { src: 'img/home/es/saloon/25.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+   { src: 'img/home/es/saloon/26.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+   { src: 'img/home/es/saloon/27.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+];
+let portfolioDataIndex = 0;
+
+
+portfolioShowMoreBtn.addEventListener('click', portfolioSowMore);
+
+async function portfolioSowMore() {
+   if (portfolioDataIndex < portfolioData.length) {
+      const imgSrcArr = [];
+      const stopCoutPortfolioData = portfolioData.length - portfolioDataIndex >= 3 ? 3 : portfolioData.length - portfolioDataIndex;
+      for (let i = 0; i < stopCoutPortfolioData; i++) {
+         const imgSrc = await new Promise((resolve, reject) => {
+            const img = new Image();
+            img.onload = () => resolve(img.src);
+            img.onerror = () => portfolioShowMoreBtn.style.display = 'none';
+            img.src = portfolioData[portfolioDataIndex + i].src;
+         });
+         imgSrcArr.push(imgSrc);
+      }
+
+      const html = imgSrcArr.map((imgSrc, index) => `
+               <div class="saloon__link">
+                  <picture class="saloon__img">
+                     <img src="${imgSrc}" alt="">
+                  </picture>
+                  <div class="saloon__content-wrapper">
+                     <div class="saloon__icon icon-plusImage"></div>
+                     <div class="saloon__text-wrapper">
+                     <h4 class="saloon__content-title">${portfolioData[portfolioDataIndex + index][currentLang].title}</h4>
+                     <p class="saloon__text">${portfolioData[portfolioDataIndex + index][currentLang].text}</p>
+                     </div>
+                  </div>
+               </div>
+               `).join('');
+      portfolioBody.insertAdjacentHTML('beforeend', html);
+      portfolioDataIndex += 3;
+      if (portfolioDataIndex >= portfolioData.length) portfolioShowMoreBtn.style.display = 'none';
+   }
+}
 
 //==========================================================================================================
 const headerObserver = new IntersectionObserver(watchHeader);

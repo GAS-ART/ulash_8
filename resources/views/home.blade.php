@@ -260,7 +260,7 @@
           </div>
         </div>
 
-        <div class="services__teaching-item">
+        {{-- <div class="services__teaching-item">
           <a class="services__teaching-img-wrapper" href="#">
             @if(App::isLocale('es'))
             <picture>
@@ -281,7 +281,7 @@
             <p class="services__teaching-text">@lang('home.teaching.card-three-text')</p>
             <button class="services__teaching-popup" data-popup="#popup">@lang('home.teaching.card-btn-text')</button>
           </div>
-        </div>
+        </div> --}}
       </div>
     </div>
   </div>
@@ -325,21 +325,9 @@
 
       <div class="saloon__wrapper">
         <div class="saloon__link">
-
-          @if(App::isLocale('es'))
           <picture class="saloon__img">
-            <source type="image/webp" media="(min-width:450px)" srcset="/img/home/es/saloon/1.webp">
-            <source type="image/webp" media="(min-width:320px)" srcset="/img/home/es/mobile/saloon/1.webp">
-            <img src="/img/home/es/saloon/1.jpg" alt="">
+            <img src="/img/home/es/saloon/1.webp" alt="">
           </picture>
-          @elseif(App::isLocale('ru'))
-          <picture class="saloon__img">
-            <source type="image/webp" media="(min-width:450px)" srcset="/img/home/ru/saloon/1.webp">
-            <source type="image/webp" media="(min-width:320px)" srcset="/img/home/ru/mobile/saloon/1.webp">
-            <img src="/img/home/ru/saloon/1.jpg" alt="">
-          </picture>
-          @endif
-
           <div class="saloon__content-wrapper">
             <div class="saloon__icon icon-plusImage"></div>
             <div class="saloon__text-wrapper">
@@ -350,21 +338,9 @@
         </div>
 
         <div class="saloon__link">
-
-          @if(App::isLocale('es'))
           <picture class="saloon__img">
-            <source type="image/webp" media="(min-width:450px)" srcset="/img/home/es/saloon/2.webp">
-            <source type="image/webp" media="(min-width:320px)" srcset="/img/home/es/mobile/saloon/2.webp">
-            <img src="/img/home/es/saloon/2.jpg" alt="">
+            <img src="/img/home/es/saloon/2.webp" alt="">
           </picture>
-          @elseif(App::isLocale('ru'))
-          <picture class="saloon__img">
-            <source type="image/webp" media="(min-width:450px)" srcset="/img/home/ru/saloon/2.webp">
-            <source type="image/webp" media="(min-width:320px)" srcset="/img/home/ru/mobile/saloon/2.webp">
-            <img src="/img/home/ru/saloon/2.jpg" alt="">
-          </picture>
-          @endif
-
           <div class="saloon__content-wrapper">
             <div class="saloon__icon icon-plusImage"></div>
             <div class="saloon__text-wrapper">
@@ -375,20 +351,9 @@
         </div>
 
         <div class="saloon__link">
-          @if(App::isLocale('es'))
           <picture class="saloon__img">
-            <source type="image/webp" media="(min-width:450px)" srcset="/img/home/es/saloon/3.webp">
-            <source type="image/webp" media="(min-width:320px)" srcset="/img/home/es/mobile/saloon/3.webp">
-            <img src="/img/home/es/saloon/3.jpg" alt="">
+            <img src="/img/home/es/saloon/3.webp" alt="">
           </picture>
-          @elseif(App::isLocale('ru'))
-          <picture class="saloon__img">
-            <source type="image/webp" media="(min-width:450px)" srcset="/img/home/ru/saloon/3.webp">
-            <source type="image/webp" media="(min-width:320px)" srcset="/img/home/ru/mobile/saloon/3.webp">
-            <img src="/img/home/ru/saloon/3.jpg" alt="">
-          </picture>
-          @endif
-
           <div class="saloon__content-wrapper">
             <div class="saloon__icon icon-plusImage"></div>
             <div class="saloon__text-wrapper">
@@ -399,20 +364,9 @@
         </div>
 
         <div class="saloon__link">
-          @if(App::isLocale('es'))
           <picture class="saloon__img">
-            <source type="image/webp" media="(min-width:450px)" srcset="/img/home/es/saloon/4.webp">
-            <source type="image/webp" media="(min-width:320px)" srcset="/img/home/es/mobile/saloon/4.webp">
-            <img src="/img/home/es/saloon/4.jpg" alt="">
+            <img src="/img/home/es/saloon/4.webp" alt="">
           </picture>
-          @elseif(App::isLocale('ru'))
-          <picture class="saloon__img">
-            <source type="image/webp" media="(min-width:450px)" srcset="/img/home/ru/saloon/4.webp">
-            <source type="image/webp" media="(min-width:320px)" srcset="/img/home/ru/mobile/saloon/4.webp">
-            <img src="/img/home/ru/saloon/4.jpg" alt="">
-          </picture>
-          @endif
-
           <div class="saloon__content-wrapper">
             <div class="saloon__icon icon-plusImage"></div>
             <div class="saloon__text-wrapper">
@@ -423,20 +377,9 @@
         </div>
 
         <div class="saloon__link">
-          @if(App::isLocale('es'))
           <picture class="saloon__img">
-            <source type="image/webp" type="image/webp" media="(min-width:450px)" srcset="/img/home/es/saloon/5.webp">
-            <source type="image/webp" type="image/webp" media="(min-width:320px)"
-              srcset="/img/home/es/mobile/saloon/5.webp">
-            <img src="/img/home/es/saloon/5.jpg" alt="">
+            <img src="/img/home/es/saloon/5.webp" alt="">
           </picture>
-          @elseif(App::isLocale('ru'))
-          <picture class="saloon__img">
-            <source type="image/webp" media="(min-width:450px)" srcset="/img/home/ru/saloon/5.webp">
-            <source type="image/webp" media="(min-width:320px)" srcset="/img/home/ru/mobile/saloon/5.webp">
-            <img src="/img/home/ru/saloon/5.jpg" alt="">
-          </picture>
-          @endif
           <div class="saloon__content-wrapper">
             <div class="saloon__icon icon-plusImage"></div>
             <div class="saloon__text-wrapper">
@@ -445,6 +388,7 @@
             </div>
           </div>
         </div>
+
       </div>
       <button class="saloon__btn">@lang('home.saloon.btn-text')</button>
     </div>
