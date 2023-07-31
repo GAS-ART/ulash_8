@@ -10,10 +10,10 @@
         @endif
       </a>
 
-      <button class="footer__popup">@lang('footer.popup')</button>
+      <button class="footer__popup" data-popup="#popup">@lang('footer.popup')</button>
 
       <div class="footer__icons">
-        <a href="#" class="footer__icon icon-instagram"></a>
+        <a href="https://www.instagram.com/ulash_bcn" class="footer__icon icon-instagram"></a>
         <a href="#" class="footer__icon icon-facebook"></a>
       </div>
     </div>
@@ -22,36 +22,44 @@
   <div class="footer__container">
     <div class="footer__content">
       <div class="footer__box">
-        <a href="{{ route('service', ['locale' => __('lang.current')]) }}" class="footer__menu-title">@lang('footer.services.title')</a>
+        <a href="{{ route('service', ['locale' => __('lang.current')]) }}"
+          class="footer__menu-title">@lang('footer.services.title')</a>
 
         <ul class="footer__menu-list">
-          <li class="footer__menu-item"><a href="{{ route('service', ['locale' => __('lang.current')]) }}" class="footer__menu-link">@lang('footer.services.li-one')</a></li>
-          <li class="footer__menu-item"><a href="{{ route('teaching', ['locale' => __('lang.current')]) }}" class="footer__menu-link">@lang('footer.services.li-two')</a></li>
-          <li class="footer__menu-item"><a href="{{ route('reviews', ['locale' => __('lang.current')]) }}" class="footer__menu-link">@lang('footer.services.li-three')</a></li>
-          <li class="footer__menu-item"><a href="{{ route('contants', ['locale' => __('lang.current')]) }}" class="footer__menu-link">@lang('footer.services.li-four')</a></li>
+          <li class="footer__menu-item"><a href="{{ route('service', ['locale' => __('lang.current')]) }}"
+              class="footer__menu-link">@lang('footer.services.li-one')</a></li>
+          <li class="footer__menu-item"><a href="{{ route('teaching', ['locale' => __('lang.current')]) }}"
+              class="footer__menu-link">@lang('footer.services.li-two')</a></li>
+          <li class="footer__menu-item"><a href="{{ route('reviews', ['locale' => __('lang.current')]) }}"
+              class="footer__menu-link">@lang('footer.services.li-three')</a></li>
+          <li class="footer__menu-item"><a href="{{ route('contants', ['locale' => __('lang.current')]) }}"
+              class="footer__menu-link">@lang('header.nav.services.brows')</a></li>
         </ul>
 
       </div>
 
       <div class="footer__box">
-        <a href="{{ route('teaching', ['locale' => __('lang.current')]) }}" class="footer__menu-title">@lang('footer.teaching.title')</a>
+        <a href="{{ route('teaching', ['locale' => __('lang.current')]) }}"
+          class="footer__menu-title">@lang('footer.teaching.title')</a>
 
         <ul class="footer__menu-list">
-          <li class="footer__menu-item"><a href="{{ route('service', ['locale' => __('lang.current')]) }}" class="footer__menu-link">@lang('footer.teaching.li-one')</a></li>
-          <li class="footer__menu-item"><a href="{{ route('teaching', ['locale' => __('lang.current')]) }}" class="footer__menu-link">@lang('footer.teaching.li-two')</a></li>
-          <li class="footer__menu-item"><a href="{{ route('reviews', ['locale' => __('lang.current')]) }}" class="footer__menu-link">@lang('footer.teaching.li-three')</a></li>
+          <li class="footer__menu-item"><a href="{{ route('service', ['locale' => __('lang.current')]) }}"
+              class="footer__menu-link">@lang('footer.teaching.li-one')</a></li>
+          <li class="footer__menu-item"><a href="{{ route('teaching', ['locale' => __('lang.current')]) }}"
+              class="footer__menu-link">@lang('footer.teaching.li-two')</a></li>
         </ul>
 
       </div>
 
       <div class="footer__box">
-        <a href="{{ route('service', ['locale' => __('lang.current')]) }}" class="footer__menu-title">@lang('footer.contacts.title')</a>
+        <a href="{{ route('service', ['locale' => __('lang.current')]) }}"
+          class="footer__menu-title">@lang('footer.contacts.title')</a>
 
         <ul class="footer__menu-list">
           <li class="footer__menu-item">
             <a class="footer__contacts-item" href="#">
               <span class="footer__contacts-icon icon-point"></span>
-              <p class="footer__contacts-address">@lang('footer.contacts.adress')</p>
+              <p class="footer__contacts-address">@lang('main.address')</p>
             </a>
           </li>
           <li class="footer__menu-item">

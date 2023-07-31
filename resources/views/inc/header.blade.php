@@ -7,7 +7,7 @@
           <div class="header-top__contacts">
             <a class="header-top__contacts-item" href="#">
               <span class="header-top__contacts-icon icon-point"></span>
-              <p class="header-top__contacts-address">Barcelona, adress adress</p>
+              <p class="header-top__contacts-address">@lang('main.address')</p>
             </a>
             <a class="header-top__contacts-item" href="tel:+34617051264">
               <span class="header-top__contacts-icon icon-phone"></span>
@@ -44,6 +44,10 @@
                     <li class="header__sub-menu-item">
                       <a href="{{ route('service', ['locale' => __('lang.current')]) }}"
                         class="header__sub-menu-link">@lang('header.nav.services.eyelashes')</a>
+                    </li>
+                    <li class="header__sub-menu-item">
+                      <a href="{{ route('service', ['locale' => __('lang.current')]) }}"
+                        class="header__sub-menu-link">@lang('header.nav.services.brows')</a>
                     </li>
                   </ul>
                 </li>
@@ -108,6 +112,10 @@
                     <li class="menu__sub-menu-item">
                       <a href="{{ route('service', ['locale' => __('lang.current')]) }}"
                         class="menu__sub-menu-link">@lang('header.nav.services.eyelashes')</a>
+                    </li>
+                    <li class="menu__sub-menu-item">
+                      <a href="{{ route('service', ['locale' => __('lang.current')]) }}"
+                        class="menu__sub-menu-link">@lang('header.nav.services.brows')</a>
                     </li>
                   </ul>
                 </li>

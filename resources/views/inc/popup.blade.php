@@ -25,8 +25,10 @@
           <div class="popup__form-box">
             <select class="popup__select" name="service" tabindex="4">
               <option value=""></option>
-              <option value="Масаж">@lang('popup.option-one')</option>
-              <option value="Спортзал">@lang('popup.option-two')</option>
+              <option value="Манткюр">@lang('header.nav.services.manicure')</option>
+              <option value="Педикюр">@lang('header.nav.services.pedicure')</option>
+              <option value="Наращивание рестниц">@lang('header.nav.services.eyelashes')</option>
+              <option value="Брови">@lang('header.nav.services.brows')</option>
             </select>
 
             <textarea class="popup__textarea" placeholder="@lang('popup.textarea')" name="text" tabindex="5"></textarea>

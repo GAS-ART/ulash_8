@@ -167,296 +167,299 @@ $(document).ready(function () {
 
 //Portfolio - show more
 var portfolioBody = document.querySelector('.saloon__wrapper');
-var portfolioShowMoreBtn = document.querySelector('.saloon__btn');
-var portfolioData = [{
-  src: 'img/home/es/saloon/6.webp',
-  es: {
-    title: '',
-    text: ''
-  },
-  ru: {
-    title: '',
-    text: ''
-  }
-}, {
-  src: 'img/home/es/saloon/7.webp',
-  es: {
-    title: '',
-    text: ''
-  },
-  ru: {
-    title: '',
-    text: ''
-  }
-}, {
-  src: 'img/home/es/saloon/8.webp',
-  es: {
-    title: '',
-    text: ''
-  },
-  ru: {
-    title: '',
-    text: ''
-  }
-}, {
-  src: 'img/home/es/saloon/9.webp',
-  es: {
-    title: '',
-    text: ''
-  },
-  ru: {
-    title: '',
-    text: ''
-  }
-}, {
-  src: 'img/home/es/saloon/10.webp',
-  es: {
-    title: '',
-    text: ''
-  },
-  ru: {
-    title: '',
-    text: ''
-  }
-}, {
-  src: 'img/home/es/saloon/11.webp',
-  es: {
-    title: '',
-    text: ''
-  },
-  ru: {
-    title: '',
-    text: ''
-  }
-}, {
-  src: 'img/home/es/saloon/12.webp',
-  es: {
-    title: '',
-    text: ''
-  },
-  ru: {
-    title: '',
-    text: ''
-  }
-}, {
-  src: 'img/home/es/saloon/13.webp',
-  es: {
-    title: '',
-    text: ''
-  },
-  ru: {
-    title: '',
-    text: ''
-  }
-}, {
-  src: 'img/home/es/saloon/14.webp',
-  es: {
-    title: '',
-    text: ''
-  },
-  ru: {
-    title: '',
-    text: ''
-  }
-}, {
-  src: 'img/home/es/saloon/15.webp',
-  es: {
-    title: '',
-    text: ''
-  },
-  ru: {
-    title: '',
-    text: ''
-  }
-}, {
-  src: 'img/home/es/saloon/16.webp',
-  es: {
-    title: '',
-    text: ''
-  },
-  ru: {
-    title: '',
-    text: ''
-  }
-}, {
-  src: 'img/home/es/saloon/17.webp',
-  es: {
-    title: '',
-    text: ''
-  },
-  ru: {
-    title: '',
-    text: ''
-  }
-}, {
-  src: 'img/home/es/saloon/18.webp',
-  es: {
-    title: '',
-    text: ''
-  },
-  ru: {
-    title: '',
-    text: ''
-  }
-}, {
-  src: 'img/home/es/saloon/19.webp',
-  es: {
-    title: '',
-    text: ''
-  },
-  ru: {
-    title: '',
-    text: ''
-  }
-}, {
-  src: 'img/home/es/saloon/20.webp',
-  es: {
-    title: '',
-    text: ''
-  },
-  ru: {
-    title: '',
-    text: ''
-  }
-}, {
-  src: 'img/home/es/saloon/21.webp',
-  es: {
-    title: '',
-    text: ''
-  },
-  ru: {
-    title: '',
-    text: ''
-  }
-}, {
-  src: 'img/home/es/saloon/22.webp',
-  es: {
-    title: '',
-    text: ''
-  },
-  ru: {
-    title: '',
-    text: ''
-  }
-}, {
-  src: 'img/home/es/saloon/23.webp',
-  es: {
-    title: '',
-    text: ''
-  },
-  ru: {
-    title: '',
-    text: ''
-  }
-}, {
-  src: 'img/home/es/saloon/24.webp',
-  es: {
-    title: '',
-    text: ''
-  },
-  ru: {
-    title: '',
-    text: ''
-  }
-}, {
-  src: 'img/home/es/saloon/25.webp',
-  es: {
-    title: '',
-    text: ''
-  },
-  ru: {
-    title: '',
-    text: ''
-  }
-}, {
-  src: 'img/home/es/saloon/26.webp',
-  es: {
-    title: '',
-    text: ''
-  },
-  ru: {
-    title: '',
-    text: ''
-  }
-}, {
-  src: 'img/home/es/saloon/27.webp',
-  es: {
-    title: '',
-    text: ''
-  },
-  ru: {
-    title: '',
-    text: ''
-  }
-}];
-var portfolioDataIndex = 0;
-portfolioShowMoreBtn.addEventListener('click', portfolioSowMore);
-function portfolioSowMore() {
-  return _portfolioSowMore.apply(this, arguments);
-} //==========================================================================================================
-function _portfolioSowMore() {
-  _portfolioSowMore = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-    var imgSrcArr, stopCoutPortfolioData, _loop, i, html;
-    return _regeneratorRuntime().wrap(function _callee$(_context2) {
-      while (1) switch (_context2.prev = _context2.next) {
-        case 0:
-          if (!(portfolioDataIndex < portfolioData.length)) {
-            _context2.next = 14;
+if (portfolioBody) {
+  var portfolioSowMore = /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+      var imgSrcArr, stopCoutPortfolioData, _loop, i, html;
+      return _regeneratorRuntime().wrap(function _callee$(_context2) {
+        while (1) switch (_context2.prev = _context2.next) {
+          case 0:
+            if (!(portfolioDataIndex < portfolioData.length)) {
+              _context2.next = 14;
+              break;
+            }
+            imgSrcArr = [];
+            stopCoutPortfolioData = portfolioData.length - portfolioDataIndex >= 3 ? 3 : portfolioData.length - portfolioDataIndex;
+            _loop = /*#__PURE__*/_regeneratorRuntime().mark(function _loop(i) {
+              var imgSrc;
+              return _regeneratorRuntime().wrap(function _loop$(_context) {
+                while (1) switch (_context.prev = _context.next) {
+                  case 0:
+                    _context.next = 2;
+                    return new Promise(function (resolve, reject) {
+                      var img = new Image();
+                      img.onload = function () {
+                        return resolve(img.src);
+                      };
+                      img.onerror = function () {
+                        return portfolioShowMoreBtn.style.display = 'none';
+                      };
+                      img.src = portfolioData[portfolioDataIndex + i].src;
+                    });
+                  case 2:
+                    imgSrc = _context.sent;
+                    imgSrcArr.push(imgSrc);
+                  case 4:
+                  case "end":
+                    return _context.stop();
+                }
+              }, _loop);
+            });
+            i = 0;
+          case 5:
+            if (!(i < stopCoutPortfolioData)) {
+              _context2.next = 10;
+              break;
+            }
+            return _context2.delegateYield(_loop(i), "t0", 7);
+          case 7:
+            i++;
+            _context2.next = 5;
             break;
-          }
-          imgSrcArr = [];
-          stopCoutPortfolioData = portfolioData.length - portfolioDataIndex >= 3 ? 3 : portfolioData.length - portfolioDataIndex;
-          _loop = /*#__PURE__*/_regeneratorRuntime().mark(function _loop(i) {
-            var imgSrc;
-            return _regeneratorRuntime().wrap(function _loop$(_context) {
-              while (1) switch (_context.prev = _context.next) {
-                case 0:
-                  _context.next = 2;
-                  return new Promise(function (resolve, reject) {
-                    var img = new Image();
-                    img.onload = function () {
-                      return resolve(img.src);
-                    };
-                    img.onerror = function () {
-                      return portfolioShowMoreBtn.style.display = 'none';
-                    };
-                    img.src = portfolioData[portfolioDataIndex + i].src;
-                  });
-                case 2:
-                  imgSrc = _context.sent;
-                  imgSrcArr.push(imgSrc);
-                case 4:
-                case "end":
-                  return _context.stop();
-              }
-            }, _loop);
-          });
-          i = 0;
-        case 5:
-          if (!(i < stopCoutPortfolioData)) {
-            _context2.next = 10;
-            break;
-          }
-          return _context2.delegateYield(_loop(i), "t0", 7);
-        case 7:
-          i++;
-          _context2.next = 5;
-          break;
-        case 10:
-          html = imgSrcArr.map(function (imgSrc, index) {
-            return "\n               <div class=\"saloon__link\">\n                  <picture class=\"saloon__img\">\n                     <img src=\"".concat(imgSrc, "\" alt=\"\">\n                  </picture>\n                  <div class=\"saloon__content-wrapper\">\n                     <div class=\"saloon__icon icon-plusImage\"></div>\n                     <div class=\"saloon__text-wrapper\">\n                     <h4 class=\"saloon__content-title\">").concat(portfolioData[portfolioDataIndex + index][currentLang].title, "</h4>\n                     <p class=\"saloon__text\">").concat(portfolioData[portfolioDataIndex + index][currentLang].text, "</p>\n                     </div>\n                  </div>\n               </div>\n               ");
-          }).join('');
-          portfolioBody.insertAdjacentHTML('beforeend', html);
-          portfolioDataIndex += 3;
-          if (portfolioDataIndex >= portfolioData.length) portfolioShowMoreBtn.style.display = 'none';
-        case 14:
-        case "end":
-          return _context2.stop();
-      }
-    }, _callee);
-  }));
-  return _portfolioSowMore.apply(this, arguments);
+          case 10:
+            html = imgSrcArr.map(function (imgSrc, index) {
+              return "\n                  <div class=\"saloon__link\">\n                     <picture class=\"saloon__img\">\n                        <img src=\"".concat(imgSrc, "\" alt=\"\">\n                     </picture>\n                     <div class=\"saloon__content-wrapper\">\n                        <div class=\"saloon__icon icon-plusImage\"></div>\n                        <div class=\"saloon__text-wrapper\">\n                        <h4 class=\"saloon__content-title\">").concat(portfolioData[portfolioDataIndex + index][currentLang].title, "</h4>\n                        <p class=\"saloon__text\">").concat(portfolioData[portfolioDataIndex + index][currentLang].text, "</p>\n                        </div>\n                     </div>\n                  </div>\n                  ");
+            }).join('');
+            portfolioBody.insertAdjacentHTML('beforeend', html);
+            portfolioDataIndex += 3;
+            if (portfolioDataIndex >= portfolioData.length) portfolioShowMoreBtn.style.display = 'none';
+          case 14:
+          case "end":
+            return _context2.stop();
+        }
+      }, _callee);
+    }));
+    return function portfolioSowMore() {
+      return _ref.apply(this, arguments);
+    };
+  }();
+  var portfolioShowMoreBtn = document.querySelector('.saloon__btn');
+  var portfolioData = [{
+    src: 'img/home/es/saloon/6.webp',
+    es: {
+      title: '',
+      text: ''
+    },
+    ru: {
+      title: '',
+      text: ''
+    }
+  }, {
+    src: 'img/home/es/saloon/7.webp',
+    es: {
+      title: '',
+      text: ''
+    },
+    ru: {
+      title: '',
+      text: ''
+    }
+  }, {
+    src: 'img/home/es/saloon/8.webp',
+    es: {
+      title: '',
+      text: ''
+    },
+    ru: {
+      title: '',
+      text: ''
+    }
+  }, {
+    src: 'img/home/es/saloon/9.webp',
+    es: {
+      title: '',
+      text: ''
+    },
+    ru: {
+      title: '',
+      text: ''
+    }
+  }, {
+    src: 'img/home/es/saloon/10.webp',
+    es: {
+      title: '',
+      text: ''
+    },
+    ru: {
+      title: '',
+      text: ''
+    }
+  }, {
+    src: 'img/home/es/saloon/11.webp',
+    es: {
+      title: '',
+      text: ''
+    },
+    ru: {
+      title: '',
+      text: ''
+    }
+  }, {
+    src: 'img/home/es/saloon/12.webp',
+    es: {
+      title: '',
+      text: ''
+    },
+    ru: {
+      title: '',
+      text: ''
+    }
+  }, {
+    src: 'img/home/es/saloon/13.webp',
+    es: {
+      title: '',
+      text: ''
+    },
+    ru: {
+      title: '',
+      text: ''
+    }
+  }, {
+    src: 'img/home/es/saloon/14.webp',
+    es: {
+      title: '',
+      text: ''
+    },
+    ru: {
+      title: '',
+      text: ''
+    }
+  }, {
+    src: 'img/home/es/saloon/15.webp',
+    es: {
+      title: '',
+      text: ''
+    },
+    ru: {
+      title: '',
+      text: ''
+    }
+  }, {
+    src: 'img/home/es/saloon/16.webp',
+    es: {
+      title: '',
+      text: ''
+    },
+    ru: {
+      title: '',
+      text: ''
+    }
+  }, {
+    src: 'img/home/es/saloon/17.webp',
+    es: {
+      title: '',
+      text: ''
+    },
+    ru: {
+      title: '',
+      text: ''
+    }
+  }, {
+    src: 'img/home/es/saloon/18.webp',
+    es: {
+      title: '',
+      text: ''
+    },
+    ru: {
+      title: '',
+      text: ''
+    }
+  }, {
+    src: 'img/home/es/saloon/19.webp',
+    es: {
+      title: '',
+      text: ''
+    },
+    ru: {
+      title: '',
+      text: ''
+    }
+  }, {
+    src: 'img/home/es/saloon/20.webp',
+    es: {
+      title: '',
+      text: ''
+    },
+    ru: {
+      title: '',
+      text: ''
+    }
+  }, {
+    src: 'img/home/es/saloon/21.webp',
+    es: {
+      title: '',
+      text: ''
+    },
+    ru: {
+      title: '',
+      text: ''
+    }
+  }, {
+    src: 'img/home/es/saloon/22.webp',
+    es: {
+      title: '',
+      text: ''
+    },
+    ru: {
+      title: '',
+      text: ''
+    }
+  }, {
+    src: 'img/home/es/saloon/23.webp',
+    es: {
+      title: '',
+      text: ''
+    },
+    ru: {
+      title: '',
+      text: ''
+    }
+  }, {
+    src: 'img/home/es/saloon/24.webp',
+    es: {
+      title: '',
+      text: ''
+    },
+    ru: {
+      title: '',
+      text: ''
+    }
+  }, {
+    src: 'img/home/es/saloon/25.webp',
+    es: {
+      title: '',
+      text: ''
+    },
+    ru: {
+      title: '',
+      text: ''
+    }
+  }, {
+    src: 'img/home/es/saloon/26.webp',
+    es: {
+      title: '',
+      text: ''
+    },
+    ru: {
+      title: '',
+      text: ''
+    }
+  }, {
+    src: 'img/home/es/saloon/27.webp',
+    es: {
+      title: '',
+      text: ''
+    },
+    ru: {
+      title: '',
+      text: ''
+    }
+  }];
+  var portfolioDataIndex = 0;
+  portfolioShowMoreBtn.addEventListener('click', portfolioSowMore);
 }
+
+//==========================================================================================================
 var headerObserver = new IntersectionObserver(watchHeader);
 headerObserver.observe(headerElement);
 

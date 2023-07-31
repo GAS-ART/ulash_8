@@ -9,10 +9,15 @@
 
 @section('content')
 <!-- <div id="map"></div> -->
-<iframe id="myMap"
+{{-- <iframe id="myMap"
   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3536.521602676732!2d-85.78990368496162!3d38.271750979690235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8869e0af648051a7%3A0x67c7df546d0e8e8c!2sChurchill%20Downs!5e0!3m2!1sen!2sus!4v1616189963388!5m2!1sen!2sus"
   width="100%" height="660" style="border:0;" allowfullscreen="" loading="lazy" style="filter: grayscale(100%);"
   frameborder="0"></iframe>
+--}}
+<iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1496.47698815643!2d2.177646796315259!3d41.39680584946815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2e6b38b24ff%3A0xfd153a6368fa7e8b!2zQy8gZGUgQ2FzcCwgMTExLCAwODAxMyBCYXJjZWxvbmEsINCY0YHQv9Cw0L3QuNGP!5e0!3m2!1sru!2sua!4v1690822147484!5m2!1sru!2sua"
+  width="100%" height="660" style="border:0;" allowfullscreen="" loading="lazy" style="filter: grayscale(100%);"
+  referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 <div class="contacts__container contacts">
   <div class="contacts__wrapper">
@@ -24,7 +29,7 @@
           <li class="footer__menu-item">
             <a class="footer__contacts-item" href="#">
               <span class="footer__contacts-icon icon-point"></span>
-              <p class="footer__contacts-address">@lang('contacts.adress-link')</p>
+              <p class="footer__contacts-address">@lang('main.address')</p>
             </a>
           </li>
           <li class="footer__menu-item">

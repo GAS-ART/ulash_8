@@ -7,6 +7,7 @@ return [
       'manicure' => 'Manicura',
       'pedicure' => 'Pedicura',
       'eyelashes' => 'Extension',
+      'brows' => 'Cejas',
     ],
     'teaching' => 'Capacitación <span>+</span>',
     'teaching' => [
