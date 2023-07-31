@@ -1218,7 +1218,7 @@ body {
   height: 431px;
   margin: 0 42px 0 42px;
   position: relative;
-
+  touch-action: pan-y;
   &::before {
     content: '';
     position: absolute;
