@@ -13,7 +13,7 @@
       <button class="footer__popup" data-popup="#popup">@lang('footer.popup')</button>
 
       <div class="footer__icons">
-        <a href="https://www.instagram.com/ulash_bcn" class="footer__icon icon-instagram"></a>
+        <a href="https://www.instagram.com/ulash_bcn" target="_blank" class="footer__icon icon-instagram"></a>
         <a href="#" class="footer__icon icon-facebook"></a>
       </div>
     </div>

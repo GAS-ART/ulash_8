@@ -15,7 +15,8 @@
             </a>
           </div>
           <div class="header-top__links">
-            <a class="header-top__contacts-icon icon-instagram" href="https://www.instagram.com/ulash_bcn"></a>
+            <a class="header-top__contacts-icon icon-instagram" target="_blank"
+              href="https://www.instagram.com/ulash_bcn"></a>
             <a class="header-top__contacts-icon icon-facebook" href="#"></a>
           </div>
         </div>
