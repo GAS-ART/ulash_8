@@ -43,7 +43,7 @@ return [
     'card-btn-text' => 'Inscribirse',
   ],
   'advantages' => [
-    'text-one' => 'Llevamos 15 años cuidando las mejeres',
+    'text-one' => 'Llevamos 15 años cuidando las mujeres',
     'text-two' => 'Equipo de profesionales cualificados. Ahorramos tu tiempo',
     'text-three' => 'Utilizamos productos cosméticos de gama alta',
     'text-four' => 'Siguiendo las últimas tendencias',

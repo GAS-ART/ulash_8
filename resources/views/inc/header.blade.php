@@ -17,7 +17,8 @@
           <div class="header-top__links">
             <a class="header-top__contacts-icon icon-instagram" target="_blank"
               href="https://www.instagram.com/ulash_bcn"></a>
-            <a class="header-top__contacts-icon icon-facebook" href="#"></a>
+            <a class="header-top__contacts-icon icon-facebook" href="https://www.facebook.com/ulash_bcn"
+              target="_blank"></a>
           </div>
         </div>
         <div class="header__menu-wrapper">

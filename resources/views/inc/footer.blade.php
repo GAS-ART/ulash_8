@@ -14,7 +14,7 @@
 
       <div class="footer__icons">
         <a href="https://www.instagram.com/ulash_bcn" target="_blank" class="footer__icon icon-instagram"></a>
-        <a href="#" class="footer__icon icon-facebook"></a>
+        <a href="https://www.facebook.com/ulash_bcn" target="_blank" class="footer__icon icon-facebook"></a>
       </div>
     </div>
   </div>
