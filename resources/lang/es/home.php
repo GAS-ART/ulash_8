@@ -32,10 +32,10 @@ return [
   'teaching' => [
     'title' => 'EDUCACIÓN',
     'card-one-title' => 'Curso basico',
-    'card-one-text' => 'Lorem Ipsum: este texto es "riba", que es victorioso en otro diseño. Lorem Ipsum є, de hecho',
+    'card-one-text' => 'En el curso basico os explicaremos los conceptos de la construcción de pestañas.También pasará por una base teórica, práctica y una práctica completa en modelos.',
 
     'card-two-title' => 'Capacitacion',
-    'card-two-text' => 'Lorem Ipsum: este texto es "riba", que es victorioso en otro diseño. Lorem Ipsum є, de hecho',
+    'card-two-text' => 'Mejorar el nivel en extensión de pestañas: análisis de errores, teoría de extensión, elaboración de la formación de volumes de 2 a 12 D, + practica con piedras Swarovski.',
 
     'card-three-title' => 'Curso de extensión de pestañas inferiores',
     'card-three-text' => 'Lorem Ipsum: este texto es "riba", que es victorioso en otro diseño. Lorem Ipsum є, de hecho',
@@ -43,7 +43,7 @@ return [
     'card-btn-text' => 'Inscribirse',
   ],
   'advantages' => [
-    'text-one' => 'Cuidamos las meujeres hace 15 años',
+    'text-one' => 'Llevamos 15 años cuidando las mejeres',
     'text-two' => 'Equipo de profesionales cualificados. Ahorramos tu tiempo',
     'text-three' => 'Utilizamos productos cosméticos de gama alta',
     'text-four' => 'Siguiendo las últimas tendencias',

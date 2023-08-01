@@ -394,7 +394,7 @@
     </div>
   </section>
 
-  <section class="reviews-slider">
+  <section id="reviews" class="reviews-slider">
     <div class="reviews-slider__containerSlider">
       <div class="reviews-slider__text">
         <h3 class="reviews-slider__title-h3 section-name">@lang('home.reviews.title-h3')</h3>

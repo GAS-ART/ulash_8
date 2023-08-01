@@ -1,6 +1,26 @@
 const currentLang = document.documentElement.lang;
-
 const popupForm = document.querySelector('.popup__form');
+
+document.addEventListener('click', documentActions);
+
+function documentActions(e) {
+   const target = e.target;
+   console.log(e.target);
+   //stopScrolling
+   if (!target.classList.contains('.ancor') && scrol == true) {
+      body.addEventListener('click', stopAnimation);
+   }
+}
+
+function clouseBurger() {
+   document.documentElement.classList.remove('menu-open');
+   document.body.classList.remove('lock');
+}
+
+window.onresize = () => {
+   clouseBurger();
+};
+
 
 $(".popup__form").submit(function (event) {
    event.preventDefault();
@@ -92,7 +112,7 @@ languageBtn.addEventListener('click', function (e) {
 
 
 //Прокрутка header
-const headerElement = document.querySelector('.header');
+/* const headerElement = document.querySelector('.header');
 
 function watchHeader(entries) {
    if (entries[0].isIntersecting) {
@@ -101,7 +121,10 @@ function watchHeader(entries) {
       entries[0].target.classList.add('_scroll')
    }
 
-}
+} 
+const headerObserver = new IntersectionObserver(watchHeader);
+headerObserver.observe(headerElement);
+*/
 
 /* const menuItems = document.querySelectorAll('.menu-item');
 
@@ -215,9 +238,72 @@ if (portfolioBody) {
    }
 }
 
+//scroll
+let stop = false;
+let scrol = false;
+function stopAnimation() { stop = true; }
+const scrolling = (selectorBtn) => {
+   //const btnUp = document.querySelector(selectorBtn);
+
+   const links = document.querySelectorAll(".ancor");
+   let speed = 0.2;
+   //const headerHeight = document.querySelector('.header__top').offsetHeight;
+
+   /*window.addEventListener("scroll", () => {
+     if (document.documentElement.scrollTop > 1600) {
+       btnUp.style.opacity = "1";
+     } else {
+       btnUp.style.opacity = "0";
+     }
+   });*/
+
+   for (let i = 0; i < links.length; i++) {
+      links[i].addEventListener("click", function (event) {
+         event.preventDefault();
+         clouseBurger();
+         //clouseBurger();
+         let widthTop = Math.round(
+            document.documentElement.scrollTop || document.body.scrollTop
+         ),
+            hash = this.hash;
+         let toBlock = document.querySelector(hash).getBoundingClientRect().top /* - headerHeight */;
+         let start = null;
+
+         requestAnimationFrame(step);
+
+         scrol = true;
+
+         function step(time) {
+
+
+            if (start === null) {
+               start = time;
+            }
+            let progress = time - start,
+               r =
+                  toBlock < 0
+                     ? Math.max(widthTop - progress / speed, widthTop + toBlock)
+                     : Math.min(widthTop + progress / speed, widthTop + toBlock);
+
+            let element = document.documentElement || document.body;
+            element.scrollTo(0, r);
+
+            if (r != widthTop + toBlock && !stop) {
+               requestAnimationFrame(step);
+            } else {
+               body.removeEventListener('click', stopAnimation);
+               stop = false;
+               scrol = false
+               // location.hash = hash;
+            }
+         }
+      });
+   }
+};
+
+scrolling(/*".pageup"*/);
+
 //==========================================================================================================
-const headerObserver = new IntersectionObserver(watchHeader);
-headerObserver.observe(headerElement);
 
 // Включить/выключить FLS (Full Logging System) (в работе)
 window['FLS'] = true;

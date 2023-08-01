@@ -65,8 +65,14 @@
                     </li>
                   </ul>
                 </li>
-                <li class="header__menu-item"><a href="{{ route('reviews', ['locale' => __('lang.current')]) }}"
-                    class="header__menu-link">@lang('header.nav.reviews')</a></li>
+                <li class="header__menu-item">
+                  @if(Route::is('home') || Route::is('index'))
+                  <a href="#reviews" class="header__menu-link ancor">@lang('header.nav.reviews')</a>
+                  @else
+                  <a href="{{ route('home', ['locale' => __('lang.current')]) }}#reviews"
+                    class="header__menu-link">@lang('header.nav.reviews')</a>
+                  @endif
+                </li>
                 <li class="header__menu-item"><a href="{{ route('contants', ['locale' => __('lang.current')]) }}"
                     class="header__menu-link">@lang('header.nav.contants')</a></li>
               </ul>
@@ -134,8 +140,12 @@
                   </ul>
                 </li>
                 <li class="menu__item header__menu-link">
-                  <a href="{{ route('contants', ['locale' => __('lang.current')]) }}"
+                  @if(Route::is('home') || Route::is('index'))
+                  <a href="#reviews" class="menu__sub-menu-link ancor">@lang('header.nav.reviews')</a>
+                  @else
+                  <a href="{{ route('home', ['locale' => __('lang.current')]) }}#reviews"
                     class="menu__sub-menu-link">@lang('header.nav.reviews')</a>
+                  @endif
                 </li>
                 <li class="menu__item header__menu-link">
                   <a href="{{ route('contants', ['locale' => __('lang.current')]) }}"

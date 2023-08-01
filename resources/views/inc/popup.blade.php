@@ -29,6 +29,7 @@
               <option value="Педикюр">@lang('header.nav.services.pedicure')</option>
               <option value="Наращивание рестниц">@lang('header.nav.services.eyelashes')</option>
               <option value="Брови">@lang('header.nav.services.brows')</option>
+              <option value="Обучение">@lang('header.nav.teaching.popup')</option>
             </select>
 
             <textarea class="popup__textarea" placeholder="@lang('popup.textarea')" name="text" tabindex="5"></textarea>

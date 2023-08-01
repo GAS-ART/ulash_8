@@ -21,6 +21,22 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 var currentLang = document.documentElement.lang;
 var popupForm = document.querySelector('.popup__form');
+document.addEventListener('click', documentActions);
+function documentActions(e) {
+  var target = e.target;
+  console.log(e.target);
+  //stopScrolling
+  if (!target.classList.contains('.ancor') && scrol == true) {
+    body.addEventListener('click', stopAnimation);
+  }
+}
+function clouseBurger() {
+  document.documentElement.classList.remove('menu-open');
+  document.body.classList.remove('lock');
+}
+window.onresize = function () {
+  clouseBurger();
+};
 $(".popup__form").submit(function (event) {
   event.preventDefault();
   $.ajax({
@@ -112,14 +128,19 @@ languageBtn.addEventListener('click', function (e) {
 });
 
 //Прокрутка header
-var headerElement = document.querySelector('.header');
+/* const headerElement = document.querySelector('.header');
+
 function watchHeader(entries) {
-  if (entries[0].isIntersecting) {
-    entries[0].target.classList.remove('_scroll');
-  } else {
-    entries[0].target.classList.add('_scroll');
-  }
-}
+   if (entries[0].isIntersecting) {
+      entries[0].target.classList.remove('_scroll')
+   } else {
+      entries[0].target.classList.add('_scroll')
+   }
+
+} 
+const headerObserver = new IntersectionObserver(watchHeader);
+headerObserver.observe(headerElement);
+*/
 
 /* const menuItems = document.querySelectorAll('.menu-item');
 
@@ -459,9 +480,62 @@ if (portfolioBody) {
   portfolioShowMoreBtn.addEventListener('click', portfolioSowMore);
 }
 
+//scroll
+var stop = false;
+var scrol = false;
+function stopAnimation() {
+  stop = true;
+}
+var scrolling = function scrolling(selectorBtn) {
+  //const btnUp = document.querySelector(selectorBtn);
+
+  var links = document.querySelectorAll(".ancor");
+  var speed = 0.2;
+  //const headerHeight = document.querySelector('.header__top').offsetHeight;
+
+  /*window.addEventListener("scroll", () => {
+    if (document.documentElement.scrollTop > 1600) {
+      btnUp.style.opacity = "1";
+    } else {
+      btnUp.style.opacity = "0";
+    }
+  });*/
+
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener("click", function (event) {
+      event.preventDefault();
+      clouseBurger();
+      //clouseBurger();
+      var widthTop = Math.round(document.documentElement.scrollTop || document.body.scrollTop),
+        hash = this.hash;
+      var toBlock = document.querySelector(hash).getBoundingClientRect().top /* - headerHeight */;
+      var start = null;
+      requestAnimationFrame(step);
+      scrol = true;
+      function step(time) {
+        if (start === null) {
+          start = time;
+        }
+        var progress = time - start,
+          r = toBlock < 0 ? Math.max(widthTop - progress / speed, widthTop + toBlock) : Math.min(widthTop + progress / speed, widthTop + toBlock);
+        var element = document.documentElement || document.body;
+        element.scrollTo(0, r);
+        if (r != widthTop + toBlock && !stop) {
+          requestAnimationFrame(step);
+        } else {
+          body.removeEventListener('click', stopAnimation);
+          stop = false;
+          scrol = false;
+          // location.hash = hash;
+        }
+      }
+    });
+  }
+};
+
+scrolling( /*".pageup"*/);
+
 //==========================================================================================================
-var headerObserver = new IntersectionObserver(watchHeader);
-headerObserver.observe(headerElement);
 
 // Включить/выключить FLS (Full Logging System) (в работе)
 window['FLS'] = true;
