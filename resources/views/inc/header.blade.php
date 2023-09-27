@@ -35,20 +35,20 @@
                 <li class="header__menu-item header__menu-link menu-item">
                   @lang('header.nav.services.title')
                   <ul class="header__sub-menu-list">
-                    <li class="header__sub-menu-item">
+                    {{-- <li class="header__sub-menu-item">
                       <a href="{{ route('service', ['locale' => __('lang.current')]) }}"
                         class="header__sub-menu-link">@lang('header.nav.services.manicure')</a>
                     </li>
                     <li class="header__sub-menu-item">
                       <a href="{{ route('service', ['locale' => __('lang.current')]) }}"
                         class="header__sub-menu-link">@lang('header.nav.services.pedicure')</a>
-                    </li>
+                    </li> --}}
                     <li class="header__sub-menu-item">
-                      <a href="{{ route('service', ['locale' => __('lang.current')]) }}"
+                      <a href="{{ route('eyelash', ['locale' => __('lang.current')]) }}"
                         class="header__sub-menu-link">@lang('header.nav.services.eyelashes')</a>
                     </li>
                     <li class="header__sub-menu-item">
-                      <a href="{{ route('service', ['locale' => __('lang.current')]) }}"
+                      <a href="{{ route('brows', ['locale' => __('lang.current')]) }}"
                         class="header__sub-menu-link">@lang('header.nav.services.brows')</a>
                     </li>
                   </ul>
@@ -57,11 +57,11 @@
                   @lang('header.nav.teaching.title')
                   <ul class="header__sub-menu-list">
                     <li class="header__sub-menu-item">
-                      <a href="{{ route('teaching', ['locale' => __('lang.current')]) }}"
+                      <a href="{{ route('course', ['locale' => __('lang.current')]) }}"
                         class="header__sub-menu-link">@lang('header.nav.teaching.base')</a>
                     </li>
                     <li class="header__sub-menu-item">
-                      <a href="{{ route('teaching', ['locale' => __('lang.current')]) }}"
+                      <a href="{{ route('training', ['locale' => __('lang.current')]) }}"
                         class="header__sub-menu-link">@lang('header.nav.teaching.training')</a>
                     </li>
                   </ul>
@@ -109,20 +109,20 @@
                   <h3 data-spoiler-btn> @lang('header.nav.services.title')</h3>
                   </h3>
                   <ul class="menu__sub-menu-list spoiler-content">
-                    <li class="menu__sub-menu-item">
+                    {{-- <li class="menu__sub-menu-item">
                       <a href="{{ route('service', ['locale' => __('lang.current')]) }}"
                         class="menu__sub-menu-link">@lang('header.nav.services.manicure')</a>
                     </li>
                     <li class="menu__sub-menu-item">
                       <a href="{{ route('service', ['locale' => __('lang.current')]) }}"
                         class="menu__sub-menu-link">@lang('header.nav.services.pedicure')</a>
-                    </li>
+                    </li> --}}
                     <li class="menu__sub-menu-item">
-                      <a href="{{ route('service', ['locale' => __('lang.current')]) }}"
+                      <a href="{{ route('eyelash', ['locale' => __('lang.current')]) }}"
                         class="menu__sub-menu-link">@lang('header.nav.services.eyelashes')</a>
                     </li>
                     <li class="menu__sub-menu-item">
-                      <a href="{{ route('service', ['locale' => __('lang.current')]) }}"
+                      <a href="{{ route('brows', ['locale' => __('lang.current')]) }}"
                         class="menu__sub-menu-link">@lang('header.nav.services.brows')</a>
                     </li>
                   </ul>
@@ -131,11 +131,11 @@
                   <h3 data-spoiler-btn> @lang('header.nav.teaching.title')</h3>
                   <ul class="menu__sub-menu-list spoiler-content">
                     <li class="menu__sub-menu-item">
-                      <a href="{{ route('teaching', ['locale' => __('lang.current')]) }}"
+                      <a href="{{ route('course', ['locale' => __('lang.current')]) }}"
                         class="menu__sub-menu-link">@lang('header.nav.teaching.base')</a>
                     </li>
                     <li class="menu__sub-menu-item">
-                      <a href="{{ route('teaching', ['locale' => __('lang.current')]) }}"
+                      <a href="{{ route('training', ['locale' => __('lang.current')]) }}"
                         class="menu__sub-menu-link">@lang('header.nav.teaching.training')</a>
                     </li>
                   </ul>

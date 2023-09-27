@@ -121,7 +121,7 @@
       </div>
       <div class="services__imgs-wrapper">
 
-        <a class="services__imgs-item" href="#">
+        {{-- <a class="services__imgs-item" href="#">
           @if(App::isLocale('es'))
           <picture>
             <source type="image/webp" media="(min-width:1920px)" srcset="/img/home/es/services/1.webp">
@@ -140,7 +140,7 @@
             <h4 class="services__content-title">@lang('home.services.card-one-text')</h4>
             <p data-popup="#popup" class="services__content-link">@lang('home.services.card-btn-text')</p>
           </div>
-        </a>
+        </a> --}}
 
         <a class="services__imgs-item" href="#">
           @if(App::isLocale('es'))

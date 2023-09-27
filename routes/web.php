@@ -41,7 +41,7 @@ Route::get('/{locale}', function ($locale) {
 })->name('home');
 
 
-Route::get('/{locale}/service', function ($locale) {
+/*  Route::get('/{locale}/service', function ($locale) {
 
   if (!in_array($locale, ['ru', 'es'])) {
 
@@ -55,9 +55,41 @@ Route::get('/{locale}/service', function ($locale) {
     App::setLocale('es');
     return view('service');
   }
-})->name('service');
+})->name('service');  */
 
-Route::get('/{locale}/teaching', function ($locale) {
+Route::get('/{locale}/eyelash-extensions', function ($locale) {
+
+  if (!in_array($locale, ['ru', 'es'])) {
+
+    abort(404);
+  } else if ($locale == 'ru') {
+
+    App::setLocale('ru');
+    return view('eyelash');
+  } else if ($locale == 'es') {
+
+    App::setLocale('es');
+    return view('eyelash');
+  }
+})->name('eyelash');
+
+Route::get('/{locale}/brows', function ($locale) {
+
+  if (!in_array($locale, ['ru', 'es'])) {
+
+    abort(404);
+  } else if ($locale == 'ru') {
+
+    App::setLocale('ru');
+    return view('brows');
+  } else if ($locale == 'es') {
+
+    App::setLocale('es');
+    return view('brows');
+  }
+})->name('brows');
+
+/* Route::get('/{locale}/teaching', function ($locale) {
 
   if (!in_array($locale, ['ru', 'es'])) {
 
@@ -71,7 +103,39 @@ Route::get('/{locale}/teaching', function ($locale) {
     App::setLocale('es');
     return view('teaching');
   }
-})->name('teaching');
+})->name('teaching'); */
+
+Route::get('/{locale}/course', function ($locale) {
+
+  if (!in_array($locale, ['ru', 'es'])) {
+
+    abort(404);
+  } else if ($locale == 'ru') {
+
+    App::setLocale('ru');
+    return view('course');
+  } else if ($locale == 'es') {
+
+    App::setLocale('es');
+    return view('course');
+  }
+})->name('course');
+
+Route::get('/{locale}/training', function ($locale) {
+
+  if (!in_array($locale, ['ru', 'es'])) {
+
+    abort(404);
+  } else if ($locale == 'ru') {
+
+    App::setLocale('ru');
+    return view('training');
+  } else if ($locale == 'es') {
+
+    App::setLocale('es');
+    return view('training');
+  }
+})->name('training');
 
 Route::get('/{locale}/reviews', function ($locale) {
 

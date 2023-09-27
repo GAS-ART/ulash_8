@@ -3,14 +3,14 @@
 return [
   'head-screen' => [
     'title' => 'ULASH',
-    'text' => 'Salón de belleza en Barcelona',
+    'text' => 'Cursos y formacion en Barcelona',
     'description' => 'Calidad premium de los mejores maestros de la belleza y la estética.',
     'btn-text' => 'Consulta',
   ],
 
   'about' => [
-    'title-h3' => 'SOBRE NUESTRO SALÓN',
-    'title-h2' => 'SALÓN DE BELLEZA ULASH',
+    'title-h3' => 'SOBRE NUESTRO',
+    'title-h2' => 'SOBRE CURSOS DE ULASH',
     'author-name' => 'Yuliia Smirnova',
     'author-profession' => 'Dueña de estudio de belleza',
     'text-1' => '¡Bienvenidos a salón de belleza Ulash en Barcelona! Hemos creado este citio de relax y belleza especialmente para ti. Aquí cada cliente es nuestro invitado especial y nos esforzamos para que su visita sea inolvidable.',

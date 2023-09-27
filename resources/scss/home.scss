@@ -945,8 +945,16 @@ body {
 }
 
 // advantages =========================================================================================
+.training-saloon button{
+  display: none;
+}
 .saloon {
   margin-bottom: 120px;
+  .training &{
+    button{
+      display: none;
+    }
+  }
 
   &__title {
     text-align: center;
