@@ -106,7 +106,7 @@
           </li>
 
         </ul>
-        <bitton class="teaching-about__popup">@lang('training.about.btn-text')</bitton>
+        <bitton class="teaching-about__popup" data-popup="#popup">@lang('training.about.btn-text')</bitton>
       </div>
 
     </div>

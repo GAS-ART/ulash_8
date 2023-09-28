@@ -142,7 +142,7 @@
           </div>
         </a> --}}
 
-        <a class="services__imgs-item" href="#">
+        <a class="services__imgs-item" href="{{ route('eyelash', ['locale' => __('lang.current')]) }}">
           @if(App::isLocale('es'))
           <picture>
             <source type="image/webp" media="(min-width:1920px)" srcset="/img/home/es/services/2.webp">
@@ -163,7 +163,7 @@
           </div>
         </a>
 
-        <a class="services__imgs-item" href="#">
+        <a class="services__imgs-item" href="{{ route('brows', ['locale' => __('lang.current')]) }}">
           @if(App::isLocale('es'))
           <picture>
             <source type="image/webp" media="(min-width:1920px)" srcset="/img/home/es/services/3.webp">
@@ -184,7 +184,7 @@
           </div>
         </a>
 
-        <a class="services__imgs-item" href="#">
+        <a class="services__imgs-item" href="{{ route('course', ['locale' => __('lang.current')]) }}">
           @if(App::isLocale('es'))
           <picture>
             <source type="image/webp" media="(min-width:1920px)" srcset="/img/home/es/services/4.webp">
@@ -214,7 +214,7 @@
       <div class="services__teaching-wrapper">
 
         <div class="services__teaching-item">
-          <a class="services__teaching-img-wrapper" href="#">
+          <a class="services__teaching-img-wrapper" href="{{ route('course', ['locale' => __('lang.current')]) }}">
             @if(App::isLocale('es'))
             <picture>
               <source type="image/webp" media="(min-width:950px)" srcset="/img/home/es/teaching/1.webp">
@@ -233,12 +233,12 @@
           <div class="services__teaching-content">
             <h4 class="services__teaching-title">@lang('home.teaching.card-one-title')</h4>
             <p class="services__teaching-text">@lang('home.teaching.card-one-text')</p>
-            <button class="services__teaching-popup" data-popup="#popup">@lang('home.teaching.card-btn-text')</button>
+            <a href="{{ route('course', ['locale' => __('lang.current')]) }}" class="services__teaching-popup">@lang('home.teaching.card-btn-text')</a>
           </div>
         </div>
 
         <div class="services__teaching-item">
-          <a class="services__teaching-img-wrapper" href="#">
+          <a class="services__teaching-img-wrapper" href="{{ route('training', ['locale' => __('lang.current')]) }}">
             @if(App::isLocale('es'))
             <picture>
               <source type="image/webp" media="(min-width:950px)" srcset="/img/home/es/teaching/2.webp">
@@ -256,7 +256,7 @@
           <div class="services__teaching-content">
             <h4 class="services__teaching-title">@lang('home.teaching.card-two-title')</h4>
             <p class="services__teaching-text">@lang('home.teaching.card-two-text')</p>
-            <button class="services__teaching-popup" data-popup="#popup">@lang('home.teaching.card-btn-text')</button>
+            <a href="{{ route('training', ['locale' => __('lang.current')]) }}" class="services__teaching-popup">@lang('home.teaching.card-btn-text')</a>
           </div>
         </div>
 

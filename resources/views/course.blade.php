@@ -100,8 +100,13 @@
             <p class="teaching-about__text">@lang('course.about.li-four')</p>
           </li>
 
+          <li class="teaching-about__item">
+            <span class="teaching-about__icon icon-point"></span>
+            <p class="teaching-about__text">@lang('course.about.5')</p>
+          </li>
+
         </ul>
-        <bitton class="teaching-about__popup">@lang('course.about.btn-text')</bitton>
+        <bitton class="teaching-about__popup" data-popup="#popup">@lang('course.about.btn-text')</bitton>
       </div>
 
     </div>
