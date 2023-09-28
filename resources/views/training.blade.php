@@ -183,7 +183,6 @@
           <span class="teaching-program__icon icon-curl"></span>
           <p class="teaching-program__text">@lang('training.program.li-eight')</p>
         </li>
-
       </ul>
     </div>
 

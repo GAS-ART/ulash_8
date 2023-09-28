@@ -179,6 +179,24 @@
           <p class="teaching-program__text">@lang('course.program.li-eight')</p>
         </li>
 
+
+        <li class="teaching-program__item">
+          <span class="teaching-program__icon icon-curl"></span>
+          <p class="teaching-program__text">@lang('course.program.9')</p>
+        </li>
+        <li class="teaching-program__item">
+          <span class="teaching-program__icon icon-curl"></span>
+          <p class="teaching-program__text">@lang('course.program.10')</p>
+        </li>
+        <li class="teaching-program__item">
+          <span class="teaching-program__icon icon-curl"></span>
+          <p class="teaching-program__text">@lang('course.program.11')</p>
+        </li>
+        <li class="teaching-program__item">
+          <span class="teaching-program__icon icon-curl"></span>
+          <p class="teaching-program__text">@lang('course.program.12')</p>
+        </li>
+
       </ul>
     </div>
 
@@ -186,8 +204,47 @@
 </section>
 
 <div class="linear-gradient">
-  <section class="services-saloon">
-    @include('inc.saloon')
+  <section class="training-saloon">
+    <div class="saloon__container">
+      <div class="saloon__title">
+        <h3 class="saloon__title-h3 section-name">@lang('home.saloon.title-h3')</h3>
+        <h2 class="saloon__title-h2 section-title">@lang('home.saloon.title-h2')</h2>
+      </div>
+    
+      <div class="saloon__wrapper">
+        <div class="saloon__link">
+          <div class="saloon__img">
+            <img class="saloon__img" src="{{asset('img/training/3.webp')}}" alt="">
+          </div>
+        </div>
+    
+        <div class="saloon__link">
+
+          <div class="saloon__img">
+            <img class="saloon__img" src="{{asset('img/training/2.webp')}}" alt="">
+          </div>
+        </div>
+    
+        <div class="saloon__link">
+          <div class="saloon__img">
+            <img class="saloon__img" src="{{asset('img/home/ru/saloon/5.webp')}}" alt="">
+          </div>
+        </div>
+    
+        <div class="saloon__link">
+          <div class="saloon__img">
+            <img class="saloon__img" src="{{asset('img/home/es/saloon/18.webp')}}" alt="">
+          </div>
+        </div>
+    
+        <div class="saloon__link">
+          <div class="saloon__img">
+            <img class="saloon__img" src="{{asset('img/home/es/saloon/20.webp')}}" alt="">
+          </div>
+        </div>
+      </div>
+      <button class="saloon__btn">@lang('home.saloon.btn-text')</button>
+    </div>
   </section>
 
   <section class="services-spollers">
