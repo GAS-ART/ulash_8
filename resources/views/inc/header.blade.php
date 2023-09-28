@@ -44,11 +44,11 @@
                         class="header__sub-menu-link">@lang('header.nav.services.pedicure')</a>
                     </li> --}}
                     <li class="header__sub-menu-item">
-                      <a href="{{ route('eyelash', ['locale' => __('lang.current')]) }}"
+                      <a href="{{-- {{ route('eyelash', ['locale' => __('lang.current')]) }} --}}"
                         class="header__sub-menu-link">@lang('header.nav.services.eyelashes')</a>
                     </li>
                     <li class="header__sub-menu-item">
-                      <a href="{{ route('brows', ['locale' => __('lang.current')]) }}"
+                      <a href="{{-- {{ route('brows', ['locale' => __('lang.current')]) }} --}}"
                         class="header__sub-menu-link">@lang('header.nav.services.brows')</a>
                     </li>
                   </ul>
