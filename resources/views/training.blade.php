@@ -11,7 +11,10 @@
 <section class="teaching-home-page">
 
   <div class="teaching-home-page__img-wrapper">
-    @if(App::isLocale('es'))
+    <div class="teaching-home-page__img">
+      <img src="{{asset('img/training/3.webp')}}" alt="">
+    </div>
+    {{-- @if(App::isLocale('es'))
     <picture class="teaching-home-page__img">
       <source type="image/webp" media="(min-width:650px)" srcset="/img/home/es/teaching-page/1.webp">
       <source type="image/webp" media="(min-width:320px)" srcset="/img/home/es/teaching-page/mobile/1.webp">
@@ -24,7 +27,7 @@
       <source type="image/webp" media="(min-width:320px)" srcset="/img/home/ru/teaching-page/mobile/1.webp">
       <img src="/img/home/ru/teaching-page/1.jpg" alt="">
     </picture>
-    @endif
+    @endif --}}
   </div>
 
   <div class="teaching-home-page__container">
@@ -51,8 +54,10 @@
   <div class="teaching-about__container">
 
     <div class="teaching-about__box">
-
-      @if(App::isLocale('es'))
+      <div class="teaching-about__img">
+        <img src="{{asset('img/training/1.webp')}}" alt="">
+      </div>
+{{--       @if(App::isLocale('es'))
       <picture class="teaching-about__img">
         <source type="image/webp" media="(min-width:650px)" srcset="/img/home/es/teaching-page/2.webp">
         <source type="image/webp" media="(min-width:320px)" srcset="/img/home/es/teaching-page/mobile/2.webp">
@@ -65,7 +70,7 @@
         <source type="image/webp" media="(min-width:320px)" srcset="/img/home/ru/teaching-page/mobile/2.webp">
         <img src="/img/home/ru/teaching-page/2.jpg" alt="">
       </picture>
-      @endif
+      @endif --}}
 
 
       <div class="teaching-about__content">
@@ -197,7 +202,7 @@
         <div class="saloon__link">
 
           <div class="saloon__img">
-            <img class="saloon__img" src="{{asset('img/home/ru/saloon/1.webp')}}" alt="">
+            <img class="saloon__img" src="{{asset('img/home/es/saloon/17.webp')}}" alt="">
           </div>
     
           {{-- <div class="saloon__content-wrapper">
@@ -212,7 +217,7 @@
         <div class="saloon__link">
 
           <div class="saloon__img">
-            <img class="saloon__img" src="{{asset('img/home/ru/saloon/2.webp')}}" alt="">
+            <img class="saloon__img" src="{{asset('img/training/2.webp')}}" alt="">
           </div>
     
           {{-- <div class="saloon__content-wrapper">
@@ -226,7 +231,7 @@
     
         <div class="saloon__link">
           <div class="saloon__img">
-            <img class="saloon__img" src="{{asset('img/training/1.webp')}}" alt="">
+            <img class="saloon__img" src="{{asset('img/home/ru/saloon/5.webp')}}" alt="">
           </div>
     
           {{-- <div class="saloon__content-wrapper">
@@ -240,7 +245,7 @@
     
         <div class="saloon__link">
           <div class="saloon__img">
-            <img class="saloon__img" src="{{asset('img/training/2.webp')}}" alt="">
+            <img class="saloon__img" src="{{asset('img/home/es/saloon/18.webp')}}" alt="">
           </div>
     
           {{-- <div class="saloon__content-wrapper">
@@ -254,7 +259,7 @@
     
         <div class="saloon__link">
           <div class="saloon__img">
-            <img class="saloon__img" src="{{asset('img/training/3.webp')}}" alt="">
+            <img class="saloon__img" src="{{asset('img/home/es/saloon/20.webp')}}" alt="">
           </div>
           {{-- <div class="saloon__content-wrapper">
             <div class="saloon__icon icon-plusImage"></div>

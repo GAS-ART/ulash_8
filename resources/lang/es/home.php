@@ -3,7 +3,7 @@
 return [
   'head-screen' => [
     'title' => 'ULASH',
-    'text' => 'Cursos y formacion en Barcelona',
+    'text' => 'Cursos y extension de pestañas en Barcelona',
     'description' => 'Calidad premium de los mejores maestros de la belleza y la estética.',
     'btn-text' => 'Consulta',
   ],
