@@ -26,7 +26,7 @@ return [
     'title-h3' => 'VENTAJAS',
     'title-h2' => 'LO QUE OBTIENES EN 2 DÍAS',
     'li-one' => 'Una poderosa base teórica sobre nuestras guías de estudio',
-    'li-two' => 'Entrenamiento casi individual (grupo hasta 3 personas)',
+    'li-two' => 'Grupo hasta 5 personas',
     'li-three' => '3 certificados internacionales de Glory lash academy',
   ],
   'program' => [

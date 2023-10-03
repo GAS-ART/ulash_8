@@ -3,7 +3,7 @@
 return [
   'head-screen' => [
     'title-h3' => 'BIEN',
-    'title-h2' => 'CONSIGA UN LESHMAKER PROFESIONAL PROFESIONAL',
+    'title-h2' => 'CONSIGA UN LESHMAKER PROFESIONAL ULASH_GO',
     'text' => '1 día en Glory Lash International Beauty Academy',
     'btn-text' => 'Reserva tu lugar',
   ],
