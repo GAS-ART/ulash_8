@@ -121,27 +121,6 @@
       </div>
       <div class="services__imgs-wrapper">
 
-        {{-- <a class="services__imgs-item" href="#">
-          @if(App::isLocale('es'))
-          <picture>
-            <source type="image/webp" media="(min-width:1920px)" srcset="/img/home/es/services/1.webp">
-            <source type="image/webp" media="(min-width:950px)" srcset="/img/home/es/mobile/services/1.webp">
-            <img src="/img/home/es/services/1.jpg" alt="">
-          </picture>
-          @elseif(App::isLocale('ru'))
-          <picture>
-            <source type="image/webp" media="(min-width:1920px)" srcset="/img/home/ru/services/1.webp">
-            <source type="image/webp" media="(min-width:950px)" srcset="/img/home/ru/mobile/services/1.webp">
-            <img src="/img/home/ru/services/1.jpg" alt="">
-          </picture>
-          @endif
-
-          <div class="services__content">
-            <h4 class="services__content-title">@lang('home.services.card-one-text')</h4>
-            <p data-popup="#popup" class="services__content-link">@lang('home.services.card-btn-text')</p>
-          </div>
-        </a> --}}
-
         <a class="services__imgs-item" href="{{ route('eyelash', ['locale' => __('lang.current')]) }}">
           @if(App::isLocale('es'))
           <picture>
@@ -180,6 +159,27 @@
 
           <div class="services__content">
             <h4 class="services__content-title">@lang('home.services.card-three-text')</h4>
+            <p data-popup="#popup" class="services__content-link">@lang('home.services.card-btn-text')</p>
+          </div>
+        </a>
+
+        <a class="services__imgs-item" href="{{ route('training', ['locale' => __('lang.current')]) }}">
+          @if(App::isLocale('es'))
+          <picture>
+            <source type="image/webp" media="(min-width:1920px)" srcset="/img/home/es/services/1.webp">
+            <source type="image/webp" media="(min-width:950px)" srcset="/img/home/es/mobile/services/1.webp">
+            <img src="/img/home/es/services/1.jpg" alt="">
+          </picture>
+          @elseif(App::isLocale('ru'))
+          <picture>
+            <source type="image/webp" media="(min-width:1920px)" srcset="/img/home/ru/services/1.webp">
+            <source type="image/webp" media="(min-width:950px)" srcset="/img/home/ru/mobile/services/1.webp">
+            <img src="/img/home/ru/services/1.jpg" alt="">
+          </picture>
+          @endif
+
+          <div class="services__content">
+            <h4 class="services__content-title">@lang('home.services.card-one-text')</h4>
             <p data-popup="#popup" class="services__content-link">@lang('home.services.card-btn-text')</p>
           </div>
         </a>

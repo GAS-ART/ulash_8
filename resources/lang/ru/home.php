@@ -24,10 +24,10 @@ return [
   'services' => [
     'title-h3' => 'УСЛУГИ',
     'title-h2' => 'ЧТО МЫ МОЖЕМ ПРЕДЛОЖИТЬ',
-    'card-one-text' => 'Маникюр, педикюр',
+    'card-one-text' => 'Базовый курс',
     'card-two-text' => 'Наращивание рестниц',
     'card-three-text' => 'Брови',
-    'card-four-text' => 'Обучение',
+    'card-four-text' => 'Повышение квалификации',
     'card-btn-text' => 'Записаться',
   ],
   'teaching' => [
