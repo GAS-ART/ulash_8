@@ -5,45 +5,30 @@ return [
     'title-h3' => 'SOBRE EL PROCEDIMIENTO',
     'title-h2' => 'MANICURA',
     'text' => 'El servicio de uñas no es sólo un procedimiento, es el arte de convertir las uñas comunes en una obra de arte. Nuestros técnicos en uñas tienen la habilidad y la creatividad para crear diseños únicos y mantener sus uñas saludables. Regálate lujo y confianza con nuestros servicios de uñas.',
-    'btn-text' => 'Reserva una manicura',
+    'btn-text' => 'Reserva',
   ],
   'price' => [
     'sect-one' => [
-      'title' => 'Manicura',
+      'title' => 'Cejas:',
 
-      'li-one' => 'Manicura masculina',
-      'li-two' => 'Manicura infantil (moldeado + barnizado, hasta 8 años)',
-      'li-three' => 'Esmalte en gel después de la manicura.',
-      'li-four' => 'Barniz monofásico (manicura)',
-      'li-five' => 'Esmalte regular (manicure)',
-      'li-six' => 'Terapia de parafina de manos (caliente)',
-      'li-seven' => 'Mano de parafina fría',
-    ],
-
-
-    'sect-two' => [
-      'title' => 'Pedicure',
-
-      'li-one' => 'Pedicura masculina',
-      'li-two' => 'Esmalte en gel después de la pedicura.',
-      'li-three' => 'Barniz monofásico (pedicura)',
-      'li-four' => 'Esmalte regular (pedicura)',
-    ],
+      'li-one' => 'Corrección',
+      'li-two' => 'Pinzas/cera',
+      'li-three' => 'Tinta para colorear',
+      'li-four' => 'Colorante de henna',
+      'li-five' => 'Aclaramiento de cejas',
+      'li-six' => 'Laminación de cejas (peinado a largo plazo)',
+  ],
 
     'sect-three' => [
-      'title' => 'Diseño',
-      'description' => 'El precio es por 1 uña',
+      'title' => 'Cejas:',
+      //'description' => 'Стоимость указана за 1 ноготь',
 
-      'li-one' => 'Francés / agujero / ombre / degradado / frotar',
-      'li-two' => 'Control deslizante / Cinta / Lentejuelas / Lentejuelas / Estampado / Mármol',
-      'li-three' => 'Ojo de gato',
-      'li-four' => 'Pintura de arte',
-      'li-five' => 'Francés / agujero / ombre / degradado / frotar',
-      'li-six' => 'Control deslizante / Cinta / Lentejuelas / Lentejuelas / Estampado / Mármol',
-      'li-seven' => 'Pintura de arte',
-      'li-eight' => 'Pintura de arte',
-      'li-nine' => 'Francés / agujero / ombre / degradado / frotar',
-      'li-ten' => 'Pintura de arte',
+      'li-one' => 'Complejo 3 en 1',
+      'li-two' => 'laminación + coloración + corrección',
+      'li-three' => 'Felicidad para las cejas!!!',
+      'li-four' => 'pecas',
+      'li-five' => 'tinte de pestañas',
+      'li-six' => 'colorear la parte inferior',
     ],
 
     'btn-text' => 'Ver todos los precios',
@@ -91,6 +76,38 @@ return [
     ],
   ],
   
+  'spollers' => [
+    'title' => 'ВОПРОС ОТВЕТ',
+
+    'spoller-one' => '¿Qué incluye el servicio de cejas en tu salón?',
+    'content-one' => 'El servicio de cejas incluye modelado, corrección, selección de forma, coloración y otros métodos para mejorar la apariencia de las cejas.',
+
+    'spoller-two' => 'Qué tipos de cejas ofrecen?',
+    'content-two' => 'Ofrecemos cejas clásicas, cejas tipo ojo de gato, cejas voluminosas y muchas otras opciones.',
+
+    'spoller-three' => '¿Qué materiales y herramientas utilizas para tus cejas?',
+    'content-three' => 'Utilizamos materiales y herramientas de alta calidad, que incluyen cera, pinzas, tintes y geles profesionales.',
+
+    'spoller-four' => '¿Cuánto dura el efecto después de las cejas realizadas en tu salón?',
+    'content-four' => 'El efecto después de un procedimiento de cejas suele durar de 2 a 4 semanas, dependiendo del tipo de servicio.',
+
+    'spoller-five' => '¿Puedo elegir la forma de ceja que me gusta?',
+    'content-five' => 'Si seguro. Brindamos una consulta durante la cual usted puede elegir la forma y el estilo de cejas que se adapte a sus deseos.',
+
+    'spoller-six' => '¿Duele el procedimiento de cejas?',
+    'content-six' => 'El procedimiento de cejas puede causar una ligera molestia, pero suele ser de corta duración y fácilmente tolerado.',
+
+    'spoller-seven' => '¿Qué productos para cejas recomiendas entre visitas al salón?',
+    'content-seven' => 'Respuesta: Recomendamos utilizar geles y aceites especiales para cejas para mantenerlas en perfecto estado.',
+
+    'spoller-eight' => '¿Puedo conseguir cejas que luzcan naturales?',
+    'content-eight' => 'Sí, nuestros artistas se especializan en crear cejas naturales y armoniosas.',
+    'spoller-nine' => '¿Qué debo hacer si tuve un intento fallido de hacer cejas en otro lugar?',
+    'content-nine' => 'Tenemos experiencia en corregir errores de procedimientos anteriores. Realizaremos una consulta y le ofreceremos la mejor manera de solucionar el problema.',
+
+    'spoller-ten' => '¿Cuál es el precio del servicio de cejas en tu salón?',
+    'content-ten' => 'Los precios pueden variar según el tipo de servicio. Para obtener información exacta sobre los precios, contáctenos o visite nuestro sitio web.',
+  ],
 
 ]
 

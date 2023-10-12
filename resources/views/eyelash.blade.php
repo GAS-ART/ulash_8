@@ -10,24 +10,9 @@
 <section class="services-home-page">
 
   <div class="services-home-page__img-wrapper">
-    @if(App::isLocale('es'))
-    <picture class="services-home-page__img">
-      <source type="image/webp" media="(min-width:650px)"
-        srcset="/img/home/es/services-page/servisces-home-page/1.webp">
-      <source type="image/webp" media="(min-width:320px)"
-        srcset="/img/home/es/services-page/mobile/servisces-home-page/1.webp">
-      <img src="/img/home/es/services-page/servisces-home-page/1.jpg" alt="">
-    </picture>
-
-    @elseif(App::isLocale('ru'))
-    <picture class="services-home-page__img">
-      <source type="image/webp" media="(min-width:650px)"
-        srcset="/img/home/ru/services-page/servisces-home-page/1.webp">
-      <source type="image/webp" media="(min-width:320px)"
-        srcset="/img/home/ru/services-page/mobile/servisces-home-page/1.webp">
-      <img src="/img/home/ru/services-page/servisces-home-page/1.jpg" alt="">
-    </picture>
-    @endif
+    <div class="services-home-page__img">
+      <img src="/img/eyelash/1.webp" alt="">
+    </div>
   </div>
 
   <div class="services-home-page__container">
@@ -39,7 +24,7 @@
         <div class="services-home-page__text-wrapper">
           <p class="services-home-page__text">@lang('eyelash.head-screen.text')</p>
         </div>
-        <bitton class="services-home-page__popup">@lang('eyelash.head-screen.btn-text')</bitton>
+        <button class="services-home-page__popup" data-popup="#popup">@lang('eyelash.head-screen.btn-text')</button>
       </div>
 
     </div>
@@ -90,7 +75,6 @@
         </ul>
 
         <ul class="services-price__list">
-          <h4 class="services-price__title">@lang('eyelash.price.sect-two.title')</h4>
           <li class="services-price__item">
             <p class="services-price__text">@lang('eyelash.price.sect-two.li-one')</p>
             <span class="services-price__price">10 €</span>
@@ -99,15 +83,6 @@
             <p class="services-price__text">@lang('eyelash.price.sect-two.li-two')</p>
             <span class="services-price__price">10 €</span>
           </li>
-          <li class="services-price__item">
-            <p class="services-price__text">@lang('eyelash.price.sect-two.li-three')</p>
-            <span class="services-price__price">10 €</span>
-          </li>
-          <li class="services-price__item">
-            <p class="services-price__text">@lang('eyelash.price.sect-two.li-four')</p>
-            <span class="services-price__price">10 €</span>
-          </li>
-
         </ul>
 
 
@@ -117,7 +92,7 @@
 
         <ul class="services-price__list">
           <h4 class="services-price__title">@lang('eyelash.price.sect-three.title')</h4>
-          <p class="services-price__description">@lang('eyelash.price.sect-three.description')</p>
+          {{-- <p class="services-price__description">@lang('eyelash.price.sect-three.description')</p> --}}
           <li class="services-price__item">
             <p class="services-price__text">@lang('eyelash.price.sect-three.li-one')</p>
             <span class="services-price__price">10 €</span>
@@ -162,22 +137,17 @@
             <p class="services-price__text">@lang('eyelash.price.sect-three.li-nine')</p>
             <span class="services-price__price">10 €</span>
           </li>
-
-          <li class="services-price__item">
-            <p class="services-price__text">@lang('eyelash.price.sect-three.li-ten')</p>
-            <span class="services-price__price">10 €</span>
-          </li>
         </ul>
       </div>
 
     </div>
 
-    <button class="services-price__btn">@lang('eyelash.price.btn-text')</button>
+    {{-- <button class="services-price__btn">@lang('eyelash.price.btn-text')</button> --}}
   </div>
 </section>
 
 
-<section class="services-types">
+{{-- <section class="services-types">
   <p class="services-types__decor-text">types</p>
   <div class="services-types__container">
     <div class="services-types__wrapper">
@@ -306,10 +276,34 @@
       </div>
     </div>
   </div>
-</section>
+</section> --}}
 
-<section class="services-advantages">
-  @include('inc.advantages')
+<section class="advantages">
+  <p class="advantages__decor-text">ulash</p>
+  <div class="advantages__decor-icon icon-curl"></div>
+  <div class="advantages__container">
+    <div class="advantages__wrapper">
+      <div class="advantages__item">
+        <div class="advantages__icon">15</div>
+        <div class="advantages__text">@lang('home.advantages.text-one')</div>
+      </div>
+
+      <div class="advantages__item">
+        <div class="advantages__icon icon-handClock"></div>
+        <div class="advantages__text">@lang('home.advantages.text-two')</div>
+      </div>
+
+      <div class="advantages__item">
+        <div class="advantages__icon icon-rockFlower"></div>
+        <div class="advantages__text">@lang('home.advantages.text-three')</div>
+      </div>
+
+      <div class="advantages__item">
+        <div class="advantages__icon icon-diamond"></div>
+        <div class="advantages__text">@lang('home.advantages.text-four')</div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <div class="linear-gradient">

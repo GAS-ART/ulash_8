@@ -40,6 +40,7 @@ $(".popup__form").submit(function (event) {
          event.target.closest('.form').classList.add('send')
       },
       error: function (err) {
+         console.log(err);
          if (event.target.classList.contains('es')) {
             if (err?.responseJSON?.errors?.name) {
                event.target.querySelector('.popup__name').classList.add("error")
@@ -175,28 +176,28 @@ const portfolioBody = document.querySelector('.saloon__wrapper');
 if (portfolioBody) {
    const portfolioShowMoreBtn = document.querySelector('.saloon__btn');
    const portfolioData = [
-      { src: 'img/home/es/saloon/6.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
-      { src: 'img/home/es/saloon/7.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
-      { src: 'img/home/es/saloon/8.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
-      { src: 'img/home/es/saloon/9.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
-      { src: 'img/home/es/saloon/10.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
-      { src: 'img/home/es/saloon/11.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
-      { src: 'img/home/es/saloon/12.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
-      { src: 'img/home/es/saloon/13.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
-      { src: 'img/home/es/saloon/14.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
-      { src: 'img/home/es/saloon/15.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
-      { src: 'img/home/es/saloon/16.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
-      { src: 'img/home/es/saloon/17.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
-      { src: 'img/home/es/saloon/18.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
-      { src: 'img/home/es/saloon/19.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
-      { src: 'img/home/es/saloon/20.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
-      { src: 'img/home/es/saloon/21.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
-      { src: 'img/home/es/saloon/22.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
-      { src: 'img/home/es/saloon/23.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
-      { src: 'img/home/es/saloon/24.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
-      { src: 'img/home/es/saloon/25.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
-      { src: 'img/home/es/saloon/26.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
-      { src: 'img/home/es/saloon/27.webp', es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+      { src: `${window.location.protocol}//${window.location.host}/img/home/es/saloon/6.webp`, es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+      { src: `${window.location.protocol}//${window.location.host}/img/home/es/saloon/7.webp`, es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+      { src: `${window.location.protocol}//${window.location.host}/img/home/es/saloon/8.webp`, es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+      { src: `${window.location.protocol}//${window.location.host}/img/home/es/saloon/9.webp`, es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+      { src: `${window.location.protocol}//${window.location.host}/img/home/es/saloon/10.webp`, es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+      { src: `${window.location.protocol}//${window.location.host}/img/home/es/saloon/11.webp`, es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+      { src: `${window.location.protocol}//${window.location.host}/img/home/es/saloon/12.webp`, es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+      { src: `${window.location.protocol}//${window.location.host}/img/home/es/saloon/13.webp`, es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+      { src: `${window.location.protocol}//${window.location.host}/img/home/es/saloon/14.webp`, es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+      { src: `${window.location.protocol}//${window.location.host}/img/home/es/saloon/15.webp`, es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+      { src: `${window.location.protocol}//${window.location.host}/img/home/es/saloon/16.webp`, es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+      { src: `${window.location.protocol}//${window.location.host}/img/home/es/saloon/17.webp`, es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+      { src: `${window.location.protocol}//${window.location.host}/img/home/es/saloon/18.webp`, es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+      { src: `${window.location.protocol}//${window.location.host}/img/home/es/saloon/19.webp`, es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+      { src: `${window.location.protocol}//${window.location.host}/img/home/es/saloon/20.webp`, es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+      { src: `${window.location.protocol}//${window.location.host}/img/home/es/saloon/21.webp`, es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+      { src: `${window.location.protocol}//${window.location.host}/img/home/es/saloon/22.webp`, es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+      { src: `${window.location.protocol}//${window.location.host}/img/home/es/saloon/23.webp`, es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+      { src: `${window.location.protocol}//${window.location.host}/img/home/es/saloon/24.webp`, es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+      { src: `${window.location.protocol}//${window.location.host}/img/home/es/saloon/25.webp`, es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+      { src: `${window.location.protocol}//${window.location.host}/img/home/es/saloon/26.webp`, es: { title: '', text: '', }, ru: { title: '', text: '', }, },
+      { src: `${window.location.protocol}//${window.location.host}/img/home/es/saloon/27.webp`, es: { title: '', text: '', }, ru: { title: '', text: '', }, },
    ];
    let portfolioDataIndex = 0;
 

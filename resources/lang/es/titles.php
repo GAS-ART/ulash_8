@@ -2,10 +2,10 @@
 
 return [
    'home'=> [
-      'title' => 'Salón de belleza en Barcelona ¨Ulash¨. Los mejores maestros de la belleza y la estética.',
-      'description' => '',
-      'ogTitle' => 'Salón de belleza en Barcelona ¨Ulash¨',
-      'ogDescription' => 'Los mejores maestros de la belleza y la estética',
+      'title' => 'Cursos de extensiones de pestañas en Barcelona Ulash',
+      'description' => 'Cursos de extensiones de pestañas en Barcelona Ulash',
+      'ogTitle' => 'Cursos de extensiones de pestañas en Barcelona Ulash',
+      'ogDescription' => 'Cursos de extensiones de pestañas en Barcelona Ulash',
    ],
 ]
 

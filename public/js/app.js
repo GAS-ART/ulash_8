@@ -55,6 +55,7 @@ $(".popup__form").submit(function (event) {
       event.target.closest('.form').classList.add('send');
     },
     error: function error(err) {
+      console.log(err);
       if (event.target.classList.contains('es')) {
         var _err$responseJSON, _err$responseJSON$err, _err$responseJSON2, _err$responseJSON2$er;
         if (err !== null && err !== void 0 && (_err$responseJSON = err.responseJSON) !== null && _err$responseJSON !== void 0 && (_err$responseJSON$err = _err$responseJSON.errors) !== null && _err$responseJSON$err !== void 0 && _err$responseJSON$err.name) {
@@ -256,7 +257,7 @@ if (portfolioBody) {
   }();
   var portfolioShowMoreBtn = document.querySelector('.saloon__btn');
   var portfolioData = [{
-    src: 'img/home/es/saloon/6.webp',
+    src: "".concat(window.location.protocol, "//").concat(window.location.host, "/img/home/es/saloon/6.webp"),
     es: {
       title: '',
       text: ''
@@ -266,7 +267,7 @@ if (portfolioBody) {
       text: ''
     }
   }, {
-    src: 'img/home/es/saloon/7.webp',
+    src: "".concat(window.location.protocol, "//").concat(window.location.host, "/img/home/es/saloon/7.webp"),
     es: {
       title: '',
       text: ''
@@ -276,7 +277,7 @@ if (portfolioBody) {
       text: ''
     }
   }, {
-    src: 'img/home/es/saloon/8.webp',
+    src: "".concat(window.location.protocol, "//").concat(window.location.host, "/img/home/es/saloon/8.webp"),
     es: {
       title: '',
       text: ''
@@ -286,7 +287,7 @@ if (portfolioBody) {
       text: ''
     }
   }, {
-    src: 'img/home/es/saloon/9.webp',
+    src: "".concat(window.location.protocol, "//").concat(window.location.host, "/img/home/es/saloon/9.webp"),
     es: {
       title: '',
       text: ''
@@ -296,7 +297,7 @@ if (portfolioBody) {
       text: ''
     }
   }, {
-    src: 'img/home/es/saloon/10.webp',
+    src: "".concat(window.location.protocol, "//").concat(window.location.host, "/img/home/es/saloon/10.webp"),
     es: {
       title: '',
       text: ''
@@ -306,7 +307,7 @@ if (portfolioBody) {
       text: ''
     }
   }, {
-    src: 'img/home/es/saloon/11.webp',
+    src: "".concat(window.location.protocol, "//").concat(window.location.host, "/img/home/es/saloon/11.webp"),
     es: {
       title: '',
       text: ''
@@ -316,7 +317,7 @@ if (portfolioBody) {
       text: ''
     }
   }, {
-    src: 'img/home/es/saloon/12.webp',
+    src: "".concat(window.location.protocol, "//").concat(window.location.host, "/img/home/es/saloon/12.webp"),
     es: {
       title: '',
       text: ''
@@ -326,7 +327,7 @@ if (portfolioBody) {
       text: ''
     }
   }, {
-    src: 'img/home/es/saloon/13.webp',
+    src: "".concat(window.location.protocol, "//").concat(window.location.host, "/img/home/es/saloon/13.webp"),
     es: {
       title: '',
       text: ''
@@ -336,7 +337,7 @@ if (portfolioBody) {
       text: ''
     }
   }, {
-    src: 'img/home/es/saloon/14.webp',
+    src: "".concat(window.location.protocol, "//").concat(window.location.host, "/img/home/es/saloon/14.webp"),
     es: {
       title: '',
       text: ''
@@ -346,7 +347,7 @@ if (portfolioBody) {
       text: ''
     }
   }, {
-    src: 'img/home/es/saloon/15.webp',
+    src: "".concat(window.location.protocol, "//").concat(window.location.host, "/img/home/es/saloon/15.webp"),
     es: {
       title: '',
       text: ''
@@ -356,7 +357,7 @@ if (portfolioBody) {
       text: ''
     }
   }, {
-    src: 'img/home/es/saloon/16.webp',
+    src: "".concat(window.location.protocol, "//").concat(window.location.host, "/img/home/es/saloon/16.webp"),
     es: {
       title: '',
       text: ''
@@ -366,7 +367,7 @@ if (portfolioBody) {
       text: ''
     }
   }, {
-    src: 'img/home/es/saloon/17.webp',
+    src: "".concat(window.location.protocol, "//").concat(window.location.host, "/img/home/es/saloon/17.webp"),
     es: {
       title: '',
       text: ''
@@ -376,7 +377,7 @@ if (portfolioBody) {
       text: ''
     }
   }, {
-    src: 'img/home/es/saloon/18.webp',
+    src: "".concat(window.location.protocol, "//").concat(window.location.host, "/img/home/es/saloon/18.webp"),
     es: {
       title: '',
       text: ''
@@ -386,7 +387,7 @@ if (portfolioBody) {
       text: ''
     }
   }, {
-    src: 'img/home/es/saloon/19.webp',
+    src: "".concat(window.location.protocol, "//").concat(window.location.host, "/img/home/es/saloon/19.webp"),
     es: {
       title: '',
       text: ''
@@ -396,7 +397,7 @@ if (portfolioBody) {
       text: ''
     }
   }, {
-    src: 'img/home/es/saloon/20.webp',
+    src: "".concat(window.location.protocol, "//").concat(window.location.host, "/img/home/es/saloon/20.webp"),
     es: {
       title: '',
       text: ''
@@ -406,7 +407,7 @@ if (portfolioBody) {
       text: ''
     }
   }, {
-    src: 'img/home/es/saloon/21.webp',
+    src: "".concat(window.location.protocol, "//").concat(window.location.host, "/img/home/es/saloon/21.webp"),
     es: {
       title: '',
       text: ''
@@ -416,7 +417,7 @@ if (portfolioBody) {
       text: ''
     }
   }, {
-    src: 'img/home/es/saloon/22.webp',
+    src: "".concat(window.location.protocol, "//").concat(window.location.host, "/img/home/es/saloon/22.webp"),
     es: {
       title: '',
       text: ''
@@ -426,7 +427,7 @@ if (portfolioBody) {
       text: ''
     }
   }, {
-    src: 'img/home/es/saloon/23.webp',
+    src: "".concat(window.location.protocol, "//").concat(window.location.host, "/img/home/es/saloon/23.webp"),
     es: {
       title: '',
       text: ''
@@ -436,7 +437,7 @@ if (portfolioBody) {
       text: ''
     }
   }, {
-    src: 'img/home/es/saloon/24.webp',
+    src: "".concat(window.location.protocol, "//").concat(window.location.host, "/img/home/es/saloon/24.webp"),
     es: {
       title: '',
       text: ''
@@ -446,7 +447,7 @@ if (portfolioBody) {
       text: ''
     }
   }, {
-    src: 'img/home/es/saloon/25.webp',
+    src: "".concat(window.location.protocol, "//").concat(window.location.host, "/img/home/es/saloon/25.webp"),
     es: {
       title: '',
       text: ''
@@ -456,7 +457,7 @@ if (portfolioBody) {
       text: ''
     }
   }, {
-    src: 'img/home/es/saloon/26.webp',
+    src: "".concat(window.location.protocol, "//").concat(window.location.host, "/img/home/es/saloon/26.webp"),
     es: {
       title: '',
       text: ''
@@ -466,7 +467,7 @@ if (portfolioBody) {
       text: ''
     }
   }, {
-    src: 'img/home/es/saloon/27.webp',
+    src: "".concat(window.location.protocol, "//").concat(window.location.host, "/img/home/es/saloon/27.webp"),
     es: {
       title: '',
       text: ''

@@ -29,9 +29,9 @@
               class="footer__menu-link">@lang('footer.services.li-one')</a></li>
           <li class="footer__menu-item"><a href="{{ route('teaching', ['locale' => __('lang.current')]) }}"
               class="footer__menu-link">@lang('footer.services.li-two')</a></li> --}}
-          <li class="footer__menu-item"><a href="{{-- {{ route('eyelash', ['locale' => __('lang.current')]) }} --}}"
+          <li class="footer__menu-item"><a href="{{ route('eyelash', ['locale' => __('lang.current')]) }}"
               class="footer__menu-link">@lang('footer.services.li-three')</a></li>
-          <li class="footer__menu-item"><a href="{{-- {{ route('brows', ['locale' => __('lang.current')]) }} --}}"
+          <li class="footer__menu-item"><a href="{{ route('brows', ['locale' => __('lang.current')]) }}"
               class="footer__menu-link">@lang('header.nav.services.brows')</a></li>
         </ul>
 
