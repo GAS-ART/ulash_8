@@ -1,8 +1,8 @@
 @extends('layout')
-@section('title', __('titles.brows.title'))
-@section('description', __('titles.brows.description'))
-@section('ogTitle', __('titles.brows.ogTitle'))
-@section('ogDescription', __('titles.brows.ogDescription'))
+@section('title', __('titles.home.title'))
+@section('description', __('titles.home.description'))
+@section('ogTitle', __('titles.home.ogTitle'))
+@section('ogDescription', __('titles.home.ogDescription'))
 
 @section('page', 'brows')
 

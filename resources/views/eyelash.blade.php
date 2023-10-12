@@ -1,8 +1,8 @@
 @extends('layout')
-@section('title', __('titles.eyelash.title'))
-@section('description', __('titles.eyelash.description'))
-@section('ogTitle', __('titles.eyelash.ogTitle'))
-@section('ogDescription', __('titles.eyelash.ogDescription'))
+@section('title', __('titles.home.title'))
+@section('description', __('titles.home.description'))
+@section('ogTitle', __('titles.home.ogTitle'))
+@section('ogDescription', __('titles.home.ogDescription'))
 
 @section('page', 'eyelash')
 

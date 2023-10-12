@@ -1,8 +1,8 @@
 @extends('layout')
-@section('title', __('titles.course.title'))
-@section('description', __('titles.course.description'))
-@section('ogTitle', __('titles.course.ogTitle'))
-@section('ogDescription', __('titles.course.ogDescription'))
+@section('title', __('titles.home.title'))
+@section('description', __('titles.home.description'))
+@section('ogTitle', __('titles.home.ogTitle'))
+@section('ogDescription', __('titles.home.ogDescription'))
 
 @section('page', 'course')
 
