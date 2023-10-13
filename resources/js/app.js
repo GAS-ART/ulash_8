@@ -36,10 +36,9 @@ $(".popup__form").submit(function (event) {
          event.target.querySelector('.popup__phone').classList.remove("error");
          event.target.querySelector('.phone-error').innerText = '';
          $(event.target)[0].reset();
-         event.target.closest('.form').classList.add('send')
+         event.target.closest('.popup').classList.add('send')
       },
       error: function (err) {
-         console.log(err);
          if (event.target.classList.contains('es')) {
             if (err?.responseJSON?.errors?.name) {
                event.target.querySelector('.popup__name').classList.add("error")
@@ -88,6 +87,8 @@ $(".popup__form").submit(function (event) {
       }
    });
 });
+
+
 
 //Стилизация Select
 let placeholderText = 'Выберету услугу';

@@ -14,6 +14,11 @@ return [
   'textarea' => 'Un comentario',
 
   'btn' => 'Envíe su solicitud',
+  
+  'success' => [
+    'title' => 'Gracias!<br><br>Encantados de conocerte.<br><br>En breve te llamaremos.',
+    'btn' => 'ОК',
+  ],
 ]
 
 ?>

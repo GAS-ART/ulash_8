@@ -40,6 +40,13 @@
           <button class="popup__button" type="submit">@lang('popup.btn')</button>
         </div>
 
+        <div class="success">
+          <h4>@lang('popup.success.title')</h4>
+          <button type="button" class="popup__success-button" data-close>
+             @lang('popup.success.btn')
+          </button>
+       </div>
+
       </form>
     </div>
   </div>

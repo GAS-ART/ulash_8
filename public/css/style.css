@@ -3409,6 +3409,7 @@ body::after {
   height: 20px;
   margin-left: auto;
   cursor: pointer;
+  z-index: 5;
 }
 .popup__close:before, .popup__close:after {
   content: "";
@@ -3488,7 +3489,7 @@ body::after {
   display: flex;
   justify-content: center;
 }
-.popup__button {
+.popup__button, .popup__success-button {
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
@@ -3497,6 +3498,44 @@ body::after {
   height: 54px;
   background: linear-gradient(0deg, #FFD700, #FFD700), #ED7C30;
   border-radius: 50px;
+}
+.popup .success {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.popup .success h4 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.popup.send .popup__text {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.popup.send .popup__form-block {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.popup.send .popup__button-wrapper {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.popup.send .success {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
 }
 
 .select2-selection {

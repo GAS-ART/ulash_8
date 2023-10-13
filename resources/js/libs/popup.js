@@ -29,6 +29,7 @@ class Popup {
         popupContent: 'popup__content',
         popupActive: 'popup_show', // Добавляется для попапа, когда он открывается
         bodyActive: 'popup-show', // Добавляется для боди, когда попап открыт
+        popupSuccess: 'send'
       },
       focusCatch: true, // Фокус внутри попапа зациклен
       closeEsc: true, // Закрытие по ESC
@@ -274,6 +275,7 @@ class Popup {
         this.targetOpen.element.querySelector(`[${this.options.youtubePlaceAttribute}]`).innerHTML = '';
     }
     this.previousOpen.element.classList.remove(this.options.classes.popupActive);
+    this.previousOpen.element.classList.remove(this.options.classes.popupSuccess);
     // aria-hidden
     this.previousOpen.element.setAttribute('aria-hidden', 'true');
     if (!this._reopen) {

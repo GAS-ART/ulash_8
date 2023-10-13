@@ -51,10 +51,9 @@ $(".popup__form").submit(function (event) {
       event.target.querySelector('.popup__phone').classList.remove("error");
       event.target.querySelector('.phone-error').innerText = '';
       $(event.target)[0].reset();
-      event.target.closest('.form').classList.add('send');
+      event.target.closest('.popup').classList.add('send');
     },
     error: function error(err) {
-      console.log(err);
       if (event.target.classList.contains('es')) {
         var _err$responseJSON, _err$responseJSON$err, _err$responseJSON2, _err$responseJSON2$er;
         if (err !== null && err !== void 0 && (_err$responseJSON = err.responseJSON) !== null && _err$responseJSON !== void 0 && (_err$responseJSON$err = _err$responseJSON.errors) !== null && _err$responseJSON$err !== void 0 && _err$responseJSON$err.name) {
@@ -1235,9 +1234,10 @@ var Popup = /*#__PURE__*/function () {
         popupContent: 'popup__content',
         popupActive: 'popup_show',
         // Добавляется для попапа, когда он открывается
-        bodyActive: 'popup-show' // Добавляется для боди, когда попап открыт
+        bodyActive: 'popup-show',
+        // Добавляется для боди, когда попап открыт
+        popupSuccess: 'send'
       },
-
       focusCatch: true,
       // Фокус внутри попапа зациклен
       closeEsc: true,
@@ -1455,6 +1455,7 @@ var Popup = /*#__PURE__*/function () {
         if (this.targetOpen.element.querySelector("[".concat(this.options.youtubePlaceAttribute, "]"))) this.targetOpen.element.querySelector("[".concat(this.options.youtubePlaceAttribute, "]")).innerHTML = '';
       }
       this.previousOpen.element.classList.remove(this.options.classes.popupActive);
+      this.previousOpen.element.classList.remove(this.options.classes.popupSuccess);
       // aria-hidden
       this.previousOpen.element.setAttribute('aria-hidden', 'true');
       if (!this._reopen) {
