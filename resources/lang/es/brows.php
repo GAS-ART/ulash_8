@@ -3,7 +3,7 @@
 return [
   'head-screen' => [
     'title-h3' => 'SOBRE EL PROCEDIMIENTO',
-    'title-h2' => 'Extensiones de pestañas',
+    'title-h2' => 'Cejas',
     'text' => 'El servicio de uñas no es sólo un procedimiento, es el arte de convertir las uñas comunes en una obra de arte. Nuestros técnicos en uñas tienen la habilidad y la creatividad para crear diseños únicos y mantener sus uñas saludables. Regálate lujo y confianza con nuestros servicios de uñas.',
     'btn-text' => 'Reserva',
   ],
