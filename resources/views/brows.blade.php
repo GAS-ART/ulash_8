@@ -24,7 +24,7 @@
         <div class="services-home-page__text-wrapper">
           <p class="services-home-page__text">@lang('brows.head-screen.text')</p>
         </div>
-        <bitton class="services-home-page__popup" data-popup="#popup">@lang('brows.head-screen.btn-text')</bitton>
+        <button class="services-home-page__popup" data-popup="#popup">@lang('brows.head-screen.btn-text')</button>
       </div>
 
     </div>
