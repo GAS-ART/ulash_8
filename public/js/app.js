@@ -24,7 +24,6 @@ var popupForm = document.querySelector('.popup__form');
 document.addEventListener('click', documentActions);
 function documentActions(e) {
   var target = e.target;
-  console.log(e.target);
   //stopScrolling
   if (!target.classList.contains('.ancor') && scrol == true) {
     body.addEventListener('click', stopAnimation);
@@ -41,7 +40,7 @@ $(".popup__form").submit(function (event) {
   event.preventDefault();
   $.ajax({
     type: 'POST',
-    url: 'http://localhost:3000/send',
+    url: "".concat(window.location.protocol, "//").concat(window.location.host, "/send"),
     data: new FormData(this),
     contentType: false,
     cache: false,

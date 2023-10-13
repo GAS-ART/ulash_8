@@ -7,7 +7,7 @@
         <h3 class="popup__title-h3 section-name">@lang('popup.title-h3')</h3>
         <h2 class="popup__title-h2 section-title">@lang('popup.title-h2')</h2>
       </div>
-      <form class="popup__form @lang('lang.current')" action="#" method="post">
+      <form class="popup__form @lang('lang.current')" action="{{route('send')}}" method="POST">
         @csrf
         <div class="popup__form-block">
           <div class="popup__form-box">

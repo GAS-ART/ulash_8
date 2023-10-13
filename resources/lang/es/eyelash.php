@@ -3,7 +3,7 @@
 return [
   'head-screen' => [
     'title-h3' => 'SOBRE EL PROCEDIMIENTO',
-    'title-h2' => 'MANICURA',
+    'title-h2' => 'Extensiones de pestañas',
     'text' => 'Las extensiones de pestañas son un procedimiento cosmético muy popular en el mundo de la belleza. Brinda la oportunidad de cambiar la apariencia de los ojos, haciendo las pestañas más largas, espesas y curvas, lo que da expresividad y atractivo a la mirada. Este procedimiento es extremadamente popular entre las mujeres que desean un maquillaje hermoso sin la necesidad de la aplicación diaria de rímel o el uso de muchos otros cosméticos.<br><br>Las principales etapas del procedimiento de extensión de pestañas incluyen: Consulta, Preparación, Extensión, Modelado, Corrección. Las extensiones de pestañas son una excelente manera de resaltar la belleza de tus ojos y mejorar tu apariencia. Sin embargo, es importante elegir técnicos profesionales y seguir las recomendaciones de cuidado para mantener la salud de tus pestañas naturales y los resultados a largo plazo.',
     'btn-text' => 'Reserva',
   ],
